@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vollaa</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+  <%= stylesheet_link_tag params[:controller]%>
+  <%= javascript_include_tag params[:controller]%>
+  <%= csrf_meta_tags %>
+  
+  <%= javascript_tag do %>
+    var params = <%= raw params.to_json %>;
+  <% end %>
+</head>
+<body>
+<div class="header">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a href="/" class="brand">Vollaa</a>
+        <div class="nav-collapse">
+          <ul class="nav pull-right">
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content container">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, :id => "flash_#{name}", :class => "alert alert-#{name}" do %>
+      <a class="close" data-dismiss="alert">&times;</a>
+      <%= raw msg %>
+    <% end %>
+  <% end %>
+  <%= content_tag :div, "data-page-action" => page_action, "data-page-controller" => page_controller do %>    
+    <%= yield %>
+  <% end %>
+</div>
+<div class="footer container">
+  <div class="footer_links">
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'About', '#' %>
+    <%= link_to 'Terms', '#' %>
+    <%= link_to 'Contact', '#' %>
+    <%= link_to 'Market Trends', '#' %>
+    <%= link_to 'Tools', '#' %>
+    <%= link_to 'Advertisers', '#' %>
+  </div>
+</div>
+</body>
+</html>

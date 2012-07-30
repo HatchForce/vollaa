@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require jquery-ui
+ *= require bootstrap
+ *= require_self
+ */
+
+body {
+  background-color: #5D5D5D;
+  font-size: 14px;
+}
+
+.header {
+  min-height: 100px;
+}
+
+.content {
+  min-height: 400px;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.footer {
+  margin-top:20px;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-align: center;
+}
+
+.footer_links a {
+  margin: 0 10px;
+}
+
+.footer_links a:hover {
+  text-decoration: none;
+  color: red;
+
+}
+
+.border {
+  border: 1px solid #A9A9A9;
+}
+
+.radius-border {
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.shadow-border {
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 0 1px 5px #000000, inset 0 10px 20px #FFFFFF;
+  -o-box-shadow: 0 1px 5px #000000, inset 0 10px 20px #FFFFFF;
+  -webkit-box-shadow: 0 1px 5px #000000, inset 0 10px 20px #FFFFFF;
+  -moz-box-shadow: 0 1px 5px #000000, inset 0 10px 20px #FFFFFF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}

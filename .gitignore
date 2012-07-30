@@ -1,0 +1,12 @@
+/.bundle
+/log/*.log
+/tmp
+/public/assets
+
+.project
+.idea
+.tmp_*
+*.swp
+*.swo
+.sass-cache
+*.rdb

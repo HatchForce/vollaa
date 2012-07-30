@@ -1,0 +1,29 @@
+<div style="width: 700px;margin: 0 auto;">
+<div class="search_box">
+
+  <%= form_tag 'home/results', :method => :get, :class => 'search_form' do %>
+    <div class="row">
+      <div class="span3">
+        <%= label_tag :what %>
+        <%= text_field_tag :what %>
+        <p class="help-inline">2bhk, house</p>
+      </div>
+      <div class="span3">
+        <%= label_tag :where %>
+        <%= text_field_tag :where %>
+        <p class="help-inline">city, state</p>
+      </div>
+      <div class="span3">
+        <%= label_tag :search, raw("&nbsp;") %>
+        <%= submit_tag :search, :class => 'btn btn-primary' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span3">
+        <%= link_to 'Advance Search', '#' %>
+      </div>
+    </div>
+  <% end %>
+
+</div>
+</div>
