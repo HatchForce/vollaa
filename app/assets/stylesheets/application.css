@@ -14,8 +14,7 @@
  */
 
 body {
-  background-color: #5D5D5D;
-  font-size: 14px;
+  background: transparent url("/assets/bg_pattern.png") repeat scroll 0 0;
 }
 
 .header {
