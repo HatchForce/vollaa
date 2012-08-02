@@ -8,7 +8,7 @@ namespace :db do
 
       for file in @files
         next if file == "." || file == ".."
-        sql = "LOAD DATA LOCAL INFILE '/home/ranjith/Projects/vollaa/db/properties_data/#{file}'
+        sql = "LOAD DATA LOCAL INFILE '#{Rails.root}/db/properties_data/#{file}'
                INTO TABLE properties
                FIELDS TERMINATED BY '|'
                LINES TERMINATED BY '\\n'
