@@ -1,4 +1,12 @@
 Vollaa::Application.routes.draw do
+
+
+  match 'vollaa_property_:id' => 'properties#vollaa_property_show', :as => 'vollaa_property_show'
+  resources :properties do
+    collection do
+
+    end
+  end
   
   resource :profile do 
     collection do

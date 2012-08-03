@@ -19,5 +19,12 @@
 
 $(document).ready(function(){
 
+  //set iframe height
+  $('iframe').height($(window).height());
 
+  //close iframe
+  $('.iframe_close').click(function(){
+    window.location = $('.iframe_content').find('iframe').attr('src');
+    return false;
+  });
 });

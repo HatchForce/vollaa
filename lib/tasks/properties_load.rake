@@ -16,6 +16,9 @@ namespace :db do
 
         connection.execute(sql)
       end
+
+      #updating created at and updated at
+      Property.update_all({:created_at => Time.now, :updated_at => Time.now}, "created_at IS NULL")
     end
   end
 end
