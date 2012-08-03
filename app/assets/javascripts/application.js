@@ -14,10 +14,10 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery.fancybox
 //= require_self
 
 $(document).ready(function(){
-
 
 
 });
