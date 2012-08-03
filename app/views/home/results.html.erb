@@ -1,0 +1,44 @@
+<div class="page-header" style="margin-top: 0;">
+  <h3>Search Results</h3>
+</div>
+<div class="row">
+  <div class="span3">Filters</div>
+  <div class="span6">
+    <div class="results_data">
+      <div class="will_paginate">
+        <div class="page_info">
+          <%= page_entries_info @results %>
+        </div>
+      </div>
+
+      <div class="sort_links">
+        <strong> Sort By :</strong>
+        <a href="#">Price</a>
+        <a href="#">Location</a>
+        <a href="#">Type</a>
+        <a href="#">Publisher</a>
+        <a href="#">Date</a>
+      </div>
+
+      <div class="results">
+        <%= render :partial => 'result', :collection => @results %>
+      </div>
+      <div class="results_footer">
+        <%= will_paginate @results, :class => 'will_paginate', :inner_window => 1 %>
+      </div>
+    </div>
+  </div>
+  <div class="span3">Ads</div>
+</div>
+
+<div id="email_form">
+  <h3>Send Property Details</h3>
+  <br>
+  <%= form_tag '/home/send_details', :remote => true, :method => :post, :class => 'send_details_form', :id => 'email_submit' do %>
+    <%= label_tag :emails, "Enter email address comma separated " %>
+    <%= text_area_tag :emails, "", :style => 'width:300px;height:60px;' %>
+    <%= hidden_field_tag :property_id %><br>
+    <%= submit_tag :Send, :class => 'btn btn-primary', :id => 'mail_submit_form' %>
+    <%= link_to 'Close', "#", :class => 'btn', :onclick => '$.fancybox.close();return false;' %>
+  <% end %>
+</div>

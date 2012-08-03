@@ -9,6 +9,7 @@ Vollaa::Application.routes.draw do
   resource :home do
     collection do
       get 'results'
+      post 'send_details'
       get 'search'
       get 'contact'
       get 'about'

@@ -1,0 +1,26 @@
+<div class="result">
+  <%= hidden_field_tag 'property_id', result.id %>
+  <div class="result_heading">
+    <%= link_to result.property_title, result.more_link, :target => '_blank' %>
+  </div>
+  <div class="result_details">
+    <div class="price pull-left">
+      <% if result.property_price != 0 %>
+        <strong>Rs : <%= result.property_price %></strong>
+      <% else %>
+        <strong title="Price is not available">N/A</strong>
+      <% end %>
+    </div>
+    <div class="description pull-right">
+      <%= result.property_description %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="property_links">
+    From : <%= result.source %> - <%= time_ago_in_words(result.created_at) %>,
+    <%= link_to 'Save Property' %> -
+    <%= link_to 'Email', '#email_form', :class => 'email_property', "data-property-id" => result.id %>  -
+    <%= link_to 'More', result.more_link, :target => '_blank' %>
+  </div>
+</div>
+
