@@ -5,6 +5,9 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'progress_bar'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 gem 'will_paginate', '~> 3.0.0'
 
 gem 'mysql2', '0.3.11'

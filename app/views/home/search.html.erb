@@ -19,8 +19,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="span3">
-        <%= link_to 'Advance Search', '#' %>
+        <%= link_to 'Advance Search', '#',:class => 'advance_search_link' %>
+        <div class="adv_search">
+          <%= render :partial => 'adv_search'%>
       </div>
     </div>
   <% end %>

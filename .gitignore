@@ -1,5 +1,6 @@
 /.bundle
 /log/*.log
+/log/*.*
 /tmp
 /public/assets
 
@@ -10,3 +11,4 @@
 *.swo
 .sass-cache
 *.rdb
+/solr
