@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vollaa</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+  <%= stylesheet_link_tag params[:controller]%>
+  <%= javascript_include_tag params[:controller]%>
+  <%= csrf_meta_tags %>
+
+  <%= javascript_tag do %>
+    var params = <%= raw params.to_json %>;
+  <% end %>
+</head>
+<body>
+<div class="iframe_header">
+  <%= link_to '/', :class => 'iframe_logo' do %>
+    <h2>Vollaa</h2>
+  <% end %>
+  <span class="iframe_close">Close X</span>
+</div>
+<div class="container-fluid iframe_content">
+  <%= yield %>
+</div>
+</body>
+</html>

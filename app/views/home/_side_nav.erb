@@ -1,0 +1,64 @@
+<span class="filter_nav" >
+  <p><%= ( params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max] ).nil?? '' : (link_to 'Remove All',params.except( :property_type,:bedrooms,:city,:state,:price_min,:price_max,:area_min,:area_max), class: 'nav_clear') %></p>
+
+  <br/>
+<h5>Type</h5>
+<p><%= type_sel('Plots','Plot') %>                              <%= type_clear('Plot')%></p>
+<p><%= type_sel('Non-Layout Land','Non-Layout Land') %>         <%= type_clear('Non-Layout Land')%></p>
+<p><%= type_sel('Residential','residential') %>                 <%= type_clear('residential')%></p>
+<p><%= type_sel('Flat','Flat')  %>                              <%= type_clear('Flat')%></p>
+<p><%= type_sel('Office Space','Office Space') %>               <%= type_clear('Office Space')%></p>
+<br/>
+<h5>Price</h5>
+<p><%= price_sel('Rs. 1 Lakh - 10 Lakhs', 100000,1000000) %>    <%= price_clear(100000,1000000) %></p>
+<p><%= price_sel('Rs. 10 Lakhs - 50 Lakhs', 1000000,5000000) %> <%= price_clear(1000000,5000000) %></p>
+<p><%= price_sel('Rs. 50 Lakhs - 1Cr', 5000000,10000000) %>     <%= price_clear(5000000,10000000) %></p>
+<p><%= price_sel('1Cr - 10Cr', 10000000,100000000)%>            <%= price_clear(10000000,100000000) %></p>
+<p><%= price_sel('Rs. 10Cr and more', 100000000,0)%>            <%= price_clear(100000000,0) %></p>
+<br/>
+<h5>Bedrooms</h5>
+<p><%= bedroom_sel(1) %>                                        <%= bed_clear(1) %></p>
+<p><%= bedroom_sel(2) %>                                        <%= bed_clear(2) %></p>
+<p><%= bedroom_sel(3) %>                                        <%= bed_clear(3) %></p>
+<p><%= bedroom_sel(4) %>                                        <%= bed_clear(4) %></p>
+<p><%= bedroom_sel(5) %>                                        <%= bed_clear(5) %></p>
+<p><%= bedroom_sel(6) %>                                        <%= bed_clear(6) %></p>
+<br/>
+<h5>Area in yards</h5>
+<p><%= area_sel('< hundred', 0,100) %>                          <%= area_clear(0,100) %></p>
+<p><%= area_sel('hundred - 1 thousand', 100,1000) %>            <%= area_clear(100,1000) %></p>
+<p><%= area_sel('1 thousand - 10 thousand', 1000,10000) %>      <%= area_clear(1000,10000) %></p>
+<p><%= area_sel('10 thousand - 50 thousand', 10000,50000) %>    <%= area_clear(10000,50000) %></p>
+<p><%= area_sel('50 thousand - 1Lakh', 50000,100000) %>         <%= area_clear(50000,100000) %></p>
+<p><%= area_sel('more than 1Lakh', 100000,0) %>                 <%= area_clear(100000,0) %></p>
+<br/>
+<h5>City</h5>
+<p><%= city_sel('Hyderabad','hyderabad') %>                     <%= city_clear('hyderabad') %></p>
+<p><%= city_sel('Ahmedabad','ahmedabad') %>                     <%= city_clear('ahmedabad') %></p>
+<p><%= city_sel('Bangalore','bangalore')%>                      <%= city_clear('bangalore') %></p>
+<p><%= city_sel('Chennai','chennai') %>                         <%= city_clear('chennai') %></p>
+<p><%= city_sel('Delhi','delhi') %>                             <%= city_clear('delhi') %></p>
+<p><%= city_sel('Mumbai','mumbai') %>                           <%= city_clear('mumbai') %></p>
+<br/>
+<h5>State</h5>
+<p><%= state_sel('Andhra Pradesh','Andhra Pradesh') %>          <%= state_clear('Andhra Pradesh') %></p>
+<p><%= state_sel('Gujarath', 'Gujarath')%>                      <%= state_clear('Gujarath') %></p>
+<p><%= state_sel('Delhi', 'Delhi') %>                           <%= state_clear('Delhi') %></p>
+<p><%= state_sel('Tamil Nadu', 'Tamil Nadu') %>                 <%= state_clear('Tamil Nadu') %></p>
+<p><%= state_sel('Maharastra', 'Maharastra') %>                 <%= state_clear('Maharastra') %></p>
+<p><%= state_sel('Kolkata', 'Kolkata') %>                       <%= state_clear('Kolkata') %></p>
+
+  <br/><br/>
+
+  <% unless session[:s_qry_ary] .blank?  %>
+
+  <h5>Recent searches</h5>
+  <p><% session[:s_qry_ary].uniq.each do |q| %>
+     <%= link_to q.join(" "), params.except( :property_type,:bedrooms,:city,:state,:price_min,:price_max,:area_min,:area_max).merge(:what => q[0], :where => q[1]) %><br/>
+     <% end %>
+  </p>
+
+   <% end %>
+
+ </span>
+

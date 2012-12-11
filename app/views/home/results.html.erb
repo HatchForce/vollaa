@@ -1,0 +1,63 @@
+<%#= (page_entries_info @results).methods %>
+<%#= session %>
+<div class="page-header" style="margin-top: 0;">
+  <%= render :partial => 'regular_search' %>
+  <!--<b>Search Results</b>-->
+</div>
+<div class="row">
+  <div class="span25" style="border-right: 1px solid rgb(215, 219, 224);">
+    <%= render :partial => 'side_nav' %>
+  </div>
+
+  <div class="span7">
+    <div class=" footer ads">
+      Your Ads Here
+    </div>
+    <br/>
+
+    <div class="results_data">
+      <div class="will_paginate">
+        <div class="page_info">
+          <%= page_entries_info @results %>
+        </div>
+      </div>
+
+      <div class="sort_links nav nav-pills">
+        <b> Sort By :</b><br/>
+        <li> <%= sortable('property_price', 'Price    ') %>  </li>
+        <li> <%= sortable 'city', 'Location ' %>  </li>
+        <li> <%= sortable 'property_type', 'Type     ' %>  </li>
+        <li> <%= sortable 'source', 'Publisher' %>  </li>
+        <li><%= sortable 'created_at', 'Date    ' %>  </li>
+      </div>
+
+      <div class="results">
+        <%= render :partial => 'result', :collection => @results %>
+      </div>
+      <div class="results_footer">
+        <%= will_paginate @results, :class => 'will_paginate' %>
+      </div>
+    </div>
+    <div class="footer ads">
+      Your Ads Here
+    </div>
+  </div>
+  <div class="span2">Volla Ads
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+  </div>
+</div>
+
+<div id="email_form">
+  <h3>Send Property Details</h3>
+  <br>
+  <%= form_tag '/home/send_details', :remote => true, :method => :post, :class => 'send_details_form', :id => 'email_submit' do %>
+      <%= label_tag :emails, "Enter email address comma separated " %>
+      <%= text_area_tag :emails, "", :style => 'width:300px;height:60px;' %>
+      <%= hidden_field_tag :property_id %>
+      <br>
+      <%= submit_tag :Send, :class => 'btn btn-primary', :id => 'mail_submit_form' %>
+      <%= link_to 'Close', "#", :class => 'btn', :onclick => '$.fancybox.close();return false;' %>
+  <% end %>
+</div>

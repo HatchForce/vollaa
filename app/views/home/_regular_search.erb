@@ -1,0 +1,46 @@
+<%= form_tag 'results', :method => :get, :class => 'search_form' do %>
+
+    <div class="row form-line" style="padding-left: 250px;">
+      <%#= image_tag("index.jpeg", :size => "150x50", :alt => "Vollaa") %>
+
+      <div class="span3 form-inline ">
+        <%= label_tag :what %>
+        <br/>
+        <%= text_field_tag :what,params[:what].nil?? "" : params[:what] %>
+      </div>
+      <div class="span3 form-inline">
+        <%= label_tag :where %>
+        <br/>
+        <%= text_field_tag :where, params[:where].nil?? "":params[:where] %>
+      </div>
+      <div class="span3 form-inline" style="padding-bottom: 20px; padding-top: 5px;">
+        <%#= label_tag :search %> <br/>
+        <%= submit_tag :search, :class => 'btn btn-block btn-primary span2' %>
+      </div>
+    </div>
+    <div class="span11 form-inline" style="padding-left: 80px;">
+      <%= label_tag 'search or select area' %>
+      <%= text_field_tag :prop_desc, params[:prop_desc].nil?? "" : params[:prop_desc] %>
+      <span style="color: #A0A0A0;  padding-left: 20px;">
+      Indira Park(8383)
+      Gachibowli(23240)
+      Himayathnagar(2343)
+      Madhapur(37773) <br/>
+      <span style="padding-left: 385px;">
+      Banjara Hills(33992)
+      Shamshabad(2323)
+      Kukatpally(6563)
+        <%= link_to 'more', "#" %>
+        </span>
+      </span>
+    </div> <br/>  <br/><br/>
+    <div style="padding-left: 400px; padding-bottom: 0px; padding-top: 0px;">
+      <label class="radio inline" style="padding-left: 50px;">
+        <%= radio_button_tag :property_for, "buy" %>Buy</label>
+      <label class="radio inline" style="padding-left: 50px;">
+        <%= radio_button_tag :property_for, "sale" %>Sale</label>
+      <label class="radio inline" style="padding-left: 50px;">
+        <%= radio_button_tag :property_for, "rent" %>Rent</label>
+    </div>
+<% end %>
+
