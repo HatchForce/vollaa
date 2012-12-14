@@ -15,6 +15,6 @@
     :in_groups_of,
     :blank?,
     :[],
-    :to => :results)
+    :to => :view_results)
 
 end

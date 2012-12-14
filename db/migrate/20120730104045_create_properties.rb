@@ -16,6 +16,7 @@ class CreateProperties < ActiveRecord::Migration
       t.date :last_update
       t.string :more_link
       t.string :source
+      t.string :local_area
 
       t.timestamps
     end

@@ -1,4 +1,5 @@
 <div class="result">
+
   <%= hidden_field_tag 'property_id', result.id %>
   <div class="result_heading">
     <%= link_to result.property_title, vollaa_property_show_path(result.id), :target => '_blank' %> (<%= result.property_for %>)

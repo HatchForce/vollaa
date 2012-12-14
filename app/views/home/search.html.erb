@@ -1,38 +1,44 @@
 <%= form_tag 'home/results', :method => :get, :class => 'search_form' do %>
 
-    <div class="span2 side_nav">
-      <label class="radio"><%= radio_button_tag :property_for, "buy" %>Buy</label><br/><br/>
-      <label class="radio"><%= radio_button_tag :property_for, "rent" %>Rent</label>
+    <%= image_tag("index.jpeg", :size => "330x130", :alt => "Vollaa", :style => "padding-bottom: 20px;") %>
+
+    <%# link_to "Update Profile", new_profile_path if ((current_user.sign_in_count).to_i == 1) %>
+
+    <div class="btn-group offset4" data-toggle="buttons-radio">
+      <%= button_tag :Buy, :class=>"btn span2", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('buy');" %>
+      <%= button_tag :Rent,:class=>"btn span2", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('rent');" %>
     </div>
-    <div style="width: 900px;margin: 0 auto;">
+    <%= hidden_field_tag :property_for, '', :id => 'property_for'  %>
+
+
+    <!--<div class="span2 side_nav">-->
+      <!--<label class="radio"><%= radio_button_tag :property_for, "buy" %>Buy</label><br/><br/>-->
+      <!--<label class="radio"><%= radio_button_tag :property_for, "rent" %>Rent</label>-->
+    <!--</div>-->
+
+    <div style="width: 1000px;margin: 0 auto;">
       <div class="search_box">
-
-
-        <ul class="nav nav-pills">
-          <li><label class="radio regular_search"><%= radio_button_tag 'search', '', :default => :selected %>
-            Regular </label></li>
-          <li><label class="radio advanced_search"><%= radio_button_tag 'search', '' %>Advanced </label></li>
-        </ul>
-
         <div class="row form-inline">
           <div class="span3 form-inline">
-            <%= label_tag :what %>
+            <%= label_tag :what %><br/>
             <%= text_field_tag :what %>
-            <p class="help-inline">2bhk, house</p>
+            <p class="help-inline">2bhk, home, flat, apartment </p>
           </div>
           <div class="span3 form-inline">
-            <%= label_tag :where %>
+            <%= label_tag :where %><br/>
             <%= text_field_tag :where %>
             <p class="help-inline">city, state</p>
           </div>
-          <div class="span form-inline" style="padding-bottom: 20px;">
-            <%#= label_tag :search, raw("&nbsp;") %>
+          <div class="span form-inline" style="padding-bottom: 20px;"> <br/>
             <%= submit_tag :search, :class => 'btn btn-primary' %>
           </div>
         </div>
-        <div class="for_hide" style="padding-top: 118px;color: #ffffff;">Advanced search</div>
+          <br/>
+        <div class="for_hide" style="padding-bottom: 171px;color: #ffffff;"> <br/>
+          <%= link_to "Advanced", "#", class: 'advanced_search' %>
+        </div>
         <div class="row">
-          <div class="adv_search"  style="padding-left: 70px;">
+          <div class="adv_search"  style="padding-left: 30px;">
             <%= render :partial => 'adv_search' %>
           </div>
         </div>

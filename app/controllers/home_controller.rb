@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
+
   include HomeHelper
-  caches_action :results
+  #caches_action :results
 
   def index
 
@@ -15,15 +16,16 @@ class HomeController < ApplicationController
   end
 
   def results
-   @properties = Property.all
-   session[:query] = params[:what], params[:where] if params[:what].present? || params[:what].present?
 
-   $s_qry = [] if session[:s_qry_ary].nil?
+    @properties = Property.all
+    session[:query] = params[:what], params[:where] if params[:what].present? || params[:what].present?
 
-    session[:s_qry_ary] = ($s_qry.push session[:query]).uniq if session[:query].present?
+    $s_qry = [] if session[:s_qry_ary].nil?
+    #$s_qry.push [params[:what], params[:where]] if params[:what].present? || params[:what].present?
+    session[:s_qry_ary] = ($s_qry = $s_qry.uniq) if $s_qry.present?
 
-   search = Property.search do
-      fulltext params['what'] + ' OR ' + params['where'] if params['where'].present?
+    search = Property.search do
+      fulltext (params['what']. present?? params['what'] : "") + ' ' + (params['where'].present?? params['where'] : "")
 
       facet :property_type, :bedrooms, :property_price, :city, :state, :built_up_area, :property_for
 
@@ -52,15 +54,21 @@ class HomeController < ApplicationController
       order_by params[:sort], params[:direction] if params[:sort].present?
     end
 
-   #sort_by('xx','zz')
+    #sort_by('xx','zz')
 
-   @results = search.results
+    @results = search.results
 
-   search.facet(:property_type).rows.each do |facet|
+    search.facet(:property_type).rows.each do |facet|
       @value = facet.value
       @count = facet.count
-   end
+    end
   end
+
+
+  def view_results
+    self.results
+  end
+
 
   def send_details
     property_id = params[:property_id]
@@ -73,11 +81,11 @@ class HomeController < ApplicationController
     end
   end
 
-  private
-
-
-  def sort_by(sort,direction)
-    order_by sort, direction
+  def revert_recent
+    $s_qry = []
+    session[:s_qry_ary] = ''
+    #session[:query] = ''
+    render :json => {:status => 'ok'}
   end
 
 end

@@ -2,15 +2,15 @@
 <html>
 <head>
   <title>Vollaa</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
 
-  <%= stylesheet_link_tag params[:controller]%>
-  <%= javascript_include_tag params[:controller]%>
+  <%= stylesheet_link_tag params[:controller] %>
+  <%= javascript_include_tag params[:controller] %>
   <%= csrf_meta_tags %>
-  
+
   <%= javascript_tag do %>
-    var params = <%= raw params.to_json %>;
+      var params = <%= raw params.to_json %>;
   <% end %>
 </head>
 <body>
@@ -19,26 +19,40 @@
     <div class="navbar-inner">
       <div class="container">
         <a href="/" class="brand">Vollaa</a>
+
         <div class="nav-collapse">
           <ul class="nav pull-right">
-            <li><a href="#">Sign In</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <% if !(user_signed_in? || present_user)  %>
+
+                <li><%= link_to "Sign in with Facebook  /", "/auth/facebook", id: "sign_in",style: "padding-left: 10px; padding-top: 10px;" %></li>
+                <li><%= link_to "Sign in  /", user_session_path, style: "padding-left: 10px; padding-top: 10px;" %></li>
+                <li><%= link_to "Sign Up", new_user_session_path, style: "padding-left: 10px; padding-top: 10px;" %></li>
+            <% elsif user_signed_in? && !present_user %>
+                <li style = "padding-left: 10px; padding-top: 10px;">Welcome <%= current_user.email %></li>
+                <li><%= link_to "Sign Out", destroy_user_session_path, :style =>"padding-left: 10px; padding-top: 10px;" %></li>
+            <% elsif present_user %>
+                <li style ="padding-left: 10px; padding-top: 10px;">Signed in as <strong><%= current_user.name %>   </strong>!
+                <li><%= link_to "Sign out", signout_path, id: "sign_out", style: "padding-left: 10px; padding-top: 10px;" %></li>
+            <% end %>
           </ul>
         </div>
       </div>
+
     </div>
   </div>
 </div>
 <div class="content container">
   <% flash.each do |name, msg| %>
-    <%= content_tag :div, :id => "flash_#{name}", :class => "alert alert-#{name}" do %>
-      <a class="close" data-dismiss="alert">&times;</a>
-      <%= raw msg %>
-    <% end %>
+      <%= content_tag :div, :id => "flash_#{name}", :class => "alert alert-#{name}" do %>
+          <a class="close" data-dismiss="alert">&times;</a>
+          <%= raw msg %>
+      <% end %>
   <% end %>
+
   <%= content_tag :div, "data-page-action" => page_action, "data-page-controller" => page_controller do %>
-    <%= yield %>
+      <%= yield %>
   <% end %>
+
 </div>
 <div class="footer container">
   <div class="footer_links">

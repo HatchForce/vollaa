@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+   <br/><br/><br/>
+<table class="table table-bordered table-hover">
+  <tr><th>Name</th><td><%= @profile.first_name %> <%= @profile.last_name %></td></tr>
+  <tr><th>Date of Birth</th><td><%= @profile.dob %></td></tr>
+  <tr><th>Contact Number</th><td><%= @profile.contact_number %></td></tr>
+  <tr><th>Address</th><td><%= @profile.address %></td></tr>
+</table>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profile_index_path %>

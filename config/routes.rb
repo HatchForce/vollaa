@@ -1,5 +1,12 @@
 Vollaa::Application.routes.draw do
 
+  devise_for :users, :controller => {:OmniauthCallback => "user/OmniauthCallback"}
+
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :profile
 
   match 'vollaa_property_:id' => 'properties#vollaa_property_show', :as => 'vollaa_property_show'
   resources :properties do
@@ -22,6 +29,8 @@ Vollaa::Application.routes.draw do
       get 'contact'
       get 'about'
       get 'terms'
+      get 'view_results'
+      post 'revert_recent'
     end
   end
 

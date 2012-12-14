@@ -1,0 +1,36 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <br/><br/>
+    <div class= "form-inline">
+
+    <%#= f.label "First Name" %>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+
+    <%#= f.label "Last Name" %>
+    <%= f.text_field :last_name, placeholder: "Last Name"%>
+    </div> <br/><br/>
+    <div class= "form-inline">
+    <%#= f.label "Date of Birth" %>
+    <%= f.text_field :dob, placeholder: "Date Of Birth" %>
+
+    <%#= f.label "Contact" %>
+    <%= f.text_field :contact_number, placeholder: "Contact Number" %>
+    </div> <br/><br/>
+    <%#= f.label "Address" %>
+    <%= f.text_area :address, placeholder: "Communication address", :row => "6x10" %>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

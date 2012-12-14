@@ -9,10 +9,12 @@ gem 'progress_bar'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'will_paginate', '~> 3.0.0'
+gem 'pg'
+gem "mechanize", "~> 2.5.1"
+gem "devise", "~> 2.1.2"
 
 gem 'mysql2', '0.3.11'
 
-gem 'devise', "~> 2.1.2"
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'

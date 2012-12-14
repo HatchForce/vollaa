@@ -1,10 +1,14 @@
 
 /* Search */
 .search_box {
-  padding-left: 50px;
+  padding-left: 250px;
   height: 400px;
   display: table-cell;
   vertical-align: middle;
+  home_image{
+    padding-bottom: 20px;
+    padding-left: 50px;
+  }
 }
 
 .regular_search{
@@ -12,7 +16,7 @@
 }
 
 .advanced_search{
-  padding-left: 150px;
+  padding-left: 300px;
 }
 
 .search_form {
@@ -64,6 +68,14 @@
 
   .property_links {
 
+  }
+}
+
+.reg_search{
+  .image{
+    float: left;
+    padding-right: 50px;
+    padding-left: 30px;
   }
 }
 

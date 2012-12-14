@@ -1,51 +1,45 @@
-<%#= (page_entries_info @results).methods %>
+<%#= (page_entries_info @view_results).methods %>
 <%#= session %>
 <div class="page-header" style="margin-top: 0;">
   <%= render :partial => 'regular_search' %>
   <!--<b>Search Results</b>-->
 </div>
 <div class="row">
-  <div class="span25" style="border-right: 1px solid rgb(215, 219, 224);">
+  <div class="span25">
     <%= render :partial => 'side_nav' %>
   </div>
 
-  <div class="span7">
+  <div class="span10">
     <div class=" footer ads">
       Your Ads Here
     </div>
     <br/>
-
-    <div class="results_data">
-      <div class="will_paginate">
-        <div class="page_info">
-          <%= page_entries_info @results %>
-        </div>
-      </div>
-
-      <div class="sort_links nav nav-pills">
-        <b> Sort By :</b><br/>
-        <li> <%= sortable('property_price', 'Price    ') %>  </li>
-        <li> <%= sortable 'city', 'Location ' %>  </li>
-        <li> <%= sortable 'property_type', 'Type     ' %>  </li>
-        <li> <%= sortable 'source', 'Publisher' %>  </li>
-        <li><%= sortable 'created_at', 'Date    ' %>  </li>
-      </div>
-
-      <div class="results">
-        <%= render :partial => 'result', :collection => @results %>
-      </div>
-      <div class="results_footer">
-        <%= will_paginate @results, :class => 'will_paginate' %>
-      </div>
-    </div>
+   <div class="view_results" >
+    <%= render :partial => 'view_results' %>
+   </div>
     <div class="footer ads">
       Your Ads Here
     </div>
   </div>
-  <div class="span2">Volla Ads
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/>
+  <div class="span3">Volla Ads<br/><br/><br/>
+    <%= link_to "Real estate - OLX" %><br/>
+    <span style="color: #4B964A;">www.olx.in/</span>
+    100% free classifieds. Apartments
+    for sale/rent on OLX. Find it now!
+    312 people +1'd this page <br/>  <br/>
+
+    <%= link_to "Real Estate " %><br/>
+    <span style="color: #4B964A;">www.freeads.in/Real_Estate</span>
+    Looking for Property? Buy, Sell &
+    Rent Property in Hyderabad <br/> <br/>
+
+    <%= link_to "Real Estate Kolkata" %> <br/>
+      <span style="color: #4B964A;">www.nkrealtors.com/</span>
+    your search for flats,office,land,
+    bunglows and showrooms ends here
+    New Melbourne Properties  <br/>  <br/>
+
+    See your ad here »
   </div>
 </div>
 

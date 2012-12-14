@@ -25,4 +25,12 @@ module ApplicationHelper
     end
   end
 
+  def sel_param(param)
+    (params[param].present?? params[param] : "") if !params[param].nil?
+  end
+
+  def radio_param(param, value)
+    radio_button_tag param, value,(params[param => value].present?? {:checked => true} : {:checked => false})
+  end
+
 end

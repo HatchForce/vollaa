@@ -1,32 +1,32 @@
-<%= form_tag 'results', :method => :get, :class => 'search_form' do %>
+<%= form_tag 'results', :method => :get, :class => 'search_form'  do %>
 
-    <div class="row form-line" style="padding-left: 250px;">
-      <%#= image_tag("index.jpeg", :size => "150x50", :alt => "Vollaa") %>
+    <div class="row form-line reg_search">
+      <%= link_to image_tag("index.jpeg", :size => "170x100", :alt => "Vollaa", class: 'image'), root_path %>
 
       <div class="span3 form-inline ">
         <%= label_tag :what %>
         <br/>
-        <%= text_field_tag :what,params[:what].nil?? "" : params[:what] %>
+        <%= text_field_tag :what,sel_param(:what) %>
       </div>
       <div class="span3 form-inline">
         <%= label_tag :where %>
         <br/>
         <%= text_field_tag :where, params[:where].nil?? "":params[:where] %>
       </div>
-      <div class="span3 form-inline" style="padding-bottom: 20px; padding-top: 5px;">
+      <div class="span2 form-inline" style="padding-bottom: 20px; padding-top: 5px;">
         <%#= label_tag :search %> <br/>
-        <%= submit_tag :search, :class => 'btn btn-block btn-primary span2' %>
+        <%= submit_tag :search, :class => 'btn btn-block btn-primary span2 search_btn'%>
       </div>
     </div>
-    <div class="span11 form-inline" style="padding-left: 80px;">
+    <div class="span11 form-inline" style="padding-left: 30px; padding-top: 10px;">
       <%= label_tag 'search or select area' %>
+      <span style="color: #A0A0A0;  padding-left: 60px;">
       <%= text_field_tag :prop_desc, params[:prop_desc].nil?? "" : params[:prop_desc] %>
-      <span style="color: #A0A0A0;  padding-left: 20px;">
       Indira Park(8383)
       Gachibowli(23240)
       Himayathnagar(2343)
-      Madhapur(37773) <br/>
-      <span style="padding-left: 385px;">
+      <br/>
+      <span style="padding-left: 424px;">
       Banjara Hills(33992)
       Shamshabad(2323)
       Kukatpally(6563)
@@ -36,11 +36,11 @@
     </div> <br/>  <br/><br/>
     <div style="padding-left: 400px; padding-bottom: 0px; padding-top: 0px;">
       <label class="radio inline" style="padding-left: 50px;">
-        <%= radio_button_tag :property_for, "buy" %>Buy</label>
+        <%= radio_button_tag :property_for, "buy", params[:property_for => "buy"]? {:checked => true} : {:checked => false} %>Buy</label>
       <label class="radio inline" style="padding-left: 50px;">
-        <%= radio_button_tag :property_for, "sale" %>Sale</label>
+        <%= radio_button_tag :property_for, "sale", params[:property_for => "sale"]? {:checked => true} : {:checked => false} %>Sale</label>
       <label class="radio inline" style="padding-left: 50px;">
-        <%= radio_button_tag :property_for, "rent" %>Rent</label>
+        <%= radio_button_tag :property_for, "rent", params[:property_for => "rent"]? {:checked => true} : {:checked => false} %>Rent</label>
     </div>
 <% end %>
 

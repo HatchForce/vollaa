@@ -9,8 +9,8 @@ module HomeHelper
   end
 
 
-  def bedroom_sel(value)
-    link_to value, params.merge(:bedrooms => value), :class => ((params[:bedrooms]).to_i == value)? "sel_nav" : ""
+  def bedroom_sel(name,value)
+    link_to name, params.merge(:bedrooms => value), :class => ((params[:bedrooms]).to_i == value)? "sel_nav" : ""
   end
 
   def bed_clear(value)
@@ -69,7 +69,7 @@ module HomeHelper
     title ||= column.titleize
     css_class = column == sort_column ? "current #{sort_direction}" : ''
     direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
-    link_to title, {:sort => column, :direction => direction}, {:class => css_class}
+    link_to title, params.merge(:sort => column, :direction => direction ), {:class => css_class}
   end
 
 
