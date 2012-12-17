@@ -1,11 +1,11 @@
 module HomeHelper
 
   def type_sel(name,value)
-    link_to name, params.merge(:property_type => value), :class => ((params[:property_type]) == value)? "sel_nav" : ""
+    link_to name, params.merge(:property_type => value), :class => ((params[:property_type]) == value)? "sel_nav type_link" : "type_link"
   end
 
   def type_clear(value)
-    ((params[:property_type]) == value)? (link_to 'Clear', params.except(:property_type), class: 'nav_clear') : ''
+    ((params[:property_type]) == value)? (link_to 'Clear', params.except(:property_type), class: 'nav_clear type_link') : ''
   end
 
 
@@ -72,5 +72,14 @@ module HomeHelper
     link_to title, params.merge(:sort => column, :direction => direction ), {:class => css_class}
   end
 
+  def property_for_radio_btn(value)
+    selected_radio = params[:property_for]
+
+    if selected_radio == value
+      radio_button_tag(:property_for, "#{value}", :checked => true)
+    else
+      radio_button_tag(:property_for, "#{value}")
+    end
+  end
 
 end

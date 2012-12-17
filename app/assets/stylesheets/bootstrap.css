@@ -289,7 +289,7 @@ a:hover {
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   /*width: 940px;commented by ashwin*/
-    width: 1200px
+    width: 1200px   /*added by ashwin*/
 }
 
 .span12 {

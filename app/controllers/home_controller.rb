@@ -18,10 +18,10 @@ class HomeController < ApplicationController
   def results
 
     @properties = Property.all
-    session[:query] = params[:what], params[:where] if params[:what].present? || params[:what].present?
+    session[:query] = params[:what], params[:where] if params[:what].present? || params[:where].present?
 
     $s_qry = [] if session[:s_qry_ary].nil?
-    #$s_qry.push [params[:what], params[:where]] if params[:what].present? || params[:what].present?
+    $s_qry.push [params[:what], params[:where]] if params[:what].present? || params[:where].present?
     session[:s_qry_ary] = ($s_qry = $s_qry.uniq) if $s_qry.present?
 
     search = Property.search do
@@ -66,6 +66,10 @@ class HomeController < ApplicationController
 
 
   def view_results
+    self.results
+  end
+
+  def side_nav
     self.results
   end
 

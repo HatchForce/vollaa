@@ -31,6 +31,7 @@ Vollaa::Application.routes.draw do
       get 'terms'
       get 'view_results'
       post 'revert_recent'
+      get 'side_nav'
     end
   end
 

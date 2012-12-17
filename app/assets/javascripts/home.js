@@ -28,21 +28,42 @@ $(function(){
       $(".adv_search").show();
    });
 
-  $(".remove_recent").click(function(){
+  $(".remove_recent").live('click',function(){
    $(".recent").remove();
       $.post('/home/revert_recent')
       return false;
     });
 
-
-
     $('.search_btn').click(function() {
-
         var what = $('#what').val();
         var where = $('#where').val();
         $('radios').change(function(){});
         var selected_btn = $('input[name=property_for]:checked').val();
-        $.get('/home/view_results',{what:what,where:where,property_for:selected_btn});
+        var send_params = {what:what,where:where,property_for:selected_btn}
+        $.get('/home/side_nav',send_params);
+        $.get('/home/view_results',send_params);
+        return false;
+    });
+
+    $.extend({
+        getUrlVars: function(){
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++)
+            {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        },
+        getUrlVar: function(name){
+            return $.getUrlVars()[name];
+        }
+    });
+
+    $('.type_link').bind('click',function(){
+        //filter links
         return false;
     });
 });

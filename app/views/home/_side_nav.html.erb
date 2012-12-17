@@ -1,9 +1,20 @@
 <%#= debug session[:s_qry_ary] %>
 
 <span class="filter_nav" >
-  <p><%= ( params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max] ).nil?? '' : (link_to 'Remove All',params.except( :property_type,:bedrooms,:city,:state,:price_min,:price_max,:area_min,:area_max), class: 'nav_clear') %></p>
+     <% unless session[:s_qry_ary] .blank?  %>
+         searching <%= session[:s_qry_ary].last[0] %><br/> in <%= session[:s_qry_ary].last[1] %> <br/><br/>
+   <div class="recent">
+     <p><b>Recent searches</b><br/><%= link_to "Remove", "#",class: 'nav_clear remove_recent' %></p>
+     <p><% session[:s_qry_ary].uniq.each_with_index do |q, i = 0| %>
+           <% unless (i == (session[:s_qry_ary].length - 1)) %>
+               <%= link_to q.join(" "), params.except( :property_type,:bedrooms,:city,:state,:price_min,:price_max,:area_min,:area_max).merge(:what => q[0], :where => q[1]) %><br/>
+           <% end %>
+       <% end %></p>
+   </div>
+     <% end %>
 
   <br/>
+  <p><%= ( params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max] ).nil?? '' : (link_to 'Remove All',params.except( :property_type,:bedrooms,:city,:state,:price_min,:price_max,:area_min,:area_max), class: 'nav_clear') %></p>
 <h5>Type</h5>
 <p><%= type_sel('Plots','Plot') %>                              <%= type_clear('Plot')%></p>
 <p><%= type_sel('Non-Layout Land','Non-Layout Land') %>         <%= type_clear('Non-Layout Land')%></p>
@@ -51,13 +62,6 @@
 <p><%= state_sel('Kolkata', 'Kolkata') %>                       <%= state_clear('Kolkata') %></p>
 
   <br/><br/>
- <div class="recent">
-  <% unless session[:s_qry_ary] .blank?  %>
-  <p><b>Recent searches</b><%= link_to "Remove", "#",class: 'nav_clear remove_recent' %></p>
-  <p><% session[:s_qry_ary].uniq.each do |q| %>
-     <%= link_to q.join(" "), params.except( :property_type,:bedrooms,:city,:state,:price_min,:price_max,:area_min,:area_max).merge(:what => q[0], :where => q[1]) %><br/>
-     <% end %>
-     <% end %></p>
- </div>
+
  </span>
 

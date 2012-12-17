@@ -3,8 +3,8 @@
     <%= image_tag("index.jpeg", :size => "330x130", :alt => "Vollaa", :style => "padding-bottom: 20px;") %>
 
     <%# link_to "Update Profile", new_profile_path if ((current_user.sign_in_count).to_i == 1) %>
-
-    <div class="btn-group offset4" data-toggle="buttons-radio">
+     <br/>
+    <div class="btn-group offset5" data-toggle="buttons-radio">
       <%= button_tag :Buy, :class=>"btn span2", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('buy');" %>
       <%= button_tag :Rent,:class=>"btn span2", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('rent');" %>
     </div>
@@ -16,7 +16,7 @@
       <!--<label class="radio"><%= radio_button_tag :property_for, "rent" %>Rent</label>-->
     <!--</div>-->
 
-    <div style="width: 1000px;margin: 0 auto;">
+    <div style="width: 1045px;margin: 0 auto;">
       <div class="search_box">
         <div class="row form-inline">
           <div class="span3 form-inline">
@@ -29,7 +29,7 @@
             <%= text_field_tag :where %>
             <p class="help-inline">city, state</p>
           </div>
-          <div class="span form-inline" style="padding-bottom: 20px;"> <br/>
+          <div class="span form-inline" style="padding-bottom: 20px;padding-top: 5px;"> <br/>
             <%= submit_tag :search, :class => 'btn btn-primary' %>
           </div>
         </div>
