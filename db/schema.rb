@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20121213090332) do
     t.date     "dob"
     t.string   "address"
     t.integer  "contact_number"
+    t.string   "image"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end
@@ -47,7 +48,6 @@ ActiveRecord::Schema.define(:version => 20121213090332) do
   add_index "properties", ["more_link"], :name => "index_properties_on_more_link", :unique => true
 
   create_table "users", :force => true do |t|
-    t.integer  "profile_id"
     t.string   "provider"
     t.string   "uid"
     t.string   "name"

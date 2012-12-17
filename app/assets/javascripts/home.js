@@ -62,8 +62,8 @@ $(function(){
         }
     });
 
-    $('.type_link').bind('click',function(){
-        //filter links
-        return false;
-    });
+//    $('.type_link').bind('click',function(){
+//        //filter links
+//        return false;
+//    });
 });

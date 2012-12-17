@@ -8,6 +8,7 @@ class CreateProfile < ActiveRecord::Migration
       t.date   :dob
       t.string :address
       t.integer :contact_number
+      t.string :image
       t.timestamps
     end
   end

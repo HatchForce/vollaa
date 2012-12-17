@@ -12,6 +12,8 @@ gem 'will_paginate', '~> 3.0.0'
 gem 'pg'
 gem "mechanize", "~> 2.5.1"
 gem "devise", "~> 2.1.2"
+gem "carrierwave", "~> 0.7.1"
+gem "rmagick"
 
 gem 'mysql2', '0.3.11'
 
@@ -22,7 +24,6 @@ gem "omniauth-openid", "~> 1.0.1"
 gem 'oa-openid'
 gem 'twitter_oauth'
 gem 'fb_graph'
-gem 'carrierwave'
 gem 'browser'
 gem 'premailer-rails3'
 gem 'meta-tags', :require => 'meta_tags'

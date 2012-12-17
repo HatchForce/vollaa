@@ -4,7 +4,7 @@
 
     <%# link_to "Update Profile", new_profile_path if ((current_user.sign_in_count).to_i == 1) %>
      <br/>
-    <div class="btn-group offset5" data-toggle="buttons-radio">
+    <div class="btn-group offset4" data-toggle="buttons-radio">
       <%= button_tag :Buy, :class=>"btn span2", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('buy');" %>
       <%= button_tag :Rent,:class=>"btn span2", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('rent');" %>
     </div>

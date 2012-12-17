@@ -33,4 +33,6 @@ module ApplicationHelper
     radio_button_tag param, value,(params[param => value].present?? {:checked => true} : {:checked => false})
   end
 
+  #@profile_path =  profile_path(:user_id => current_user.id) || new_profile_path(:user_id => current_user.id)
+
 end

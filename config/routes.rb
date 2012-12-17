@@ -15,11 +15,12 @@ Vollaa::Application.routes.draw do
     end
   end
   
-  resource :profile do 
-    collection do
-      get 'index'
-    end
-  end
+  #resource :profile do
+  #  collection do
+  #    get 'index'
+  #    get 'show'
+  #  end
+  #end
 
   resource :home do
     collection do
