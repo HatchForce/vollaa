@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   end
 
   def results
-
+     #raise params.to_yaml
     @properties = Property.all
     session[:query] = params[:what], params[:where] if params[:what].present? || params[:where].present?
 
@@ -24,7 +24,7 @@ class HomeController < ApplicationController
     $s_qry.push [params[:what], params[:where]] if params[:what].present? || params[:where].present?
     session[:s_qry_ary] = ($s_qry = $s_qry.uniq) if $s_qry.present?
 
-    search = Property.search do
+    @search = Property.search do
       fulltext (params['what']. present?? params['what'] : "") + ' ' + (params['where'].present?? params['where'] : "")
 
       facet :property_type, :bedrooms, :property_price, :city, :state, :built_up_area, :property_for
@@ -56,9 +56,9 @@ class HomeController < ApplicationController
 
     #sort_by('xx','zz')
 
-    @results = search.results
+    @results = @search.results
 
-    search.facet(:property_type).rows.each do |facet|
+    @search.facet(:property_type).rows.each do |facet|
       @value = facet.value
       @count = facet.count
     end

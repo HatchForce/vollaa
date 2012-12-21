@@ -1,16 +1,18 @@
 <div class="results_data">
-  <div class="will_paginate">
-    <div class="page_info">    <%#= raise @results.to_yaml %>
-      <%= page_entries_info @results %>
-    </div>
-  </div>
+
   <div class="sort_links nav nav-pills">
-    <b> Sort By :</b><br/>
+    <b style="float: left; padding-top: 27px;"> Sort By :</b><br/>
     <li> <%= sortable('property_price', 'Price    ') %>  </li>
     <li> <%= sortable 'city', 'Location ' %>  </li>
     <li> <%= sortable 'property_type', 'Type     ' %>  </li>
     <li> <%= sortable 'source', 'Publisher' %>  </li>
     <li><%= sortable 'created_at', 'Date    ' %>  </li>
+
+    <div class="will_paginate" style="padding-top: 7px;">
+      <div class="page_info">    <%#= raise @results.to_yaml %>
+        <%= page_entries_info @results %>
+      </div>
+    </div>
   </div>
 
   <div class="results">

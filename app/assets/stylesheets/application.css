@@ -12,6 +12,7 @@
  *= require bootstrap
  *= require jquery.fancybox
  *= require_self
+ *= require solr-autocomplete/jquery.autocomplete
  */
 
 body {
@@ -121,18 +122,20 @@ body {
 }
 
 .will_paginate .page_info {
-  background: #2e6ab1;
-  color: white;
-  padding: 0.4em 0.6em;
+  /*background: #2e6ab1;*/
+  /*color: white;*/
+  /*padding: 0.4em 0.6em;*/
   /*width: 22em;*/
-  margin-bottom: 0.3em;
-  text-align: center;
+  /*margin-bottom: 0.3em;*/
+  /*text-align: center;*/
+    color: #89CDE4;
+    margin-bottom: 0.3em;
+    text-align: center;
 }
 
 .will_paginate .page_info b {
-  color: #000033;
-  background: #6aa6ed;
-  padding: 0.1em 0.25em;
+    color: #38B2DA;
+    padding: 0.1em 0.25em;
 }
 
 .will_paginate:after {

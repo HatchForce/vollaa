@@ -1,5 +1,5 @@
 /*
- *  This part of the library is extended from jQuery Autocomplete plugin by Jörn Zaefferer 
+// *  This part of the library is extended from jQuery Autocomplete plugin by Jï¿½rn Zaefferer
  */
 
 

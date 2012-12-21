@@ -10,6 +10,12 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_one :profile
+  after_create :after_signup
+
+  def after_signup
+    # self.email.to_yaml
+Profile.create({:user_id => self.id})
+  end
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

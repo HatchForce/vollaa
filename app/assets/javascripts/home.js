@@ -13,6 +13,11 @@ $(function(){
     return false;
   });
 
+    $(".save_prop").click(function(){
+        $("#save_property_#{result.id}").slideToggle();
+        return false;
+    });
+
   $('#email_submit').submit(function(){
     $.fancybox.close();
     return true;
@@ -34,16 +39,21 @@ $(function(){
       return false;
     });
 
-    $('.search_btn').click(function() {
-        var what = $('#what').val();
-        var where = $('#where').val();
-        $('radios').change(function(){});
-        var selected_btn = $('input[name=property_for]:checked').val();
-        var send_params = {what:what,where:where,property_for:selected_btn}
-        $.get('/home/side_nav',send_params);
-        $.get('/home/view_results',send_params);
-        return false;
-    });
+//    $('.price').click(function(){$(".p").animate({width:'toggle'},5); });
+//    $('.type').click(function(){$(".tp").animate({width:'toggle'},1); });
+
+//  regular_search working ajax  start
+//    $('.search_btn').click(function() {
+//        var what = $('#what').val();
+//        var where = $('#where').val();
+//        $('radios').change(function(){});
+//        var selected_btn = $('input[name=property_for]:checked').val();
+//        var send_params = {what:what,where:where,property_for:selected_btn}
+//        $.get('/home/side_nav',send_params);
+//        $.get('/home/view_results',send_params);
+//        return false;
+//    });
+//  regular_search working ajax  end
 
     $.extend({
         getUrlVars: function(){

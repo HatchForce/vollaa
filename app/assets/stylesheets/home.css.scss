@@ -69,6 +69,13 @@
   .property_links {
 
   }
+
+  .save_property{
+      background : #ececef;
+      width :500px;
+      height:100px;
+      display:none;
+  }
 }
 
 .reg_search{
@@ -84,6 +91,7 @@
 
   a {
     margin: 0 5px;
+    color: #848080;
   }
    .current {
       padding-right: 50px;
@@ -108,6 +116,8 @@
 }
 
 .filter_nav  {
+
+  border-right: #F2EEEE solid 1px;
   p
     {
     font-size: 12px;
@@ -126,6 +136,9 @@
       background-color: #e1e1e1;
       color: #4f4f4f;
     }
+  }
+  .recent{
+    border-bottom: 1px solid #DDD9D9;
   }
 }
 

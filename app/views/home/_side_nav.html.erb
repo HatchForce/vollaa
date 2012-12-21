@@ -1,66 +1,79 @@
-<%#= debug session[:s_qry_ary] %>
+<%#= debug @value %>
 
-<span class="filter_nav span3" >
-     <% unless session[:s_qry_ary] .blank?  %>
+<span class="filter_nav span3">
+     <% unless session[:s_qry_ary].blank? %>
          searching <%= session[:s_qry_ary].last[0] %><br/> in <%= session[:s_qry_ary].last[1] %> <br/><br/>
    <div class="recent">
-     <p><b>Recent searches</b><br/><%= link_to "Remove", "#",class: 'nav_clear remove_recent' %></p>
-     <p><% session[:s_qry_ary].uniq.each_with_index do |q, i = 0| %>
+     <p><b>Recent searches</b><%= link_to "Remove", "#", class: 'nav_clear remove_recent' %></p>
+
+     <p>
+       <% session[:s_qry_ary].uniq.each_with_index do |q, i = 0| %>
            <% unless (i == (session[:s_qry_ary].length - 1)) %>
-               <%= link_to q.join(" "), params.except( :property_type,:bedrooms,:city,:state,:price_min,:price_max,:area_min,:area_max).merge(:what => q[0], :where => q[1]) %><br/>
+               <%= link_to q.join(" "), params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max).merge(:what => q[0], :where => q[1]) %>
+               <br/>
            <% end %>
        <% end %></p>
    </div>
      <% end %>
 
   <br/>
-  <p><%= ( params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max] ).nil?? '' : (link_to 'Remove All',params.except( :property_type,:bedrooms,:city,:state,:price_min,:price_max,:area_min,:area_max), class: 'nav_clear') %></p>
-<h5>Type</h5>
-<p><%= type_sel('Plots','Plot') %>                              <%= type_clear('Plot')%></p>
-<p><%= type_sel('Non-Layout Land','Non-Layout Land') %>         <%= type_clear('Non-Layout Land')%></p>
-<p><%= type_sel('Residential','residential') %>                 <%= type_clear('residential')%></p>
-<p><%= type_sel('Flat','Flat')  %>                              <%= type_clear('Flat')%></p>
-<p><%= type_sel('Office Space','Office Space') %>               <%= type_clear('Office Space')%></p>
-<br/>
-<h5>Price</h5>
-<p><%= price_sel('Rs. 1 Lakh - 10 Lakhs', 100000,1000000) %>    <%= price_clear(100000,1000000) %></p>
-<p><%= price_sel('Rs. 10 Lakhs - 50 Lakhs', 1000000,5000000) %> <%= price_clear(1000000,5000000) %></p>
-<p><%= price_sel('Rs. 50 Lakhs - 1Cr', 5000000,10000000) %>     <%= price_clear(5000000,10000000) %></p>
-<p><%= price_sel('1Cr - 10Cr', 10000000,100000000)%>            <%= price_clear(10000000,100000000) %></p>
-<p><%= price_sel('Rs. 10Cr and more', 100000000,0)%>            <%= price_clear(100000000,0) %></p>
-<br/>
-<h5>Bedrooms</h5>
-<p><%= bedroom_sel("one",1) %>                                        <%= bed_clear(1) %></p>
-<p><%= bedroom_sel("Two",2) %>                                        <%= bed_clear(2) %></p>
-<p><%= bedroom_sel("Three",3) %>                                        <%= bed_clear(3) %></p>
-<p><%= bedroom_sel("Four",4) %>                                        <%= bed_clear(4) %></p>
-<p><%= bedroom_sel("Five",5) %>                                        <%= bed_clear(5) %></p>
-<p><%= bedroom_sel("Six",6) %>                                        <%= bed_clear(6) %></p>
-<br/>
-<h5>Area in yards</h5>
-<p><%= area_sel('< hundred', 0,100) %>                          <%= area_clear(0,100) %></p>
-<p><%= area_sel('hundred - 1 thousand', 100,1000) %>            <%= area_clear(100,1000) %></p>
-<p><%= area_sel('1 thousand - 10 thousand', 1000,10000) %>      <%= area_clear(1000,10000) %></p>
-<p><%= area_sel('10 thousand - 50 thousand', 10000,50000) %>    <%= area_clear(10000,50000) %></p>
-<p><%= area_sel('50 thousand - 1Lakh', 50000,100000) %>         <%= area_clear(50000,100000) %></p>
-<p><%= area_sel('more than 1Lakh', 100000,0) %>                 <%= area_clear(100000,0) %></p>
-<br/>
-<h5>City</h5>
-<p><%= city_sel('Hyderabad','hyderabad') %>                     <%= city_clear('hyderabad') %></p>
-<p><%= city_sel('Ahmedabad','ahmedabad') %>                     <%= city_clear('ahmedabad') %></p>
-<p><%= city_sel('Bangalore','bangalore')%>                      <%= city_clear('bangalore') %></p>
-<p><%= city_sel('Chennai','chennai') %>                         <%= city_clear('chennai') %></p>
-<p><%= city_sel('Delhi','delhi') %>                             <%= city_clear('delhi') %></p>
-<p><%= city_sel('Mumbai','mumbai') %>                           <%= city_clear('mumbai') %></p>
-<br/>
-<h5>State</h5>
-<p><%= state_sel('Andhra Pradesh','Andhra Pradesh') %>          <%= state_clear('Andhra Pradesh') %></p>
-<p><%= state_sel('Gujarath', 'Gujarath')%>                      <%= state_clear('Gujarath') %></p>
-<p><%= state_sel('Delhi', 'Delhi') %>                           <%= state_clear('Delhi') %></p>
-<p><%= state_sel('Tamil Nadu', 'Tamil Nadu') %>                 <%= state_clear('Tamil Nadu') %></p>
-<p><%= state_sel('Maharastra', 'Maharastra') %>                 <%= state_clear('Maharastra') %></p>
-<p><%= state_sel('Kolkata', 'Kolkata') %>                       <%= state_clear('Kolkata') %></p>
+  <p><%= (params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max]).nil? ? '' : (link_to 'Remove All', params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max), class: 'nav_clear') %></p>
 
+<h5><span class="type">Type</span></h5>
+  <span class="tp">
+  <% @search.facet(:property_type).rows.each do |facet| %>
+      <p><%= link_to facet.value, params.merge(:property_type => facet.value), :class => ((params[:property_type]) == facet.value) ? "sel_nav type_link" : "type_link" %>
+        ( <%= @count = facet.count %>)<%= type_clear("#{facet.value}") %></p>
+  <% end %></span>
+  <br/>
+
+<h5><span class="price">Price</span></h5>
+  <span class="p">
+<p><%= price_sel('Rs. 1 Lakh - 10 Lakhs', 100000, 1000000) %>    <%= price_clear(100000, 1000000) %></p>
+<p><%= price_sel('Rs. 10 Lakhs - 50 Lakhs', 1000000, 5000000) %> <%= price_clear(1000000, 5000000) %></p>
+<p><%= price_sel('Rs. 50 Lakhs - 1Cr', 5000000, 10000000) %>     <%= price_clear(5000000, 10000000) %></p>
+<p><%= price_sel('Rs. 1Cr - 10Cr', 10000000, 100000000) %>            <%= price_clear(10000000, 100000000) %></p>
+<p><%= price_sel('Rs. 10Cr plus', 100000000, 0) %>            <%= price_clear(100000000, 0) %></p></span>
+<br/>
+
+<h5>Bedrooms</h5>
+  <ul class="nav nav-pills nav-stacked">
+    <% @search.facet(:bedrooms).rows.each do |facet| %>
+        <% unless (facet.value == 0) %>
+            <p><%= link_to "#{facet.value}b (#{@count = facet.count})", params.merge(:bedrooms => facet.value), :class => ((params[:bedrooms]).to_i == facet.value) ? "sel_nav type_link" : "type_link" %>
+              <%= bed_clear(facet.value) %></p>
+        <% end %>
+    <% end %>
+  </ul>
+  <br/>
+
+<h5>Area in yards</h5>
+<p><%= area_sel('< hundred', 0, 100) %>                          <%= area_clear(0, 100) %></p>
+<p><%= area_sel('hundred - 1 thousand', 100, 1000) %>            <%= area_clear(100, 1000) %></p>
+<p><%= area_sel('1 thousand - 10 thousand', 1000, 10000) %>      <%= area_clear(1000, 10000) %></p>
+<p><%= area_sel('10 thousand - 50 thousand', 10000, 50000) %>    <%= area_clear(10000, 50000) %></p>
+<p><%= area_sel('50 thousand - 1Lakh', 50000, 100000) %>         <%= area_clear(50000, 100000) %></p>
+<p><%= area_sel('more than 1Lakh', 100000, 0) %>                 <%= area_clear(100000, 0) %></p>
+<br/>
+
+<h5>City</h5>
+
+  <ul class="nav nav-pills nav-stacked">
+    <% @search.facet(:city).rows.each do |facet| %>
+        <p><%= link_to facet.value, params.merge(:city => facet.value), :class => ((params[:city]) == facet.value) ? "sel_nav type_link" : "type_link" %>
+          ( <%= @count = facet.count %>)<%= city_clear("#{facet.value}") %></p>
+    <% end %>
+  </ul>
+  <br/>
+
+<h5>State</h5>
+
+  <ul class="nav nav-pills nav-stacked">
+    <% @search.facet(:state).rows.each do |facet| %>
+        <p><%= link_to facet.value, params.merge(:state => facet.value), :class => ((params[:state]) == facet.value) ? "sel_nav type_link" : "type_link" %>
+          ( <%= @count = facet.count %>)<%= state_clear("#{facet.value}") %></p>
+    <% end %>
+  </ul>
   <br/><br/>
 
  </span>
