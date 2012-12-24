@@ -15,13 +15,14 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require jquery.fancybox
-//= require_self
+
 //= require solr-autocomplete/ajax-solr/core/Core
 //= require solr-autocomplete/ajax-solr/core/AbstractManager
 //= require solr-autocomplete/ajax-solr/managers/Manager.jquery
 //= require solr-autocomplete/ajax-solr/core/Parameter
 //= require solr-autocomplete/ajax-solr/core/ParameterStore
-//= require solr-autocomplete/jquery-autocomplete/jquery.autocomplete
+// require solr-autocomplete/jquery-autocomplete/jquery.autocomplete
+//= require_self
 
 $(document).ready(function(){
 

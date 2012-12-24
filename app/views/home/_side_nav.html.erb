@@ -22,7 +22,8 @@
 <h5><span class="type">Type</span></h5>
   <span class="tp">
   <% @search.facet(:property_type).rows.each do |facet| %>
-      <p><%= link_to facet.value, params.merge(:property_type => facet.value), :class => ((params[:property_type]) == facet.value) ? "sel_nav type_link" : "type_link" %>
+       <% @fac_type = (facet.value == "residential")? "Residential" : facet.value %>
+      <p><%= link_to @fac_type , params.merge(:property_type => facet.value), :class => ((params[:property_type]) == facet.value) ? "sel_nav type_link" : "type_link" %>
         ( <%= @count = facet.count %>)<%= type_clear("#{facet.value}") %></p>
   <% end %></span>
   <br/>

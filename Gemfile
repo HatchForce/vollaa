@@ -40,7 +40,7 @@ group :assets do
 end
 
 gem 'execjs'
-gem 'jquery-rails'
+gem "jquery-rails", "~> 2.1.4"
 gem 'therubyracer', :platforms => :ruby
 
 group :development, :test do

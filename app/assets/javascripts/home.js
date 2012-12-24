@@ -1,4 +1,16 @@
 $(function(){
+
+    var whatTags = [ "2 bhk", "1 bhk", "3 bhk", "4 bhk", "5 bhk", "Flat", "Land", "Office", "Residential" ];
+    $( "#what" ).autocomplete({
+        source: whatTags
+    });
+
+    var whereTags = ["Hyderabad", "Secunderabad", "Bangalore", "Chennai", "Delhi", "Kolkata", "Gujarath", "Mumbai", "Ahmedabad"];
+    $("#where").autocomplete({
+       source: whereTags
+    });
+
+
   $('.email_property').click(function(){
      var id = ($(this).attr("data-property-id"));
     $('.send_details_form > #property_id').val(id);
