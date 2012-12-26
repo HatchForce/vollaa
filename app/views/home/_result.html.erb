@@ -37,7 +37,7 @@
 
 
   <div id="save_property_<%= result.id %>" style="background : #ececef; width :500px; height:100px; display:none;">
-    <% if user_signed_in? %>
+    <% if (user_signed_in? || current_twitter_user || current_fb_user) %>
         property saved
     <% else %>
         <%= link_to "Sign in  /", user_session_path %>

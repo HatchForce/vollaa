@@ -14,20 +14,32 @@ class User < ActiveRecord::Base
 
   def after_signup
     # self.email.to_yaml
-Profile.create({:user_id => self.id})
+  Profile.create({:user_id => self.id})
+  end
+
+  def self.create_with_omniauth_twitter(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+      user.name = auth.info.name rescue "na"
+      user.image = auth["info"]["image"] rescue "na"
+      user.email = auth["user_info"]["email"] rescue "na"
+      user.auth_token = auth.params.oauth_token rescue ''
+      user.save(:validate => false)   rescue 'na'
+    end
   end
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider
       user.uid = auth.uid
-      user.name = auth.info.name
-      user.email = auth.info.email
-      user.image = auth.info.image
-      user.location = auth.info.location
-      user.oauth_token = auth.credentials.token
-      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-      user.save(:validate => false)
+      user.name = auth.info.name  rescue ''
+      user.email = auth.info.email  rescue ''
+      user.image = auth.info.image   rescue ''
+      user.location = auth.info.location rescue ''
+      user.oauth_token = auth.credentials.token  rescue ''
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at) rescue ''
+      user.save(:validate => false)   rescue ''
     end
     end
 

@@ -38,6 +38,7 @@ class HomeController < ApplicationController
       with(:source, params[:source]) if params[:source].present?
       with(:created_at, params[:created_at]) if params[:created_at].present?
       with(:property_description, params[:prop_desc]) if params[:prop_desc].present?
+      with(:property_price, params[:property_price]) if params[:property_price].present?
 
       with(:property_price).greater_than(params[:price_min]) if params[:price_min].present? and !params[:price_max].present?
       with(:property_price).less_than(params[:price_max]) if params[:price_max].present? and !params[:price_min].present?
@@ -80,7 +81,8 @@ class HomeController < ApplicationController
     emails.each do |email|
       email = email.strip
       if email =~ /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/
-        UserMailer.mail_property_details(email, property_id).deliver
+        @mail = UserMailer.mail_property_details(email, property_id).deliver
+        raise "returned to send_details"
       end
     end
   end

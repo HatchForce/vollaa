@@ -88,4 +88,24 @@ $(function(){
 //        //filter links
 //        return false;
 //    });
+
+    //Property Price selection
+    $('#price_min_').live('change',function(){
+        $('#price_min_ option:selected').each(function(){
+            var price_min = $(this).val()
+//            $.get('/home/view_results',price_min)
+//            alert('hi')
+//            window.location.search -= '&price_min='
+            window.location += '&price_min='+price_min;
+            return false;
+        })
+    });
+
+    $('#price_max_').change(function(){
+        $('#price_max_ option:selected').each(function(){
+            var price_max = $(this).val()
+            location.href = location.href + '&price_max='+price_max;
+            return false
+        })
+    });
 });

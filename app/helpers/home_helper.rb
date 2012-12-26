@@ -22,6 +22,10 @@ module HomeHelper
     link_to name,params.merge(:price_min => val1, :price_max => val2), :class => ((params[:price_min].to_i == val1) && (params[:price_max].to_i == val2))? "sel_nav" : ""
   end
 
+  def pp_clear(value)
+    ((params[:property_price]).to_i == value)? (link_to 'Clear', params.except(:property_price), class: 'nav_clear') : ''
+  end
+
   def price_clear(val1,val2)
     ((params[:price_min].to_i == val1) && (params[:price_max].to_i == val2))? (link_to 'Clear', params.except(:price_min,:price_max), class: 'nav_clear') : ''
   end

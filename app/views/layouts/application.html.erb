@@ -23,18 +23,25 @@
 
         <div class="nav-collapse">
           <ul class="nav pull-right">
-            <% if !(user_signed_in? || current_fb_user)  %>
+            <%#= "user logged in" if current_twitter_user %>
+            <% if !(user_signed_in? || current_fb_user || current_twitter_user)  %>
+                <li><%= link_to "Sign in with Twitter  /", "/auth/twitter", id: "sign_in",style: "padding-left: 10px; padding-top: 10px;" %></li>
                 <li><%= link_to "Sign in with Facebook  /", "/auth/facebook", id: "sign_in",style: "padding-left: 10px; padding-top: 10px;" %></li>
                 <li><%= link_to "Sign in  /", user_session_path, style: "padding-left: 10px; padding-top: 10px;" %></li>
                 <li><%= link_to "Sign Up", new_user_registration_path, style: "padding-left: 10px; padding-top: 10px;" %></li>
-            <% elsif user_signed_in? && !current_fb_user %>
+            <% elsif user_signed_in? && !current_fb_user && !current_twitter_user %>
                 <li style = "padding-left: 10px; padding-top: 10px;">Welcome <%= current_user.email %></li>
                 <li><%= link_to "Sign Out", destroy_user_session_path, :style =>"padding-left: 10px; padding-top: 10px;" %></li>
                 <li><%= link_to "My Profile",(current_user.profile)? profile_path(current_user.id) : new_profile_path(:user_id => current_user.id), :style =>"padding-left: 10px; padding-top: 10px;"  %></li>
-            <% elsif current_fb_user %>
+            <% elsif current_fb_user && !current_twitter_user %>
                 <li style ="padding-left: 10px; padding-top: 10px;">Signed in as <strong><%= current_user.name %>   </strong>!
                 <li><%= link_to "Sign out", signout_path, id: "sign_out", style: "padding-left: 10px; padding-top: 10px;" %></li>
                 <% @profile_path =  (current_fb_user.profile)? profile_path(current_fb_user.profile.id) : new_profile_path(:user_id => current_fb_user.id)%>
+                <li><%= link_to "My Profile", @profile_path, :style =>"padding-left: 10px; padding-top: 10px;"  %></li>
+            <% elsif  current_twitter_user  %>
+                <li style ="padding-left: 10px; padding-top: 10px;">Signed in as <strong><%= current_user.name %>   </strong>!
+                <li><%= link_to "Sign out", signout_path, id: "sign_out", style: "padding-left: 10px; padding-top: 10px;" %></li>
+                <% @profile_path =  (current_twitter_user.profile)? profile_path(current_twitter_user.profile.id) : new_profile_path(:user_id => current_fb_user.id)%>
                 <li><%= link_to "My Profile", @profile_path, :style =>"padding-left: 10px; padding-top: 10px;"  %></li>
             <% end %>
           </ul>

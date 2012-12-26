@@ -1177,7 +1177,8 @@ input[type="file"] {
 }
 
 select {
-  width: 220px;
+  /*width: 220px; edited by ashwin*/
+    width: 100px;
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }
