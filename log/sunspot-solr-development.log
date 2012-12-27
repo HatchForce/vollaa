@@ -1,528 +1,256 @@
-Dec 26, 2012 3:46:13 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: JNDI not configured for solr (NoInitialContextEx)
-Dec 26, 2012 3:46:13 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: using system property solr.solr.home: /home/startup/Projects/vollaa/solr
-Dec 26, 2012 3:46:13 PM org.apache.solr.core.SolrResourceLoader <init>
+Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader <init>
 INFO: Solr home set to '/home/startup/Projects/vollaa/solr/'
-Dec 26, 2012 3:46:13 PM org.apache.solr.servlet.SolrDispatchFilter init
+Dec 27, 2012 6:04:05 PM org.apache.solr.servlet.SolrDispatchFilter init
 INFO: SolrDispatchFilter.init()
-Dec 26, 2012 3:46:13 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: JNDI not configured for solr (NoInitialContextEx)
-Dec 26, 2012 3:46:13 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: using system property solr.solr.home: /home/startup/Projects/vollaa/solr
-Dec 26, 2012 3:46:13 PM org.apache.solr.core.CoreContainer$Initializer initialize
+Dec 27, 2012 6:04:05 PM org.apache.solr.core.CoreContainer$Initializer initialize
 INFO: looking for solr.xml: /home/startup/Projects/vollaa/solr/solr.xml
-Dec 26, 2012 3:46:13 PM org.apache.solr.core.SolrResourceLoader <init>
+Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader <init>
 INFO: Solr home set to '/home/startup/Projects/vollaa/solr/'
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.SolrConfig initLibs
+Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrConfig initLibs
 INFO: Adding specified lib dirs to ClassLoader
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.SolrConfig <init>
+Dec 27, 2012 6:04:06 PM org.apache.solr.core.SolrConfig <init>
 INFO: Loaded SolrConfig: solrconfig.xml
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.SolrCore <init>
+Dec 27, 2012 6:04:06 PM org.apache.solr.core.SolrCore <init>
 INFO: Opening new SolrCore at /home/startup/Projects/vollaa/solr/, dataDir=/home/startup/Projects/vollaa/solr/data/development/
-Dec 26, 2012 3:46:14 PM org.apache.solr.schema.IndexSchema readSchema
+Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Reading Solr Schema
-Dec 26, 2012 3:46:14 PM org.apache.solr.schema.IndexSchema readSchema
+Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Schema name=sunspot
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.KeywordTokenizerFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.KeywordTokenizerFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.EdgeNGramFilterFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created autocomplete: org.apache.solr.schema.TextField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LetterTokenizerFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LetterTokenizerFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.EdgeNGramFilterFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created autosuggest: org.apache.solr.schema.TextField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created string: org.apache.solr.schema.StrField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created tdouble: org.apache.solr.schema.TrieDoubleField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created rand: org.apache.solr.schema.RandomSortField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.StandardTokenizerFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.StandardFilterFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created text: org.apache.solr.schema.TextField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created boolean: org.apache.solr.schema.BoolField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created date: org.apache.solr.schema.DateField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created sdouble: org.apache.solr.schema.SortableDoubleField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created sfloat: org.apache.solr.schema.SortableFloatField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created sint: org.apache.solr.schema.SortableIntField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created slong: org.apache.solr.schema.SortableLongField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created tint: org.apache.solr.schema.TrieIntField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created tfloat: org.apache.solr.schema.TrieFloatField
-Dec 26, 2012 3:46:14 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created tdate: org.apache.solr.schema.TrieDateField
-Dec 26, 2012 3:46:14 PM org.apache.solr.schema.IndexSchema readSchema
+Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: default search field is text
-Dec 26, 2012 3:46:14 PM org.apache.solr.schema.IndexSchema readSchema
+Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: query parser default operator is AND
-Dec 26, 2012 3:46:14 PM org.apache.solr.schema.IndexSchema readSchema
+Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: unique key field: id
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.JmxMonitoredMap <init>
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.JmxMonitoredMap <init>
 INFO: No JMX servers found, not exposing Solr information with JMX.
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.SolrCore initListeners
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore initListeners
 INFO: Added SolrEventListener: org.apache.solr.core.QuerySenderListener{queries=[]}
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.SolrCore initListeners
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore initListeners
 INFO: Added SolrEventListener: org.apache.solr.core.QuerySenderListener{queries=[{q=solr rocks,start=0,rows=10}, {q=static firstSearcher warming query from solrconfig.xml}]}
-Dec 26, 2012 3:46:14 PM org.apache.solr.request.XSLTResponseWriter init
+Dec 27, 2012 6:04:07 PM org.apache.solr.request.XSLTResponseWriter init
 INFO: xsltCacheLifetimeSeconds=5
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created standard: solr.SearchHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created dismax: solr.SearchHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created partitioned: solr.SearchHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /spell: solr.SearchHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created tvrh: org.apache.solr.handler.component.SearchHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: org.apache.solr.handler.extraction.ExtractingRequestHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/extract: org.apache.solr.handler.extraction.ExtractingRequestHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /terms: org.apache.solr.handler.component.SearchHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: solr.SearchHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /elevate: solr.SearchHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update: solr.XmlUpdateRequestHandler
-Dec 26, 2012 3:46:14 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/javabin: solr.BinaryUpdateRequestHandler
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: solr.CSVRequestHandler
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/csv: solr.CSVRequestHandler
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/: org.apache.solr.handler.admin.AdminHandlers
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/ping: PingRequestHandler
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /debug/dump: solr.DumpRequestHandler
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /mlt: solr.MoreLikeThisHandler
-Dec 26, 2012 3:46:15 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@1764a78 main
-Dec 26, 2012 3:46:15 PM org.apache.solr.update.DirectUpdateHandler2$CommitTracker <init>
+Dec 27, 2012 6:04:07 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@16a969b main
+Dec 27, 2012 6:04:07 PM org.apache.solr.update.DirectUpdateHandler2$CommitTracker <init>
 INFO: AutoCommit: disabled
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SpellCheckComponent inform
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Initializing spell checkers
-Dec 26, 2012 3:46:15 PM org.apache.solr.spelling.AbstractLuceneSpellChecker init
+Dec 27, 2012 6:04:07 PM org.apache.solr.spelling.AbstractLuceneSpellChecker init
 INFO: Using WhitespaceAnalzyer for dictionary: default
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SpellCheckComponent inform
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SpellCheckComponent inform
 WARNING: No queryConverter defined, using default converter
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.QueryElevationComponent inform
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.QueryElevationComponent inform
 INFO: Loading QueryElevation from: /home/startup/Projects/vollaa/solr/conf/elevate.xml
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@133f28b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@1788a72
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@c96a1a
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@154e3d4
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@39856b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@664140
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@133f28b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@1788a72
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@c96a1a
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@154e3d4
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@39856b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@664140
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@133f28b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@1788a72
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@c96a1a
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@154e3d4
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@39856b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@664140
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@133f28b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@1788a72
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@c96a1a
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@154e3d4
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@39856b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.SpellCheckComponent@145eca6
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@664140
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@133f28b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@1788a72
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@c96a1a
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@154e3d4
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@39856b
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.TermVectorComponent@1b3c169
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@664140
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.TermsComponent@5f0fd7
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.QuerySenderListener newSearcher
-INFO: QuerySenderListener sending requests to Searcher@1764a78 main
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.CoreContainer register
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.SpellCheckComponent@5f0fd7
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.TermVectorComponent@108fbd4
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.TermsComponent@cd564c
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@16a969b main
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.CoreContainer register
 INFO: registering core: 
-Dec 26, 2012 3:46:15 PM org.apache.solr.servlet.SolrDispatchFilter init
+Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrDispatchFilter init
 INFO: user.dir=/home/startup/.rvm/gems/ruby-1.9.3-p286/gems/sunspot_solr-1.3.3/solr
-Dec 26, 2012 3:46:15 PM org.apache.solr.servlet.SolrDispatchFilter init
+Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrDispatchFilter init
 INFO: SolrDispatchFilter.init() done
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=null path=null params={start=0&event=firstSearcher&q=solr+rocks&rows=10} hits=0 status=0 QTime=73 
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+query+from+solrconfig.xml} hits=0 status=0 QTime=2 
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.QuerySenderListener newSearcher
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=null path=null params={start=0&event=firstSearcher&q=solr+rocks&rows=10} hits=0 status=0 QTime=144 
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+query+from+solrconfig.xml} hits=0 status=0 QTime=1 
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.QuerySenderListener newSearcher
 INFO: QuerySenderListener done.
-Dec 26, 2012 3:46:15 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener newSearcher
+Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener newSearcher
 INFO: Loading spell index for spellchecker: default
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [] Registered new searcher Searcher@1764a78 main
-Dec 26, 2012 3:46:15 PM org.apache.solr.servlet.SolrServlet init
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@16a969b main
+Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrServlet init
 INFO: SolrServlet.init()
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: JNDI not configured for solr (NoInitialContextEx)
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: using system property solr.solr.home: /home/startup/Projects/vollaa/solr
-Dec 26, 2012 3:46:15 PM org.apache.solr.servlet.SolrServlet init
+Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrServlet init
 INFO: SolrServlet.init() done
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: JNDI not configured for solr (NoInitialContextEx)
-Dec 26, 2012 3:46:15 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: using system property solr.solr.home: /home/startup/Projects/vollaa/solr
-Dec 26, 2012 3:46:15 PM org.apache.solr.servlet.SolrUpdateServlet init
+Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrUpdateServlet init
 INFO: SolrUpdateServlet.init() done
-Dec 26, 2012 3:46:20 PM org.apache.solr.request.UnInvertedField uninvert
-INFO: UnInverted multi-valued field {field=property_price_it,memSize=499264,tindexSize=752,time=599,phase1=588,nTerms=4487,bigTerms=1,termInstances=15378,uses=0}
-Dec 26, 2012 3:46:20 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=1259 
-Dec 26, 2012 3:46:46 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=143 
-Dec 26, 2012 3:47:17 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=56 
-Dec 26, 2012 3:48:32 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=51 
-Dec 26, 2012 3:49:43 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=41 
-Dec 26, 2012 3:50:20 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=38 
-Dec 26, 2012 3:50:42 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=35 
-Dec 26, 2012 3:50:45 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=42 
-Dec 26, 2012 3:50:49 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=33 
-Dec 26, 2012 3:50:53 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=32 
-Dec 26, 2012 3:50:58 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=31 
-Dec 26, 2012 3:51:03 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=34 
-Dec 26, 2012 3:51:08 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=36 
-Dec 26, 2012 3:51:14 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=34 
-Dec 26, 2012 3:51:20 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=35 
-Dec 26, 2012 3:51:27 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=32 
-Dec 26, 2012 3:51:32 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=31 
-Dec 26, 2012 3:51:36 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=54 
-Dec 26, 2012 3:52:28 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=34 
-Dec 26, 2012 3:59:41 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=196 
-Dec 26, 2012 3:59:49 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=172 
-Dec 26, 2012 4:00:25 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=65 
-Dec 26, 2012 4:00:33 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=28 
-Dec 26, 2012 4:01:07 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=53 
-Dec 26, 2012 4:01:29 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:01:35 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+*]} hits=15242 status=0 QTime=273 
-Dec 26, 2012 4:03:42 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=45 
-Dec 26, 2012 4:03:50 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[100000+TO+*]} hits=15257 status=0 QTime=234 
-Dec 26, 2012 4:04:11 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=86 
-Dec 26, 2012 4:04:18 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[*+TO+100000]} hits=1898 status=0 QTime=7 
-Dec 26, 2012 4:05:11 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=47 
-Dec 26, 2012 4:05:21 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[*+TO+100000]} hits=1898 status=0 QTime=3 
-Dec 26, 2012 4:05:28 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+100000]} hits=0 status=0 QTime=76 
-Dec 26, 2012 4:06:15 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+100000]} hits=0 status=0 QTime=1 
-Dec 26, 2012 4:06:25 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+100000]} hits=0 status=0 QTime=1 
-Dec 26, 2012 4:06:39 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[2000000+TO+100000]} hits=0 status=0 QTime=2 
-Dec 26, 2012 4:06:45 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=64 
-Dec 26, 2012 4:06:57 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=117 
-Dec 26, 2012 4:08:15 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=28 
-Dec 26, 2012 4:08:22 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[*+TO+100000]} hits=1898 status=0 QTime=4 
-Dec 26, 2012 4:08:58 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+100000]} hits=0 status=0 QTime=1 
-Dec 26, 2012 4:09:12 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=30 
-Dec 26, 2012 4:09:19 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=27 
-Dec 26, 2012 4:09:38 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:09:47 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[*+TO+100000]} hits=1898 status=0 QTime=4 
-Dec 26, 2012 4:10:24 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=28 
-Dec 26, 2012 4:10:33 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[*+TO+2000000]} hits=2683 status=0 QTime=123 
-Dec 26, 2012 4:10:44 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[1000000+TO+2000000]} hits=714 status=0 QTime=59 
-Dec 26, 2012 4:16:26 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[1000000+TO+2000000]} hits=714 status=0 QTime=21 
-Dec 26, 2012 4:17:06 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=115 
-Dec 26, 2012 4:17:20 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=29 
-Dec 26, 2012 4:17:26 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+1500000]} hits=259 status=0 QTime=32 
-Dec 26, 2012 4:18:48 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=39 
-Dec 26, 2012 4:18:55 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=27 
-Dec 26, 2012 4:21:36 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:21:43 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=33 
-Dec 26, 2012 4:23:50 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:24:15 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 4:24:22 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:residential} hits=17150 status=0 QTime=140 
-Dec 26, 2012 4:24:29 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:residential&fq=property_price_it:[500000+TO+*]} hits=15240 status=0 QTime=28 
-Dec 26, 2012 4:24:40 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:residential&fq=bedrooms_i:4&fq=property_price_it:[500000+TO+*]} hits=1342 status=0 QTime=146 
-Dec 26, 2012 4:24:47 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:residential&fq=bedrooms_i:4&fq=property_price_it:[500000+TO+*]} hits=1342 status=0 QTime=23 
-Dec 26, 2012 4:25:03 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:residential&fq=bedrooms_i:4&fq=property_price_it:[500000+TO+*]} hits=1342 status=0 QTime=22 
-Dec 26, 2012 4:25:14 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:residential&fq=bedrooms_i:4&fq=property_price_it:[500000+TO+*]} hits=1342 status=0 QTime=21 
-Dec 26, 2012 4:25:23 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:residential&fq=bedrooms_i:4&fq=property_price_it:[500000+TO+*]} hits=1342 status=0 QTime=31 
-Dec 26, 2012 4:26:04 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:residential&fq=bedrooms_i:4&fq=city_s:ahmedabad&fq=property_price_it:[500000+TO+*]} hits=19 status=0 QTime=113 
-Dec 26, 2012 4:27:22 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:residential&fq=bedrooms_i:4&fq=city_s:ahmedabad&fq=property_price_it:[500000+TO+*]} hits=19 status=0 QTime=6 
-Dec 26, 2012 4:27:36 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=28 
-Dec 26, 2012 4:27:42 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:27:52 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 4:28:04 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:28:10 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=33 
-Dec 26, 2012 4:28:17 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=28 
-Dec 26, 2012 4:30:39 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 4:30:46 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=29 
-Dec 26, 2012 4:31:48 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=29 
-Dec 26, 2012 4:31:59 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=36 
-Dec 26, 2012 4:32:09 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=29 
-Dec 26, 2012 4:32:22 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=29 
-Dec 26, 2012 4:32:33 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=27 
-Dec 26, 2012 4:32:45 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:32:51 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+*]} hits=15242 status=0 QTime=27 
-Dec 26, 2012 4:32:59 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+1000000]} hits=59 status=0 QTime=193 
-Dec 26, 2012 4:34:42 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:37:13 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 4:39:27 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=26 
-Dec 26, 2012 4:39:51 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:39:59 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+*]} hits=15242 status=0 QTime=28 
-Dec 26, 2012 4:40:22 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+*]} hits=15242 status=0 QTime=41 
-Dec 26, 2012 4:41:05 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=29 
-Dec 26, 2012 4:43:02 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=28 
-Dec 26, 2012 4:43:28 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=30 
-Dec 26, 2012 4:43:42 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+1000000]} hits=69 status=0 QTime=18 
-Dec 26, 2012 4:43:50 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[1500000+TO+1000000]} hits=0 status=0 QTime=1 
-Dec 26, 2012 4:43:57 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+1000000]} hits=59 status=0 QTime=2 
-Dec 26, 2012 4:44:02 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[1500000+TO+1000000]} hits=0 status=0 QTime=0 
-Dec 26, 2012 4:44:09 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[1500000+TO+2000000]} hits=546 status=0 QTime=139 
-Dec 26, 2012 4:44:26 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:44:34 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=28 
-Dec 26, 2012 4:44:39 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[1000000+TO+*]} hits=15186 status=0 QTime=159 
-Dec 26, 2012 4:44:55 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=32 
-Dec 26, 2012 4:45:02 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=27 
-Dec 26, 2012 4:45:10 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+*]} hits=15242 status=0 QTime=31 
-Dec 26, 2012 4:45:36 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[100000+TO+*]} hits=15257 status=0 QTime=27 
-Dec 26, 2012 4:48:04 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=28 
-Dec 26, 2012 4:50:33 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[*+TO+500000]} hits=1916 status=0 QTime=4 
-Dec 26, 2012 4:50:39 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[*+TO+1000000]} hits=1972 status=0 QTime=5 
-Dec 26, 2012 4:50:46 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[*+TO+2000000]} hits=2683 status=0 QTime=7 
-Dec 26, 2012 4:51:17 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 4:51:23 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=27 
-Dec 26, 2012 4:51:30 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+*]} hits=15242 status=0 QTime=29 
-Dec 26, 2012 4:51:43 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_type_s:Flat&fq=property_price_it:[500000+TO+*]} hits=1 status=0 QTime=101 
-Dec 26, 2012 4:51:50 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[1000000+TO+*]} hits=15186 status=0 QTime=26 
-Dec 26, 2012 4:52:29 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:52:35 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:52:43 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[1000000+TO+*]} hits=15186 status=0 QTime=30 
-Dec 26, 2012 4:52:47 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[100000+TO+1000000]} hits=74 status=0 QTime=22 
-Dec 26, 2012 4:52:52 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=26 
-Dec 26, 2012 4:52:59 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=27 
-Dec 26, 2012 4:53:05 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+*]} hits=15242 status=0 QTime=27 
-Dec 26, 2012 4:53:11 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[2000000+TO+*]} hits=14543 status=0 QTime=69 
-Dec 26, 2012 4:54:46 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 4:54:52 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=26 
-Dec 26, 2012 4:54:59 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[1500000+TO+*]} hits=15018 status=0 QTime=33 
-Dec 26, 2012 5:01:11 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=28 
-Dec 26, 2012 5:02:36 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 5:05:15 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=28 
-Dec 26, 2012 5:05:43 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 5:06:38 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=26 
-Dec 26, 2012 5:06:58 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=27 
-Dec 26, 2012 5:07:22 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 5:09:58 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 5:10:35 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=29 
-Dec 26, 2012 5:10:41 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=27 
-Dec 26, 2012 5:10:44 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[*+TO+1000000]} hits=1972 status=0 QTime=3 
-Dec 26, 2012 5:10:51 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+1000000]} hits=59 status=0 QTime=2 
-Dec 26, 2012 5:10:57 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[500000+TO+2000000]} hits=770 status=0 QTime=10 
-Dec 26, 2012 5:11:11 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=31 
-Dec 26, 2012 5:12:58 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[200000+TO+*]} hits=15252 status=0 QTime=28 
-Dec 26, 2012 5:14:07 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17155 status=0 QTime=28 
+Dec 27, 2012 6:07:46 PM org.apache.solr.request.UnInvertedField uninvert
+INFO: UnInverted multi-valued field {field=property_price_it,memSize=569272,tindexSize=752,time=726,phase1=717,nTerms=4487,bigTerms=1,termInstances=15378,uses=0}
+Dec 27, 2012 6:07:46 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=1747 
+Dec 27, 2012 6:09:08 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=174 
+Dec 27, 2012 6:10:00 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=57 
+Dec 27, 2012 6:11:38 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=46 

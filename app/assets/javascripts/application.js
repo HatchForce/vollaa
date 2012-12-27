@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require jquery.ui.slider
+//= require underscore
 //= require bootstrap
 //= require jquery.fancybox
 
@@ -34,6 +36,27 @@ $(document).ready(function(){
     window.location = $('.iframe_content').find('iframe').attr('src');
     return false;
   });
+
+// Working Slider function
+//    var PopulationFilter = {
+//        min: 800000,
+//        max: 10000000,
+//    };
+//
+//    $("#population-range").slider({
+//        range: true,
+//        min: PopulationFilter.min,
+//        max: PopulationFilter.max,
+//        values: [ PopulationFilter.min, PopulationFilter.max ],
+//        slide: function(event, ui) {
+//            $( "#filtered-pop" ).val( (ui.values[ 0 ])+ " - " + (ui.values[ 1 ]))
+//        }
+//    });
+//
+//    $( "#filtered-pop" ).val( (PopulationFilter.min)+ " - " + (PopulationFilter.max))
+
+
+
 });
 
 

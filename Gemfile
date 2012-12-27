@@ -15,7 +15,8 @@ gem "mechanize", "~> 2.5.1"
 gem "devise", "~> 2.1.2"
 gem "carrierwave", "~> 0.7.1"
 gem "rmagick"
-
+gem "jquery-ui-rails"
+gem 'underscore-rails'
 gem 'mysql2', '0.3.11'
 
 gem 'omniauth'
@@ -28,6 +29,7 @@ gem 'fb_graph'
 gem 'browser'
 gem 'premailer-rails3'
 gem 'meta-tags', :require => 'meta_tags'
+gem 'gmaps4rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

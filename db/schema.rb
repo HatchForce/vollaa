@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121213090332) do
+ActiveRecord::Schema.define(:version => 20121227064635) do
 
   create_table "profile", :force => true do |t|
     t.integer  "user_id"
@@ -43,9 +43,23 @@ ActiveRecord::Schema.define(:version => 20121213090332) do
     t.string   "source"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.string   "local_area"
   end
 
   add_index "properties", ["more_link"], :name => "index_properties_on_more_link", :unique => true
+
+  create_table "property_maps", :force => true do |t|
+    t.string   "place"
+    t.string   "city"
+    t.string   "state"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
+    t.integer  "prop_details"
+    t.integer  "property_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "provider"

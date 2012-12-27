@@ -22,7 +22,7 @@ def get_properties(i)
   property_description = div_child.children()[10].text() rescue ""
   p_p =  div_child.children()[2].children()[0].children()[0].text().split(/ /)  rescue ""
     #p_p =  div_child.children()[1].children()[3].children()[0].text().split(/ /)[1].split(",")
-  property_price = p_p.join()
+  property_price = p_p.join() rescue ""
   built_up_area =  div_child.children()[2].children()[1].children()[0].children[1].children[0] rescue ""
   bedrooms = div_child.children()[2].children()[1].children()[2].children[0].text.split(":")[1] rescue "NA"
   property_age = div_child.children()[2].children()[1].children()[4].children()[0].text.split(":")[1] rescue ""

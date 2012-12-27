@@ -3,8 +3,14 @@
 <head>
   <title>Vollaa</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "jquery.colorbox" %>
+  <%= javascript_include_tag "gmaps4rails/gmaps4rails.base" %>
+  <%= javascript_include_tag "gmaps4rails/gmaps4rails.googlemaps" %>
+  <%= javascript_include_tag "gmaps4rails/gmaps4rails.bing" %>
+  <%= javascript_include_tag "gmaps4rails/gmaps4rails.mapquest" %>
+  <%= javascript_include_tag "gmaps4rails/gmaps4rails.openlayers" %>
 
   <%= stylesheet_link_tag params[:controller] %>
   <%= javascript_include_tag params[:controller] %>
@@ -61,6 +67,7 @@
 
   <%= content_tag :div, "data-page-action" => page_action, "data-page-controller" => page_controller do %>
       <%= yield %>
+      <%= yield :scripts %>
   <% end %>
 
 </div>

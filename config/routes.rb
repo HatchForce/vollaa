@@ -1,10 +1,13 @@
 Vollaa::Application.routes.draw do
 
+  get "property_map/index"
+
   devise_for :users, :controller => {:OmniauthCallback => "user/OmniauthCallback"}
 
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
+  match "property_map", :to => 'property_map#index', :as => :property_map
 
   resources :profile
 
