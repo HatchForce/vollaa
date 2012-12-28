@@ -4,14 +4,14 @@
 
      <br/>
     <div class="btn-group offset6" data-toggle="buttons-radio">
-      <%= button_tag :Buy, :class=>"btn span2", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('buy');" %>
+      <%= button_tag :Buy, :class=>"btn span2", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('buy');", :default => true %>
       <%= button_tag :Rent,:class=>"btn span2", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('rent');" %>
     </div>
     <%= hidden_field_tag :property_for, '', :id => 'property_for'  %>
 
 
     <!--<div class="span2 side_nav">-->
-      <!--<label class="radio"><%= radio_button_tag :property_for, "buy" %>Buy</label><br/><br/>-->
+      <!--<label class="radio"><%= radio_button_tag :property_for, "buy", :checked => true %>Buy</label><br/><br/>-->
       <!--<label class="radio"><%= radio_button_tag :property_for, "rent" %>Rent</label>-->
     <!--</div>-->
 

@@ -1,17 +1,37 @@
-<h2>Sign in</h2>
+<br/><br/>
+<div class="form-horizontal sign_in">
+  <h2 class="offset2 sign">Sign in</h2>
+  <br/>
+  <span class="form_body">
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+      <div class="control-group">
+        <%= f.label :email, class: "control-label" %>
+        <div class="controls">
+          <%= f.email_field :email %>
+        </div>
+      </div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+      <div class="control-group">
+        <%= f.label :password, class: "control-label" %>
+        <div class="controls">
+          <%= f.password_field :password %>
+        </div>
+      </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+      <div class="control-group">
+        <div class="controls">
+          <% if devise_mapping.rememberable? -%>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+              <label class="checkbox">
+                <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+              </label>
+          <% end -%>
+          <%= f.submit "Sign in" %>
+  <% end %>   <br/>
+    <br/>
+    <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </span>
+</div>

@@ -28,11 +28,15 @@
   <% end %></span>
   <br/>
 
-<h5><span class="price">Price</span></h5>
+<h5><span id="price">Price</span></h5>
 
-   <span> Price Min </span><span style="padding-left: 19px;">  Price Max</span>
-   <%= select "price_min", '', [["min price"], ["1 Lakh", 100000], ["2 Lakhs", 200000], ["5 Lakhs", 500000], ["10 Lakh", 1000000], ["15 Lakhs", 1500000], ["20 Lakhs", 2000000], ["25 Lakh", 2500000], ["30 Lakhs", 3000000], ["35 Lakhs", 3500000], ["40 Lakhs", 4000000], ["45 Lakh", 4500000], ["50 Lakhs", 5000000], ["35 Lakhs", 5500000]], :selected => params[:price_min], class: 'controls', :disabled => "min price", :params => params.except("price_min") %> <!---:prompt => "Placeholder"-->
-   <%= select "price_max", '', [["max price"],["1 Lakh", 100000], ["2 Lakhs", 200000], ["5 Lakhs", 500000], ["10 Lakh", 1000000], ["15 Lakhs", 1500000], ["20 Lakhs", 2000000], ["25 Lakh", 2500000], ["30 Lakhs", 3000000], ["35 Lakhs", 3500000], ["40 Lakhs", 4000000], ["45 Lakh", 4500000], ["50 Lakhs", 5000000], ["35 Lakhs", 5500000]], :selected => params[:price_max], class: 'controls', :disabled => "max price" %>
+  <div id='property_price' style="width: 190px"></div>
+<br/>
+<input type="text" id="filtered-price" style="width: 150px; cursor: default; " disabled="true" />
+
+   <!--<span> Price Min </span><span style="padding-left: 19px;">  Price Max</span>-->
+   <%#= select "price_min", '', [["min price", 0], ["1 Lakh", 100000], ["2 Lakhs", 200000], ["5 Lakhs", 500000], ["10 Lakh", 1000000], ["15 Lakhs", 1500000], ["20 Lakhs", 2000000], ["25 Lakh", 2500000], ["30 Lakhs", 3000000], ["35 Lakhs", 3500000], ["40 Lakhs", 4000000], ["45 Lakh", 4500000], ["50 Lakhs", 5000000], ["35 Lakhs", 5500000]], :selected => params[:price_min], class: 'controls', :disabled => "min price", :params => params.except("price_min") %> <!---:prompt => "Placeholder"-->
+   <%#= select "price_max", '', [["max price", ],["1 Lakh", 100000], ["2 Lakhs", 200000], ["5 Lakhs", 500000], ["10 Lakh", 1000000], ["15 Lakhs", 1500000], ["20 Lakhs", 2000000], ["25 Lakh", 2500000], ["30 Lakhs", 3000000], ["35 Lakhs", 3500000], ["40 Lakhs", 4000000], ["45 Lakh", 4500000], ["50 Lakhs", 5000000], ["35 Lakhs", 5500000]], :selected => params[:price_max], class: 'controls', :disabled => "max price", :prompt => "max price" %>
 
    <!--<span class="p">-->
   <!--<p><%#= price_sel('Rs. 1 Lakh - 10 Lakhs', 100000, 1000000) %>    <%#= price_clear(100000, 1000000) %></p>-->
