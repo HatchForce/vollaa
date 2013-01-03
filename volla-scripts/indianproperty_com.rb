@@ -26,8 +26,9 @@ def get_properties(i)
   property_image = div_child.children()[0].children()[1].attributes['src']
   last_update = Date.parse(div_child.children()[1].children()[6].children()[0].children()[2].text().split(":")[1])
   more_link = "http://hyderabad.indiaproperty.com" + div_child.children()[1].children()[6].children()[0].children()[3].elements.attribute('href')
-  
- @data_container << [property_type,property_for,city,state,country,property_title,property_description,property_price,built_up_area,bedrooms,property_age,last_update,property_image,"indiaproperty.com",more_link]
+  created_at = Time.now
+
+ @data_container << [property_type,property_for,city,state,country,property_title,property_description,property_price,built_up_area,bedrooms,property_age,last_update,property_image,"indiaproperty.com",more_link,created_at]
  end
  File.open("indianproperty_#{@timestamp}.txt", 'a+') do |f|
   @data_container.each do|data| 

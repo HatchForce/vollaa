@@ -1006,8 +1006,8 @@ pre code {
 }
 
 form {
-  margin: 0 0 20px; 
-    /*margin: 0 0 20px -87px;edited by ashwin*/
+  /*margin: 0 0 20px; edited by ashwin*/
+    margin: 0 0 20px -87px;
 }
 
 fieldset {

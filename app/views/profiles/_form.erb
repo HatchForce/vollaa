@@ -1,0 +1,72 @@
+<%= form_for profile, :url => profile.new_record?? profiles_path : profile_path(profile), :html => {:multipart => true} do |f| %>
+ <%#= form_for @profile, :html => {:multipart => true} do |f| %>
+    <br/><br/>
+
+    <div class="form-horizontal">
+      <div class="control-group">
+        <%= f.label "First Name", class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :first_name, placeholder: "First Name" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label "Last Name", class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :last_name, placeholder: "Last Name" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label "Avatar", class: "control-label" %>
+        <div class="controls">
+          <%= f.file_field :image %>
+        </div>
+      </div>
+
+      <div class="control-group">
+
+        <%= f.label :remote_image_url, "OR Image URL", class: 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :remote_image_url, placeholder: "image path" %>
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <%= f.label "Contact Number", class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :contact_number, placeholder: "Contact Number" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label "City", class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :city, placeholder: "city" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label "State", class: "control-label" %>
+        <div class="controls">
+          <%= f.text_field :state, placeholder: "state" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label "Address", class: "control-label" %>
+        <div class="controls">
+          <%= f.text_area :address, placeholder: "Communication address", :rows => "6x100" %>
+        </div>
+      </div>
+      <%#= debug params[:user_id] => current_user.id %>
+
+      <%#= f.hidden_field :user_id, :value => current_user.id, :name => params["user_id" => current_user.id] %>
+
+      <div class="actions offset2">
+        <%= f.submit @profile.new_record? ? 'create' : 'update', class: 'btn btn-primary span2' %>
+      </div>
+    </div>
+
+<% end %>

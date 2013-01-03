@@ -29,8 +29,13 @@
   <br/>
 
 <h5><span id="price">Price</span></h5>
-
-  <div id='property_price' style="width: 190px"></div>
+  <%  if (params["price_min"] || params["price_max"]).present?  %>
+  <div class="price_range">
+  Price Range<br/> <%= number_to_indian_currency(params["price_min"])+ "-"+ number_to_indian_currency(params["price_max"])%>
+  </div>
+  <br/>
+      <% end %>
+  <div id='property_price' style="width: 190px" ></div>
 <br/>
 <input type="text" id="filtered-price" style="width: 150px; cursor: default; " disabled="true" />
 

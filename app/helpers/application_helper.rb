@@ -35,4 +35,8 @@ module ApplicationHelper
 
   #@profile_path =  profile_path(:user_id => current_user.id) || new_profile_path(:user_id => current_user.id)
 
+  def number_to_indian_currency(number)
+    "Rs.#{number.to_s.gsub(/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/, "\\1,")}"
+  end
+
 end

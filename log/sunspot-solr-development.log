@@ -1,256 +1,268 @@
-Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Jan 03, 2013 6:09:58 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: JNDI not configured for solr (NoInitialContextEx)
-Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Jan 03, 2013 6:09:58 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: using system property solr.solr.home: /home/startup/Projects/vollaa/solr
-Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader <init>
+Jan 03, 2013 6:09:58 PM org.apache.solr.core.SolrResourceLoader <init>
 INFO: Solr home set to '/home/startup/Projects/vollaa/solr/'
-Dec 27, 2012 6:04:05 PM org.apache.solr.servlet.SolrDispatchFilter init
+Jan 03, 2013 6:09:59 PM org.apache.solr.servlet.SolrDispatchFilter init
 INFO: SolrDispatchFilter.init()
-Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Jan 03, 2013 6:09:59 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: JNDI not configured for solr (NoInitialContextEx)
-Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Jan 03, 2013 6:09:59 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: using system property solr.solr.home: /home/startup/Projects/vollaa/solr
-Dec 27, 2012 6:04:05 PM org.apache.solr.core.CoreContainer$Initializer initialize
+Jan 03, 2013 6:09:59 PM org.apache.solr.core.CoreContainer$Initializer initialize
 INFO: looking for solr.xml: /home/startup/Projects/vollaa/solr/solr.xml
-Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrResourceLoader <init>
+Jan 03, 2013 6:09:59 PM org.apache.solr.core.SolrResourceLoader <init>
 INFO: Solr home set to '/home/startup/Projects/vollaa/solr/'
-Dec 27, 2012 6:04:05 PM org.apache.solr.core.SolrConfig initLibs
+Jan 03, 2013 6:09:59 PM org.apache.solr.core.SolrConfig initLibs
 INFO: Adding specified lib dirs to ClassLoader
-Dec 27, 2012 6:04:06 PM org.apache.solr.core.SolrConfig <init>
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.SolrConfig <init>
 INFO: Loaded SolrConfig: solrconfig.xml
-Dec 27, 2012 6:04:06 PM org.apache.solr.core.SolrCore <init>
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.SolrCore <init>
 INFO: Opening new SolrCore at /home/startup/Projects/vollaa/solr/, dataDir=/home/startup/Projects/vollaa/solr/data/development/
-Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
+Jan 03, 2013 6:10:00 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Reading Solr Schema
-Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
+Jan 03, 2013 6:10:00 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: Schema name=sunspot
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.KeywordTokenizerFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.KeywordTokenizerFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.EdgeNGramFilterFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created autocomplete: org.apache.solr.schema.TextField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LetterTokenizerFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LetterTokenizerFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.EdgeNGramFilterFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created autosuggest: org.apache.solr.schema.TextField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created string: org.apache.solr.schema.StrField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created tdouble: org.apache.solr.schema.TrieDoubleField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created rand: org.apache.solr.schema.RandomSortField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.StandardTokenizerFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.StandardFilterFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created null: org.apache.solr.analysis.LowerCaseFilterFactory
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created text: org.apache.solr.schema.TextField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created boolean: org.apache.solr.schema.BoolField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created date: org.apache.solr.schema.DateField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created sdouble: org.apache.solr.schema.SortableDoubleField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created sfloat: org.apache.solr.schema.SortableFloatField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created sint: org.apache.solr.schema.SortableIntField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created slong: org.apache.solr.schema.SortableLongField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created tint: org.apache.solr.schema.TrieIntField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created tfloat: org.apache.solr.schema.TrieFloatField
-Dec 27, 2012 6:04:06 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+Jan 03, 2013 6:10:00 PM org.apache.solr.util.plugin.AbstractPluginLoader load
 INFO: created tdate: org.apache.solr.schema.TrieDateField
-Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
+Jan 03, 2013 6:10:00 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: default search field is text
-Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
+Jan 03, 2013 6:10:00 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: query parser default operator is AND
-Dec 27, 2012 6:04:06 PM org.apache.solr.schema.IndexSchema readSchema
+Jan 03, 2013 6:10:00 PM org.apache.solr.schema.IndexSchema readSchema
 INFO: unique key field: id
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.JmxMonitoredMap <init>
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.JmxMonitoredMap <init>
 INFO: No JMX servers found, not exposing Solr information with JMX.
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore initListeners
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.SolrCore initListeners
 INFO: Added SolrEventListener: org.apache.solr.core.QuerySenderListener{queries=[]}
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore initListeners
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.SolrCore initListeners
 INFO: Added SolrEventListener: org.apache.solr.core.QuerySenderListener{queries=[{q=solr rocks,start=0,rows=10}, {q=static firstSearcher warming query from solrconfig.xml}]}
-Dec 27, 2012 6:04:07 PM org.apache.solr.request.XSLTResponseWriter init
+Jan 03, 2013 6:10:00 PM org.apache.solr.request.XSLTResponseWriter init
 INFO: xsltCacheLifetimeSeconds=5
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created standard: solr.SearchHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created dismax: solr.SearchHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created partitioned: solr.SearchHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /spell: solr.SearchHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created tvrh: org.apache.solr.handler.component.SearchHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: org.apache.solr.handler.extraction.ExtractingRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/extract: org.apache.solr.handler.extraction.ExtractingRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /terms: org.apache.solr.handler.component.SearchHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: solr.SearchHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:00 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /elevate: solr.SearchHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update: solr.XmlUpdateRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/javabin: solr.BinaryUpdateRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: adding lazy requestHandler: solr.CSVRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /update/csv: solr.CSVRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/: org.apache.solr.handler.admin.AdminHandlers
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /admin/ping: PingRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /debug/dump: solr.DumpRequestHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
 INFO: created /mlt: solr.MoreLikeThisHandler
-Dec 27, 2012 6:04:07 PM org.apache.solr.search.SolrIndexSearcher <init>
-INFO: Opening Searcher@16a969b main
-Dec 27, 2012 6:04:07 PM org.apache.solr.update.DirectUpdateHandler2$CommitTracker <init>
+Jan 03, 2013 6:10:01 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@c5cd1a main
+Jan 03, 2013 6:10:01 PM org.apache.solr.update.DirectUpdateHandler2$CommitTracker <init>
 INFO: AutoCommit: disabled
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SpellCheckComponent inform
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SpellCheckComponent inform
 INFO: Initializing spell checkers
-Dec 27, 2012 6:04:07 PM org.apache.solr.spelling.AbstractLuceneSpellChecker init
+Jan 03, 2013 6:10:01 PM org.apache.solr.spelling.AbstractLuceneSpellChecker init
 INFO: Using WhitespaceAnalzyer for dictionary: default
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SpellCheckComponent inform
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SpellCheckComponent inform
 WARNING: No queryConverter defined, using default converter
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.QueryElevationComponent inform
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.QueryElevationComponent inform
 INFO: Loading QueryElevation from: /home/startup/Projects/vollaa/solr/conf/elevate.xml
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.SpellCheckComponent@5f0fd7
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@c96a1a
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@154e3d4
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@39856b
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@664140
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@145eca6
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.TermVectorComponent@108fbd4
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@1b3c169
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SearchHandler inform
-INFO: Adding  component:org.apache.solr.handler.component.TermsComponent@cd564c
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.QuerySenderListener newSearcher
-INFO: QuerySenderListener sending requests to Searcher@16a969b main
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.CoreContainer register
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@39856b
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@664140
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@145eca6
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@1b3c169
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5f0fd7
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@108fbd4
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@39856b
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@664140
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@145eca6
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@1b3c169
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5f0fd7
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@108fbd4
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@39856b
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@664140
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@145eca6
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@1b3c169
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5f0fd7
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@108fbd4
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@39856b
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@664140
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@145eca6
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@1b3c169
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5f0fd7
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.SpellCheckComponent@cd564c
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@108fbd4
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@39856b
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@664140
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@145eca6
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@1b3c169
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@5f0fd7
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.TermVectorComponent@dcc20c
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@108fbd4
+Jan 03, 2013 6:10:01 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.TermsComponent@147b5c2
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@c5cd1a main
+Jan 03, 2013 6:10:01 PM org.apache.solr.core.CoreContainer register
 INFO: registering core: 
-Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrDispatchFilter init
+Jan 03, 2013 6:10:01 PM org.apache.solr.servlet.SolrDispatchFilter init
 INFO: user.dir=/home/startup/.rvm/gems/ruby-1.9.3-p286/gems/sunspot_solr-1.3.3/solr
-Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrDispatchFilter init
+Jan 03, 2013 6:10:01 PM org.apache.solr.servlet.SolrDispatchFilter init
 INFO: SolrDispatchFilter.init() done
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=null path=null params={start=0&event=firstSearcher&q=solr+rocks&rows=10} hits=0 status=0 QTime=144 
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+query+from+solrconfig.xml} hits=0 status=0 QTime=1 
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.QuerySenderListener newSearcher
-INFO: QuerySenderListener done.
-Dec 27, 2012 6:04:07 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener newSearcher
-INFO: Loading spell index for spellchecker: default
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrCore registerSearcher
-INFO: [] Registered new searcher Searcher@16a969b main
-Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrServlet init
+Jan 03, 2013 6:10:02 PM org.apache.solr.servlet.SolrServlet init
 INFO: SolrServlet.init()
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Jan 03, 2013 6:10:02 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: JNDI not configured for solr (NoInitialContextEx)
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Jan 03, 2013 6:10:02 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: using system property solr.solr.home: /home/startup/Projects/vollaa/solr
-Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrServlet init
+Jan 03, 2013 6:10:02 PM org.apache.solr.servlet.SolrServlet init
 INFO: SolrServlet.init() done
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Jan 03, 2013 6:10:02 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: JNDI not configured for solr (NoInitialContextEx)
-Dec 27, 2012 6:04:07 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+Jan 03, 2013 6:10:02 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
 INFO: using system property solr.solr.home: /home/startup/Projects/vollaa/solr
-Dec 27, 2012 6:04:07 PM org.apache.solr.servlet.SolrUpdateServlet init
+Jan 03, 2013 6:10:02 PM org.apache.solr.servlet.SolrUpdateServlet init
 INFO: SolrUpdateServlet.init() done
-Dec 27, 2012 6:07:46 PM org.apache.solr.request.UnInvertedField uninvert
-INFO: UnInverted multi-valued field {field=property_price_it,memSize=569272,tindexSize=752,time=726,phase1=717,nTerms=4487,bigTerms=1,termInstances=15378,uses=0}
-Dec 27, 2012 6:07:46 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=1747 
-Dec 27, 2012 6:09:08 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=174 
-Dec 27, 2012 6:10:00 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=57 
-Dec 27, 2012 6:11:38 PM org.apache.solr.core.SolrCore execute
-INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=46 
+Jan 03, 2013 6:10:02 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=null path=null params={start=0&event=firstSearcher&q=solr+rocks&rows=10} hits=0 status=0 QTime=316 
+Jan 03, 2013 6:10:02 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+query+from+solrconfig.xml} hits=0 status=0 QTime=39 
+Jan 03, 2013 6:10:02 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Jan 03, 2013 6:10:02 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener newSearcher
+INFO: Loading spell index for spellchecker: default
+Jan 03, 2013 6:10:02 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@c5cd1a main
+Jan 03, 2013 6:10:05 PM org.apache.solr.request.UnInvertedField uninvert
+INFO: UnInverted multi-valued field {field=property_price_it,memSize=569272,tindexSize=752,time=790,phase1=779,nTerms=4487,bigTerms=1,termInstances=15378,uses=0}
+Jan 03, 2013 6:10:05 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=1892 
+Jan 03, 2013 6:10:13 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[3503125+TO+10000000]} hits=6428 status=0 QTime=197 
+Jan 03, 2013 6:10:34 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=property_price_it:[100000+TO+6235938]} hits=7867 status=0 QTime=97 
+Jan 03, 2013 6:10:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=bedrooms_i:2&fq=property_price_it:[100000+TO+6235938]} hits=4551 status=0 QTime=50 
+Jan 03, 2013 6:11:03 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=bedrooms_i:2&fq=city_s:chennai&fq=property_price_it:[100000+TO+6235938]} hits=2418 status=0 QTime=79 
+Jan 03, 2013 6:11:36 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=bedrooms_i:2&fq=city_s:chennai&fq=property_price_it:[4018750+TO+10000000]} hits=1158 status=0 QTime=41 
+Jan 03, 2013 6:11:42 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=bedrooms_i:2&fq=city_s:chennai&fq=property_price_it:[100000+TO+5720313]} hits=2277 status=0 QTime=57 
+Jan 03, 2013 6:11:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=bedrooms_i:2&fq=city_s:chennai&fq=property_price_it:[100000+TO+9833281]} hits=2743 status=0 QTime=57 
+Jan 03, 2013 6:11:55 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property&fq=bedrooms_i:2&fq=city_s:chennai&fq=property_price_it:[100000+TO+5450469]} hits=2192 status=0 QTime=47 
+Jan 03, 2013 6:12:15 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select params={facet=true&f.state_s.facet.mincount=1&f.property_price_it.facet.mincount=1&f.property_type_s.facet.mincount=1&f.bedrooms_i.facet.mincount=1&f.property_for_s.facet.mincount=1&wt=ruby&rows=10&start=0&q=*:*&f.built_up_area_s.facet.mincount=1&f.city_s.facet.mincount=1&facet.field=property_type_s&facet.field=bedrooms_i&facet.field=property_price_it&facet.field=city_s&facet.field=state_s&facet.field=built_up_area_s&facet.field=property_for_s&fq=type:Property} hits=17502 status=0 QTime=67 

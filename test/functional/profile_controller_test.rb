@@ -2,13 +2,13 @@ require 'test_helper'
 
 class ProfileControllerTest < ActionController::TestCase
   setup do
-    @profile = profile(:one)
+    @profile = profiles(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:profile)
+    assert_not_nil assigns(:Profile)
   end
 
   test "should get new" do
@@ -17,7 +17,7 @@ class ProfileControllerTest < ActionController::TestCase
   end
 
   test "should create profile" do
-    assert_difference('Profile.count') do
+    assert_difference('Profiles.count') do
       post :create, profile: {  }
     end
 
@@ -40,10 +40,10 @@ class ProfileControllerTest < ActionController::TestCase
   end
 
   test "should destroy profile" do
-    assert_difference('Profile.count', -1) do
+    assert_difference('Profiles.count', -1) do
       delete :destroy, id: @profile
     end
 
-    assert_redirected_to profile_index_path
+    assert_redirected_to profiles_index_path
   end
 end

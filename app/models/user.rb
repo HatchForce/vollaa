@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
   after_create :after_signup
 
   def after_signup
-    # self.email.to_yaml
-  Profile.create({:user_id => self.id})
+
+  @k = Profile.create({:user_id => self.id})
   end
 
   def self.create_with_omniauth_twitter(auth)
@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
       user.name = auth.info.name rescue "na"
       user.image = auth["info"]["image"] rescue "na"
       user.email = auth["user_info"]["email"] rescue "na"
-      user.auth_token = auth.params.oauth_token rescue ''
+      user.oauth_token = auth.params.oauth_token rescue ''
       user.save(:validate => false)   rescue 'na'
     end
   end

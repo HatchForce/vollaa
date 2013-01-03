@@ -1,0 +1,47 @@
+<h1>My Profile</h1>
+
+<br/><br/><br/>
+<div class="profile">
+
+<table class="table">
+  <span class="span2 a b">Avatar</span>
+  <div class="span3 c">
+  <%#=(current_user.image).nil?? image_tag (@profile.image_url(:medium).to_s, style:"float: right; padding-right: 456px; padding-bottom: 8px;") : image_tag("annonymous_user.png") %>
+  <%#= (current_fb_user.image).nil?? image_tag current_fb_user.image, style:"float: right; padding-right: 536px; padding-bottom: 8px;" : image_tag("annonymous_user.png") %>
+  <%= (current_user.image).nil?? (image_tag @profile.image, style:"padding-top: 10px;") : image_tag("annonymous_user.png") %>
+  </div>
+  <br/>
+  <div class="span2 b">Name</div>
+  <div class="span2 c"><%= @profile.first_name %> <%= @profile.last_name %></div>
+  <br/>
+
+  <div class="span2 b">Contact Number</div>
+  <div class="span3 c"><%= @profile.contact_number %></div>
+  <br/>
+
+  <div class="span2 b">City</div>
+  <div class="span3 c"><%= @profile.city %></div>
+  <br/>
+
+  <div class="span2 b">State</div>
+  <div class="span3 c"><%= @profile.state %></div>
+  <br/>
+
+  <div class="span2 b">Address</div>
+  <div class="span3 c"><%= @profile.address %></div>
+  <br/>
+
+  <div class="span2 b">Email</div>
+  <div class="span3 c"><%= current_user.email %></div>
+  <br/>
+
+  <div class="span2 b">Type</div>
+  <div class="span3 c">Customer, Dealer, Broker, Builder</div>
+  <br/>
+
+  <div class="span2 b"></div>
+  <div class="span3 c"></div>
+  <br/>
+  <div class="span4 offset5 d"><%= link_to 'edit', edit_profile_path(:id => @profile.id), class: 'btn span1' %></div>
+</table>
+</div>

@@ -1,16 +1,16 @@
 <br/><br/>
-<div class="form-horizontal sign_up">
-  <h2 class="offset2">Sign up</h2>
-            <br/>
+<div class="form-horizontal sign_up span7">
+  <h2 class="offset2 sign">Registration</h2>
+  <br/>
+   <span class="form_body">
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
-
-      <div class="control-group">
-        <%= f.label :email, class: "control-label" %>
-        <div class="controls">
-          <%= f.email_field :email %>
-        </div>
-      </div>
+         <div class="control-group">
+           <%= f.label :email, class: "control-label" %>
+           <div class="controls">
+             <%= f.email_field :email %>
+           </div>
+         </div>
 
       <div class="control-group">
         <%= f.label :password, class: "control-label" %>
@@ -30,7 +30,8 @@
         <div class="controls">
           <%= f.submit "Sign up", class: "btn" %>
   <% end %> <br/><br/>
-  <%= render "devise/shared/links" %>
-  </div>
-  </div>
+     <%= render "devise/shared/links" %>
+     </div>
+     </div>
+  </span>
 </div>

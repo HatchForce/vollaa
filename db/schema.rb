@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121227064635) do
+ActiveRecord::Schema.define(:version => 20130103084234) do
 
   create_table "profile", :force => true do |t|
     t.integer  "user_id"
     t.string   "first_name"
     t.string   "last_name"
-    t.date     "dob"
     t.string   "address"
     t.integer  "contact_number"
+    t.string   "city"
+    t.string   "state"
     t.string   "image"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false

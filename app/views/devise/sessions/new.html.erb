@@ -1,12 +1,12 @@
 <br/><br/>
-<div class="form-horizontal sign_in">
+<div class="form-horizontal sign_in span7">
   <h2 class="offset2 sign">Sign in</h2>
   <br/>
   <span class="form_body">
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
       <div class="control-group">
-        <%= f.label :email, class: "control-label" %>
+        <%= f.label :email, class: "control-label control" %>
         <div class="controls">
           <%= f.email_field :email %>
         </div>
@@ -31,7 +31,7 @@
   <% end %>   <br/>
     <br/>
     <%= render "devise/shared/links" %>
-      </div>
+    </div>
     </div>
   </span>
 </div>
