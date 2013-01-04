@@ -3,45 +3,57 @@
 <br/><br/><br/>
 <div class="profile">
 
-<table class="table">
-  <span class="span2 a b">Avatar</span>
-  <div class="span3 c">
-  <%#=(current_user.image).nil?? image_tag (@profile.image_url(:medium).to_s, style:"float: right; padding-right: 456px; padding-bottom: 8px;") : image_tag("annonymous_user.png") %>
-  <%#= (current_fb_user.image).nil?? image_tag current_fb_user.image, style:"float: right; padding-right: 536px; padding-bottom: 8px;" : image_tag("annonymous_user.png") %>
-  <%= (current_user.image).nil?? (image_tag @profile.image, style:"padding-top: 10px;") : image_tag("annonymous_user.png") %>
-  </div>
-  <br/>
-  <div class="span2 b">Name</div>
-  <div class="span2 c"><%= @profile.first_name %> <%= @profile.last_name %></div>
-  <br/>
+  <table class="table">
+    <tr>
+      <td class="span3 a b">Avatar</td>
+      <td class="span3 c">
+        <!--(image_tag (@profile.image_url(:medium).to_s, style:"float: right; padding-right: 456px; padding-bottom: 8px;"))-->
+        <%#=((current_twitter_user).present?? "Twitter image" : image_tag("annonymous_user.png")) if (!user_signed_in? && !current_fb_user.present? && current_twitter_user.present?) %>
 
-  <div class="span2 b">Contact Number</div>
-  <div class="span3 c"><%= @profile.contact_number %></div>
-  <br/>
+        <%= (current_fb_user.image).present?? (raw image_tag current_fb_user.image, :size => "100x40" ) : image_tag("annonymous_user.png") if !user_signed_in? %>
+        <%= ((current_user.profile.image).present? ? (image_tag @profile.image, style: "padding-top: 10px;") : image_tag("annonymous_user.png")) if (user_signed_in? && !current_fb_user.present? && !current_twitter_user.present?) %>
+      </td>
+    </tr>
+    <tr>
+      <td class="span3 b">Name</td>
+      <td class="span3 c"><%= @profile.first_name %> <%= @profile.last_name %></td>
+    </tr>
+    <tr>
 
-  <div class="span2 b">City</div>
-  <div class="span3 c"><%= @profile.city %></div>
-  <br/>
+      <td class="span3 b">Contact Number</td>
+      <td class="span3 c"><%= @profile.contact_number %></td>
+    </tr>
+    <tr>
 
-  <div class="span2 b">State</div>
-  <div class="span3 c"><%= @profile.state %></div>
-  <br/>
+      <td class="span3 b">City</td>
+      <td class="span3 c"><%= @profile.city %></td>
+    </tr>
+    <tr>
 
-  <div class="span2 b">Address</div>
-  <div class="span3 c"><%= @profile.address %></div>
-  <br/>
+      <td class="span3 b">State</td>
+      <td class="span3 c"><%= @profile.state %></td>
+    </tr>
+    <tr>
 
-  <div class="span2 b">Email</div>
-  <div class="span3 c"><%= current_user.email %></div>
-  <br/>
+      <td class="span3 b">Address</td>
+      <td class="span3 c"><%= @profile.address %></td>
+    </tr>
+    <tr>
 
-  <div class="span2 b">Type</div>
-  <div class="span3 c">Customer, Dealer, Broker, Builder</div>
-  <br/>
+      <td class="span3 b">Email</td>
+      <% @fb_twt_email = (current_fb_user.present?? (current_fb_user.email rescue '') : (current_twitter_user.email rescue '')) %>
 
-  <div class="span2 b"></div>
-  <div class="span3 c"></div>
-  <br/>
-  <div class="span4 offset5 d"><%= link_to 'edit', edit_profile_path(:id => @profile.id), class: 'btn span1' %></div>
-</table>
+      <td class="span3 c"><%= user_signed_in?? current_user.email : @fb_twt_email %></td>
+    </tr>
+    <tr>
+
+      <td class="span3 b">Type</td>
+      <td class="span3 c">Customer, Dealer, Broker, Builder</td>
+    </tr>
+
+    <tr>
+      <td class="span3 b"></td>
+      <td class="span4 offset5 d"><%= link_to 'edit', edit_profile_path(:id => @profile.id), class: 'btn span1 offset2' %></td>
+    </tr>
+  </table>
 </div>

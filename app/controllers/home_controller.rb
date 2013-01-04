@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   end
 
   def results
-     #raise params.to_yaml
+     #raise params.inspect
     @properties = Property.all
     session[:query] = params[:what], params[:where] if params[:what].present? || params[:where].present?
 
