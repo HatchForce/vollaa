@@ -1,6 +1,7 @@
 <%= content_for :script %>
 <br/><br/>
-<%= gmaps4rails(@json) %>
+<%#= gmaps4rails(@json) %>
+<%= gmaps("markers" => {"data" => @json, "options" => {"rich_marker" => true, "custom_infowindow_class" => "yellow" } }) %>
 <br/>
 <div id='population-range' style="width: 500px"></div>
 <br/>

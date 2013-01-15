@@ -8,11 +8,11 @@
 
   <div class="result_details">
     <div class="price pull-left">
-      <% if result.property_price != 0 %>
-          <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;">Rs.  <%= result.property_price %></span>
-      <% else %>
-          Contact for price
-      <% end %>
+      <%# if result.property_price != 0 %>
+          <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= result.property_price %></span>
+      <%# else %>
+          <!--Contact for price-->
+      <%# end %>
     </div>
     <div style="padding-top: 1px;">
       <br/>
@@ -28,7 +28,7 @@
     <div class="clear"></div>
   </div>
   <div class="property_links">
-    From : <%= result.source %>   <%= time_ago_in_words(result.created_at) rescue '' %>,
+    From : <%= result.source %>,   <%= time_ago_in_words(result.created_at) rescue '' %>,
     <%= link_to 'Save Property', "#", class: 'save_prop', :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
     -
     <%= link_to 'Email', '#email_form', :class => 'email_property', "data-property-id" => result.id %>  -

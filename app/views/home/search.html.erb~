@@ -27,7 +27,7 @@
           </div>
         </div>
           <br/>
-        <div class="for_hide" style="padding-bottom: 146px;color: #ffffff;"> <br/>
+        <div class="for_hide" style="padding-bottom: 171px;color: #ffffff;"> <br/>
           <%= link_to "Advanced", "#", class: 'advanced_search' %>
         </div>
         <div class="row">

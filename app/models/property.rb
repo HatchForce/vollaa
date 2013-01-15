@@ -1,5 +1,6 @@
 class Property < ActiveRecord::Base
   attr_accessible :property_type, :property_for, :city, :state, :country, :property_title, :property_description, :property_price, :built_up_area, :bedrooms, :property_age, :last_update, :property_image, :source, :more_link
+  has_one :property_map
 
   scope :bedrooms, lambda { where(:bedrooms => 1) }
   scope :price, where("property_price >= ?", 10000000) #property_price more than 1cr
@@ -9,8 +10,8 @@ class Property < ActiveRecord::Base
 
   searchable do
 
-    autosuggest :property_property_title, :using => :property_title
-    autocomplete :property_property_desc, :using => :property_description
+    #autosuggest :property_property_title, :using => :property_title
+    #autocomplete :property_property_desc, :using => :property_description
 
     text :city, :property_title, :boost => 9
     string :property_type
@@ -26,9 +27,6 @@ class Property < ActiveRecord::Base
     string :source
     Date :created_at
 
-    string :sort_title do
-      property_for.downcase.gsub(/^(an?|the)\b/, '')
-    end
   end
 
 end

@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20130103084234) do
     t.string   "property_type"
     t.string   "property_for"
     t.integer  "bedrooms"
-    t.integer  "property_price"
+    t.string   "property_price"
     t.integer  "built_up_area"
     t.string   "city"
     t.string   "state"
@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(:version => 20130103084234) do
     t.date     "last_update"
     t.string   "more_link"
     t.string   "source"
+    t.string   "local_area"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
-    t.string   "local_area"
   end
 
   add_index "properties", ["more_link"], :name => "index_properties_on_more_link", :unique => true
