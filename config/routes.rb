@@ -1,5 +1,7 @@
 Vollaa::Application.routes.draw do
 
+  post '/home/saved_properties' => "home#saved_properties"
+
   resources :profiles
 
   get "property_map/index"

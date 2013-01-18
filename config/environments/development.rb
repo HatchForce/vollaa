@@ -45,9 +45,8 @@ Vollaa::Application.configure do
     :user_name            => 'vollaa.startup@gmail.com',
     :password             => 'onedollar',
     :authentication       => 'plain',
-    :enable_starttls_auto => true
+    :enable_starttls_auto => true,
   }
-
   config.action_mailer.default_url_options = { :host => "127.0.0.1:3000" }
 end
 

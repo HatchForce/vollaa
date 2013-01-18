@@ -7,16 +7,19 @@
 }
 
 .marker {
-  background-color: #b07317;
+  background-color: #b97920;
   color: #dcecff;
   font: 90% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  border-radius: 5px 1px 5px 1px;
 }
 
 .marker_hover {
-  background-color: #0d83b0;
+  background-color: #2193b0;
   color: #dcecff;
   height: "17px";
-  width: "48px"
+  font: 100% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  width: "48px";
+  border-radius: 5px 1px 5px 1px;
 }
 
 .yellow {

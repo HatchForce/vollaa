@@ -11,7 +11,7 @@ $(function () {
     });
 
 
-    $('.email_property').click(function () {
+    $('.email_property').live('click',function () {
         var id = ($(this).attr("data-property-id"));
         $('.send_details_form > #property_id').val(id);
         $(this).fancybox({
@@ -25,8 +25,18 @@ $(function () {
         return false;
     });
 
-    $(".save_prop").click(function () {
-        $('#save_property_#{result.id}').slideToggle();
+    $(".save_prop").live('click', function () {
+        $('#save_property_result.id').slideToggle();
+        var prop_id = ($(this).attr("data-property-id"));
+        var user_id = ($(this).attr("data-user-id"));
+        $.ajax(
+            {   type:'POST',
+                url:'/home/saved_properties',
+                data:{
+                    'property_id':prop_id,
+                    'user_id':user_id
+                }
+            })
         return false;
     });
 
@@ -50,6 +60,22 @@ $(function () {
         $.post('/home/revert_recent')
         return false;
     });
+
+//    #### more less start ####
+    $(".more").hide();
+    $(".bed_more").live('click', function () {
+        $(".more").slideDown();
+        $(this).text("<<less");
+        $(this).removeClass("bed_more");
+        $(this).addClass("bed_less");
+    });
+    $(".bed_less").live('click', function () {
+        $(".more").hide();
+        $(this).text("more>>");
+        $(this).removeClass("bed_less");
+        $(this).addClass("bed_more");
+    });
+//    #### more less end ####
 
 //    $('.price').click(function(){$(".p").animate({width:'toggle'},5); });
 //    $('.type').click(function(){$(".tp").animate({width:'toggle'},1); });
@@ -140,16 +166,86 @@ $(function () {
             PropertyPriceFilter.max = ui.values[ 1 ]
 
             window.location += '&price_min=' + PropertyPriceFilter.min + '&price_max=' + PropertyPriceFilter.max;
-
+//            FilterParameters()
         }
-
     });
 
-//var search_url = "http://localhost:3000/home/results?commit=search&property_for=&search=&utf8=%E2%9C%93&what=&where="
-//
-//var FilterParameters = function () {
-//
-//}
 
-})
-;
+    var FilterParameters = function () {
+        var search_url = "http://localhost:3000/home/results?commit=search&utf8=%E2%9C%93"
+        var what = function () {
+            if (params["what"] != null) {
+
+                return "&what=" +
+                    params["what"];
+            }
+            else {
+                return false
+            }
+        }
+        var where = function () {
+            if (params["where"] != null) {
+                return "&where=" + params["where"]
+            } else {
+                return false
+            }
+        }
+        var property_for = function () {
+            if (params["property_for"] != null) {
+                return "&property_for=" +
+                    params["property_for"]
+            } else {
+                return false
+            }
+        }
+        var price_min = function () {
+            if (params["price_min"] != null) {
+                return "&price_min=" +
+                    PropertyPriceFilter.min
+            } else {
+                return false
+            }
+        }
+        var price_max = function () {
+            if (params["price_max"] != null) {
+                return "&price_max=" +
+                    PropertyPriceFilter.max
+            } else {
+                return false
+            }
+        }
+        var city = function () {
+            if (params["city"] != null) {
+                return "&city=" +
+                    params["city"]
+            } else {
+                return false
+            }
+        }
+        var property_type = function () {
+            if (params["property_type"] != null) {
+                return "&property_type=" +
+                    params["property_type"]
+            } else {
+                return false
+            }
+        }
+        var area_min = function () {
+            if (params["area_min"] != null) {
+                return "&area_min=" +
+                    params["area_min"]
+            } else {
+                return false
+            }
+        }
+        var area_max = function () {
+            if (params["area_max"] != null) {
+                return "&area_max=" +
+                    params["area_max"]
+            } else {
+                return false
+            }
+        }
+        window.location = search_url + what() + where() + property_for() + property_type() + price_min() + price_max() + area_min() + area_max()
+    }
+});

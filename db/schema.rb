@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130103084234) do
+ActiveRecord::Schema.define(:version => 20130118112930) do
 
   create_table "profile", :force => true do |t|
     t.integer  "user_id"
@@ -60,6 +60,13 @@ ActiveRecord::Schema.define(:version => 20130103084234) do
     t.integer  "property_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "saved_properties", :force => true do |t|
+    t.integer  "property_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -1,0 +1,48 @@
+<div class="result">
+
+  <%= hidden_field_tag 'property_id', result.id %>
+  <div class="result_heading">
+    <%= link_to result.property_title, vollaa_property_show_path(result.id), :target => '_blank' %>
+    (<%= result.property_for %>)
+  </div>
+
+  <div class="result_details">
+    <div class="price pull-left">
+      <%# if result.property_price != 0 %>
+          <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= result.property_price %></span>
+      <%# else %>
+          <!--Contact for price-->
+      <%# end %>
+    </div>
+    <div style="padding-top: 1px;">
+      <br/>
+      <span class="span3">  Type : <%= result.property_type %></span>
+      <span class="span2">  Area : <%= result.built_up_area %> yards</span>
+      <span class="span2">Bedrooms : <%= result.bedrooms %></span> <br/>
+      <span class="span3"> State : <%= result.state %></span>
+      <span class="span2"> City : <%= result.city %></span>
+    </div>
+    <div class="description span8">
+      <%= result.property_description %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="property_links">
+    From :<span class="source"><%= result.source %>,  <%= time_ago_in_words(result.created_at)+" ago," rescue '' %></span>
+    <%= link_to 'Save Property', "#", class: 'save_prop', :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
+    -
+    <%= link_to 'Email', '#email_form', :class => 'email_property', "data-property-id" => result.id %>  -
+    <%= link_to 'more info', vollaa_property_show_path(result.id), :target => '_blank' %>
+  </div>
+
+  <div id="save_property_<%= result.id %>" style="background : #ececef; width :500px; height:100px; display:none;">
+    <% if (user_signed_in? || current_twitter_user || current_fb_user) %>
+        property saved
+    <% else %>
+        <%= link_to "Sign in  /", user_session_path %>
+        <%= link_to "Sign Up", new_user_registration_path %>
+        to save the property
+    <% end %>
+  </div>
+</div>
+

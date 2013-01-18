@@ -2,7 +2,10 @@
 
 <span class="filter_nav span3">
      <% unless session[:s_qry_ary].blank? %>
-         searching <%= session[:s_qry_ary].last[0] %><br/> in <%= session[:s_qry_ary].last[1] %> <br/><br/>
+      <div class="search_query">
+        searching <%= session[:s_qry_ary].last[0] %>
+        <br/> in <%= session[:s_qry_ary].last[1] %> <br/>
+      </div>
    <div class="recent">
      <p><b>Recent searches</b><%= link_to "Remove", "#", class: 'nav_clear remove_recent' %></p>
 
@@ -29,21 +32,22 @@
   <br/>
 
 <h5><span id="price">Price</span></h5>
-  <%  if (params["price_min"] || params["price_max"]).present?  %>
+  <% if (params["price_min"] || params["price_max"]).present? %>
   <div class="price_range">
-  Price Range<br/> <%= number_to_indian_currency(params["price_min"])+ "-"+ number_to_indian_currency(params["price_max"])%>
+    Price
+    Range<br/> <%= number_to_indian_currency(params["price_min"])+ "-"+ number_to_indian_currency(params["price_max"]) %>
   </div>
   <br/>
       <% end %>
-  <div id='property_price' style="width: 210px" ></div>
+  <div id='property_price' style="width: 210px"></div>
 <br/>
-<input type="text" id="filtered-price" style="width: 185px; cursor: default; " disabled="true" />
+<input type="text" id="filtered-price" style="width: 185px; cursor: default; " disabled="true"/>
 
    <!--<span> Price Min </span><span style="padding-left: 19px;">  Price Max</span>-->
-   <%#= select "price_min", '', [["min price", 0], ["1 Lakh", 100000], ["2 Lakhs", 200000], ["5 Lakhs", 500000], ["10 Lakh", 1000000], ["15 Lakhs", 1500000], ["20 Lakhs", 2000000], ["25 Lakh", 2500000], ["30 Lakhs", 3000000], ["35 Lakhs", 3500000], ["40 Lakhs", 4000000], ["45 Lakh", 4500000], ["50 Lakhs", 5000000], ["35 Lakhs", 5500000]], :selected => params[:price_min], class: 'controls', :disabled => "min price", :params => params.except("price_min") %> <!---:prompt => "Placeholder"-->
-   <%#= select "price_max", '', [["max price", ],["1 Lakh", 100000], ["2 Lakhs", 200000], ["5 Lakhs", 500000], ["10 Lakh", 1000000], ["15 Lakhs", 1500000], ["20 Lakhs", 2000000], ["25 Lakh", 2500000], ["30 Lakhs", 3000000], ["35 Lakhs", 3500000], ["40 Lakhs", 4000000], ["45 Lakh", 4500000], ["50 Lakhs", 5000000], ["35 Lakhs", 5500000]], :selected => params[:price_max], class: 'controls', :disabled => "max price", :prompt => "max price" %>
+  <%#= select "price_min", '', [["min price", 0], ["1 Lakh", 100000], ["2 Lakhs", 200000], ["5 Lakhs", 500000], ["10 Lakh", 1000000], ["15 Lakhs", 1500000], ["20 Lakhs", 2000000], ["25 Lakh", 2500000], ["30 Lakhs", 3000000], ["35 Lakhs", 3500000], ["40 Lakhs", 4000000], ["45 Lakh", 4500000], ["50 Lakhs", 5000000], ["35 Lakhs", 5500000]], :selected => params[:price_min], class: 'controls', :disabled => "min price", :params => params.except("price_min") %> <!---:prompt => "Placeholder"-->
+  <%#= select "price_max", '', [["max price", ],["1 Lakh", 100000], ["2 Lakhs", 200000], ["5 Lakhs", 500000], ["10 Lakh", 1000000], ["15 Lakhs", 1500000], ["20 Lakhs", 2000000], ["25 Lakh", 2500000], ["30 Lakhs", 3000000], ["35 Lakhs", 3500000], ["40 Lakhs", 4000000], ["45 Lakh", 4500000], ["50 Lakhs", 5000000], ["35 Lakhs", 5500000]], :selected => params[:price_max], class: 'controls', :disabled => "max price", :prompt => "max price" %>
 
-   <!--<span class="p">-->
+  <!--<span class="p">-->
   <!--<p><%#= price_sel('Rs. 1 Lakh - 10 Lakhs', 100000, 1000000) %>    <%#= price_clear(100000, 1000000) %></p>-->
   <!--<p><%#= price_sel('Rs. 10 Lakhs - 50 Lakhs', 1000000, 5000000) %> <%#= price_clear(1000000, 5000000) %></p>-->
   <!--<p><%#= price_sel('Rs. 50 Lakhs - 1Cr', 5000000, 10000000) %>     <%#= price_clear(5000000, 10000000) %></p>-->
@@ -53,12 +57,24 @@
 
    <h5>Bedrooms</h5>
    <ul class="nav nav-pills nav-stacked">
+     <% i = 0 %>
      <% @search.facet(:bedrooms).rows.each do |facet| %>
-         <% unless (facet.value == 0) %>
-             <p><%= link_to "#{facet.value}b (#{@count = facet.count})", params.merge(:bedrooms => facet.value), :class => ((params[:bedrooms]).to_i == facet.value) ? "sel_nav type_link" : "type_link" %>
-               <%= bed_clear(facet.value) %></p>
+         <% facet_value = facet.value %>
+         <% facet_count = facet.count %>
+         <% unless (facet_value == 0) || (facet_value > 15) %>
+             <% i += 1 %>
+             <% if i > 5 %>
+                 <span class="more"><p><%= link_to "#{facet_value}b (#{@count = facet_count})", params.merge(:bedrooms => facet_value), :class => ((params[:bedrooms]).to_i == facet_value) ? "sel_nav type_link" : "type_link" %>
+                   <%= bed_clear(facet_value) %></p></span>
+             <% else %>
+                 <p><%= link_to "#{facet_value}b (#{@count = facet_count})", params.merge(:bedrooms => facet_value), :class => ((params[:bedrooms]).to_i == facet_value) ? "sel_nav type_link" : "type_link" %>
+                   <%= bed_clear(facet_value) %></p>
+             <% end %>
          <% end %>
      <% end %>
+     <% if i > 5 %>
+     <div class="bed_more"><%= "more>>" %></div>
+         <% end %>
    </ul>
    <br/>
 
@@ -81,8 +97,10 @@
 
    <ul class="nav nav-pills nav-stacked">
      <% @search.facet(:city).rows.each do |facet| %>
-         <p><%= link_to facet.value, params.merge(:city => facet.value), :class => ((params[:city]) == facet.value) ? "sel_nav type_link" : "type_link" %>
-           ( <%= @count = facet.count %>)<%= city_clear("#{facet.value}") %></p>
+         <% unless facet.value == '' %>
+             <p><%= link_to facet.value, params.merge(:city => facet.value), :class => ((params[:city]) == facet.value) ? "sel_nav type_link" : "type_link" %>
+               ( <%= @count = facet.count %>)<%= city_clear("#{facet.value}") %></p>
+         <% end %>
      <% end %>
    </ul>
    <br/>

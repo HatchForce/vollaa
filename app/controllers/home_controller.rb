@@ -77,12 +77,10 @@ class HomeController < ApplicationController
 
   def send_details
     property_id = params[:property_id]
-    emails = params[:emails].split(',')
+    emails = params[:emails].strip.split(',')
     emails.each do |email|
-      email = email.strip
       if email =~ /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/
-        @mail = UserMailer.mail_property_details(email, property_id).deliver
-        raise "returned to send_details"
+         @mail = UserMailer.mail_property_details(email, property_id).deliver
       end
     end
   end
@@ -91,6 +89,13 @@ class HomeController < ApplicationController
     $s_qry = []
     session[:s_qry_ary] = ''
     #session[:query] = ''
+    render :json => {:status => 'ok'}
+  end
+
+  def saved_properties
+    @prop_id = params[:property_id]
+    @user_id = params[:user_id]
+    @saved_prop = SavedProperty.create(:property_id => @prop_id, :user_id => @user_id)
     render :json => {:status => 'ok'}
   end
 

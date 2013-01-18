@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_one :profile
+  has_many :saved_properties, :through => :properties
   after_create :after_signup
 
   def after_signup

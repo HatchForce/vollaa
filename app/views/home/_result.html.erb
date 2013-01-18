@@ -2,16 +2,16 @@
 
   <%= hidden_field_tag 'property_id', result.id %>
   <div class="result_heading">
-    <%= link_to result.property_title, vollaa_property_show_path(result.id), :target => '_blank' %>
+    <%= link_to truncate(result.property_title, :length => 80), vollaa_property_show_path(result.id), :target => '_blank' %>
     (<%= result.property_for %>)
   </div>
 
   <div class="result_details">
     <div class="price pull-left">
       <%# if result.property_price != 0 %>
-          <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= result.property_price %></span>
+      <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= number_to_indian_currency result.property_price %></span>
       <%# else %>
-          <!--Contact for price-->
+      <!--Contact for price-->
       <%# end %>
     </div>
     <div style="padding-top: 1px;">
@@ -25,18 +25,22 @@
     <div class="description span8">
       <%= result.property_description %>
     </div>
+    <% image = result.property_image %>
+    <% if image.present? %>
+        <%= image_tag result.property_image, class: 'prop_image', alt: '' %>
+    <% end %>
     <div class="clear"></div>
   </div>
   <div class="property_links">
-    From : <%= result.source %>,   <%= time_ago_in_words(result.created_at) rescue '' %>,
-    <%= link_to 'Save Property', "#", class: 'save_prop', :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
-    -
+    From :<span class="source"><%= result.source %>
+    ,  <%= time_ago_in_words(result.created_at)+" ago," rescue '' %></span>
+    <% @user_id = current_user.id || current_fb_user.id || current_twitter_user.id %>
+    <%= link_to 'Save Property', "#", class: 'save_prop', "data-property-id" => result.id, "data-user-id" => @user_id, :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>    -
     <%= link_to 'Email', '#email_form', :class => 'email_property', "data-property-id" => result.id %>  -
     <%= link_to 'more info', vollaa_property_show_path(result.id), :target => '_blank' %>
   </div>
 
-
-  <div id="save_property_<%= result.id %>" style="background : #ececef; width :500px; height:100px; display:none;">
+  <div id="save_property_<%= result.id %>" style="background : #ececef; width :500px; height:100%; display:none;">
     <% if (user_signed_in? || current_twitter_user || current_fb_user) %>
         property saved
     <% else %>
@@ -45,7 +49,5 @@
         to save the property
     <% end %>
   </div>
-
-
 </div>
 

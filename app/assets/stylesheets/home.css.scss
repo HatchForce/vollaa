@@ -68,6 +68,11 @@
 
   .property_links {
 
+    .source{
+      color: #6B96AD;
+      font-size: 13.5px;
+    }
+
   }
 
   .save_property{
@@ -75,6 +80,12 @@
       width :500px;
       height:100px;
       display:none;
+  }
+  .prop_image{
+    height: 65px;
+    margin-left: 235px;
+    width: 110px;
+    border: 3px solid #D0DAE1;
   }
 }
 
@@ -117,6 +128,16 @@
 
 .filter_nav  {
 
+  .search_query{
+    border: 1px solid #D0CFCF;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    padding: 7px 1px 5px 13px;
+    position: inherit;
+  }
+
   border-right: #F2EEEE solid 1px;
   p
     {
@@ -143,6 +164,16 @@
 
   .price_range{
     border: 2px dotted #D6CACA;
+  }
+  .bed_more{
+    color: #B97920;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .bed_less{
+    color: #B97920;
+    cursor: pointer;
+    font-size: 12px;
   }
 }
 

@@ -160,34 +160,35 @@ body {
 
 /* iframe */
 .iframe_header {
-  background-color: #FFFFFF;
-  height: 100px;
+  background-color: #EFEFEF;
+  height: 70px;
   padding: 10px 20px;
-  border-bottom: 1px solid #005580;
+  border-bottom: 1px solid #AAAAAA;
 }
 
 .iframe_logo {
   margin-top: 20px;
   float: left;
-  color: #fbb450;
+  color: #A2BCD2;
 }
 
 .iframe_logo:hover {
   text-decoration: none;
-  color: #fbb450;
+  color: #91a9bf;
 }
 
 .iframe_logo h2 {
   font-size: 48px;
+    margin: 0 0 10px 20px;
 }
 
 .iframe_close {
   position: fixed;
   right: 0;
   top: 0;
-  padding: 10px;
-  background-color: #dd514c;
-  font-size: 16px;
+  padding: 0px 8px;
+  background-color: #B1AEAE;
+  font-size: 10px;
   cursor: pointer;
 }
 
@@ -241,4 +242,10 @@ body {
     /*margin: 0 0 1em;*/
     /*overflow: hidden;*/
     /*padding: 2em;*/
+}
+
+.google_cal{
+    float: right;
+    font-size: 10px;
+    font-weight: bold;
 }
