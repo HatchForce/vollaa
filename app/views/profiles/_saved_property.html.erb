@@ -1,0 +1,35 @@
+<% @saved_properties = SavedProperty.where("user_id = ?", @profile.user_id).order("created_at DESC") %>
+<% @saved_properties.each do |saved_prop| %>
+    <% properties = Property.where("id = ?", saved_prop.property_id) %>
+    <% @property = properties[0] %>
+     <div class="sav_prop_<%= @property.id %>">
+    <div class="result_heading">
+      <%= link_to truncate(@property.property_title, :length => 80), vollaa_property_show_path(@property.id), :target => '_blank' %>
+      (<%= @property.property_for %>)
+       <%= "- " + time_ago_in_words(saved_prop.created_at) %>
+      <%= link_to " Remove","#", "data-property-id" => @property.id, "data-user-id" => @profile.user_id,id: 'remove_save_prop' %>
+    </div>
+    <div class="result_details">
+      <div class="price pull-left">
+        <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= number_to_indian_currency @property.property_price %></span>
+
+      </div>
+      <div style="padding-top: 1px;">
+        <br/>                                                                        <span class="span3">  Type : <%= @property.property_type %></span>
+        <span class="span2">  Area : <%= @property.built_up_area %> yards</span>
+        <span class="span2">Bedrooms : <%= @property.bedrooms %></span> <br/>
+        <span class="span3"> State : <%= @property.state %></span>
+        <span class="span2"> City : <%= @property.city %></span>
+      </div>    <br/>
+      <div class="description span8">
+        <%= @property.property_description %>
+      </div>
+      <% image = @property.property_image %>
+      <% if image.present? %>
+          <%= image_tag @property.property_image, class: 'save_prop_image', alt: '' %>
+      <% end %>
+    </div>
+     </div>
+    <br/> <br/>
+
+<% end %>

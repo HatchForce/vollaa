@@ -34,9 +34,13 @@
   <div class="property_links">
     From :<span class="source"><%= result.source %>
     ,  <%= time_ago_in_words(result.created_at)+" ago," rescue '' %></span>
-    <% (@user_id = (current_user.id || current_fb_user.id || current_twitter_user.id)) if session[:user_id].present? %>
-    <% if session[:user_id].present? %>
-        <%= link_to 'Save Property', "#", class: 'save_prop', "data-property-id" => result.id, "data-user-id" => @user_id, :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
+    <% (@user_id = (current_user.id || current_fb_user.id || current_twitter_user.id) rescue nil) %>
+    <% unless @user_id.nil? %>
+        <% @user = current_user || current_fb_user || current_twitter_user %>
+        <% @save_property = link_to 'Save Property', "#", class: 'save_prop', "data-property-id" => result.id, "data-user-id" => @user_id, "data-profile-id" => @user.profile.id, :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
+        <% @saved_property = link_to "Saved", "/profiles/#{@user.profile.id}#tab2", class: "saved" %>
+        <% @saved_prop_present = SavedProperty.where("property_id = ?",result.id).present? %>
+        <%= @saved_prop_present?  @saved_property : @save_property %>
     <% else %>
         <%= link_to 'Save Property', "#", class: 'save_prop', :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
     <% end %>

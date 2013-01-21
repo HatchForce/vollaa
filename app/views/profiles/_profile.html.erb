@@ -1,0 +1,56 @@
+<div class="profile">
+
+  <table class="table">
+    <tr>
+      <td class="span3 a b">Avatar</td>
+      <td class="span3 c">
+        <!--(image_tag (@profile.image_url(:medium).to_s, style:"float: right; padding-right: 456px; padding-bottom: 8px;"))-->
+        <%#=((current_twitter_user).present?? "Twitter image" : image_tag("annonymous_user.png")) if (!user_signed_in? && !current_fb_user.present? && current_twitter_user.present?) %>
+
+        <%= (current_fb_user.image).present?? (raw image_tag current_fb_user.image, :size => "100x40" ) : image_tag("annonymous_user.png") if !user_signed_in? %>
+        <%= ((current_user.profile.image).present? ? (image_tag @profile.image, :size => "100x40", style: "padding-top: 10px;") : image_tag("annonymous_user.png")) if (user_signed_in? && !current_fb_user.present? && !current_twitter_user.present?) %>
+      </td>
+    </tr>
+    <tr>
+      <td class="span3 b">Name</td>
+      <td class="span3 c"><%= @profile.first_name %> <%= @profile.last_name %></td>
+    </tr>
+    <tr>
+
+      <td class="span3 b">Contact Number</td>
+      <td class="span3 c"><%= @profile.contact_number %></td>
+    </tr>
+    <tr>
+
+      <td class="span3 b">City</td>
+      <td class="span3 c"><%= @profile.city %></td>
+    </tr>
+    <tr>
+
+      <td class="span3 b">State</td>
+      <td class="span3 c"><%= @profile.state %></td>
+    </tr>
+    <tr>
+
+      <td class="span3 b">Address</td>
+      <td class="span3 c"><%= @profile.address %></td>
+    </tr>
+    <tr>
+
+      <td class="span3 b">Email</td>
+      <% @fb_twt_email = (current_fb_user.present?? (current_fb_user.email rescue '') : (current_twitter_user.email rescue '')) %>
+
+      <td class="span3 c"><%= user_signed_in?? current_user.email : @fb_twt_email %></td>
+    </tr>
+    <tr>
+
+      <td class="span3 b">Type</td>
+      <td class="span3 c">Customer, Dealer, Broker, Builder</td>
+    </tr>
+
+    <tr>
+      <td class="span3 b"></td>
+      <td class="span4 offset5 d"><%= link_to 'edit', edit_profile_path(:id => @profile.id), class: 'btn span1 offset2' %></td>
+    </tr>
+  </table>
+</div>

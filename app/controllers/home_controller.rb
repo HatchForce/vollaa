@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   end
 
   def results
-     #raise params.inspect
+    #raise params.inspect
     @properties = Property.all
     session[:query] = params[:what], params[:where] if params[:what].present? || params[:where].present?
 
@@ -25,7 +25,7 @@ class HomeController < ApplicationController
     session[:s_qry_ary] = ($s_qry = $s_qry.uniq) if $s_qry.present?
 
     @search = Property.search do
-      fulltext (params['what']. present?? params['what'] : "") + ' ' + (params['where'].present?? params['where'] : "")
+      fulltext (params['what'].present? ? params['what'] : "") + ' ' + (params['where'].present? ? params['where'] : "")
 
       facet :property_type, :bedrooms, :property_price, :city, :state, :built_up_area, :property_for
 
@@ -80,7 +80,7 @@ class HomeController < ApplicationController
     emails = params[:emails].strip.split(',')
     emails.each do |email|
       if email =~ /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/
-       Notifier.mail_property_details(email, property_id).deliver
+        Notifier.mail_property_details(email, property_id).deliver
       end
     end
   end
@@ -88,15 +88,26 @@ class HomeController < ApplicationController
   def revert_recent
     $s_qry = []
     session[:s_qry_ary] = ''
-    #session[:query] = ''
     render :json => {:status => 'ok'}
   end
 
   def saved_properties
     @prop_id = params[:property_id]
     @user_id = params[:user_id]
-    @saved_prop = SavedProperty.create(:property_id => @prop_id, :user_id => @user_id)
-    render :json => {:status => 'ok'}
+    @saved_prop_present = SavedProperty.where("property_id = ? AND user_id = ?", @prop_id, @user_id).present?
+    if !@saved_prop_present
+      @saved_prop = SavedProperty.create(:property_id => @prop_id, :user_id => @user_id)
+      render :json => {:status => 'ok'}
+    else
+      render :json => {:status => 'already exists'}
+    end
+  end
+
+  def remove_save_prop
+    @rm_prop_id = params[:property_id]
+    user_id = params[:user_id]
+    SavedProperty.where("property_id = ? AND user_id = ?", @rm_prop_id, user_id).destroy_all
+    render :json => {:status => 'record deleted'}
   end
 
 end

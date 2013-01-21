@@ -25,10 +25,12 @@ $(function () {
         return false;
     });
 
+//    ### Save Property Start ###
     $(".save_prop").live('click', function () {
         $('#save_property_result.id').slideToggle();
         var prop_id = ($(this).attr("data-property-id"));
         var user_id = ($(this).attr("data-user-id"));
+        var profile_id = $(this).attr("data-profile-id");
         if (prop_id != null || user_id != null) {
             $.ajax(
                 {   type:'POST',
@@ -38,12 +40,19 @@ $(function () {
                         'user_id':user_id
                     }
                 })
+            $(this).text("Saved");
+            $(this).attr("href", "../profiles/"+ profile_id);
+            $(this).removeAttr("onclick");
+            $(this).removeClass("save_prop");
+            $(this).addClass('saved');
             return false;
         }
         else {
             return false;
         }
     });
+
+//    ### Save Property End ###
 
     $('#email_submit').submit(function () {
         $.fancybox.close();
@@ -171,86 +180,66 @@ $(function () {
             PropertyPriceFilter.max = ui.values[ 1 ]
 
             window.location += '&price_min=' + PropertyPriceFilter.min + '&price_max=' + PropertyPriceFilter.max;
-//            FilterParameters()
         }
     });
 
+  $('.home_search_btn').live('click', function(){
 
-    var FilterParameters = function () {
         var search_url = "http://localhost:3000/home/results?commit=search&utf8=%E2%9C%93"
         var what = function () {
             if (params["what"] != null) {
-
-                return "&what=" +
-                    params["what"];
-            }
-            else {
-                return false
-            }
+                return ("&what=" + params["what"]);
+            } else { return '' }
         }
+
         var where = function () {
             if (params["where"] != null) {
-                return "&where=" + params["where"]
-            } else {
-                return false
-            }
+                return ("&where=" + params["where"])
+            } else { return '' }
         }
+
         var property_for = function () {
             if (params["property_for"] != null) {
-                return "&property_for=" +
-                    params["property_for"]
-            } else {
-                return false
-            }
+                return ("&property_for=" + params["property_for"])
+            } else { return false }
         }
+
         var price_min = function () {
             if (params["price_min"] != null) {
-                return "&price_min=" +
-                    PropertyPriceFilter.min
-            } else {
-                return false
-            }
+                return ("&price_min=" + params["price_min"])
+            } else { return false }
         }
+
         var price_max = function () {
             if (params["price_max"] != null) {
-                return "&price_max=" +
-                    PropertyPriceFilter.max
-            } else {
-                return false
-            }
+                return ("&price_max=" + params["price_max"])
+            } else { return false}
         }
+
         var city = function () {
             if (params["city"] != null) {
-                return "&city=" +
-                    params["city"]
-            } else {
-                return false
-            }
+                return ("&city=" + params["city"])
+            } else { return false }
         }
+
         var property_type = function () {
             if (params["property_type"] != null) {
-                return "&property_type=" +
-                    params["property_type"]
-            } else {
-                return false
-            }
+                return ("&property_type=" + params["property_type"])
+            } else { return false }
         }
+
         var area_min = function () {
             if (params["area_min"] != null) {
-                return "&area_min=" +
-                    params["area_min"]
-            } else {
-                return false
-            }
+                return ("&area_min=" + params["area_min"])
+            } else { return false }
         }
+
         var area_max = function () {
             if (params["area_max"] != null) {
-                return "&area_max=" +
-                    params["area_max"]
-            } else {
-                return false
-            }
+                return ("&area_max=" + params["area_max"])
+            } else { return false }
         }
-        window.location = search_url + what() + where() + property_for() + property_type() + price_min() + price_max() + area_min() + area_max()
-    }
+
+        window.location = search_url + what + where + property_for + property_type + price_min + price_max + area_min + area_max
+  });
 });
