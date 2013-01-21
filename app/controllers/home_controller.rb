@@ -80,7 +80,7 @@ class HomeController < ApplicationController
     emails = params[:emails].strip.split(',')
     emails.each do |email|
       if email =~ /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/
-         @mail = UserMailer.mail_property_details(email, property_id).deliver
+       Notifier.mail_property_details(email, property_id).deliver
       end
     end
   end

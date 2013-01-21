@@ -27,7 +27,7 @@ gem 'oa-openid'
 gem 'twitter_oauth'
 gem 'fb_graph'
 gem 'browser'
-gem 'premailer-rails3'
+#gem 'premailer-rails3'
 gem 'meta-tags', :require => 'meta_tags'
 gem 'gmaps4rails'
 

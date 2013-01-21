@@ -34,8 +34,13 @@
   <div class="property_links">
     From :<span class="source"><%= result.source %>
     ,  <%= time_ago_in_words(result.created_at)+" ago," rescue '' %></span>
-    <% @user_id = current_user.id || current_fb_user.id || current_twitter_user.id %>
-    <%= link_to 'Save Property', "#", class: 'save_prop', "data-property-id" => result.id, "data-user-id" => @user_id, :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>    -
+    <% (@user_id = (current_user.id || current_fb_user.id || current_twitter_user.id)) if session[:user_id].present? %>
+    <% if session[:user_id].present? %>
+        <%= link_to 'Save Property', "#", class: 'save_prop', "data-property-id" => result.id, "data-user-id" => @user_id, :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
+    <% else %>
+        <%= link_to 'Save Property', "#", class: 'save_prop', :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
+    <% end %>
+    -
     <%= link_to 'Email', '#email_form', :class => 'email_property', "data-property-id" => result.id %>  -
     <%= link_to 'more info', vollaa_property_show_path(result.id), :target => '_blank' %>
   </div>

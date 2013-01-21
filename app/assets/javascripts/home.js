@@ -29,15 +29,20 @@ $(function () {
         $('#save_property_result.id').slideToggle();
         var prop_id = ($(this).attr("data-property-id"));
         var user_id = ($(this).attr("data-user-id"));
-        $.ajax(
-            {   type:'POST',
-                url:'/home/saved_properties',
-                data:{
-                    'property_id':prop_id,
-                    'user_id':user_id
-                }
-            })
-        return false;
+        if (prop_id != null || user_id != null) {
+            $.ajax(
+                {   type:'POST',
+                    url:'/home/saved_properties',
+                    data:{
+                        'property_id':prop_id,
+                        'user_id':user_id
+                    }
+                })
+            return false;
+        }
+        else {
+            return false;
+        }
     });
 
     $('#email_submit').submit(function () {

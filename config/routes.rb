@@ -29,15 +29,15 @@ Vollaa::Application.routes.draw do
 
   resource :home do
     collection do
-      get 'results'
+      get  'results'
       post 'send_details'
-      get 'search'
-      get 'contact'
-      get 'about'
-      get 'terms'
-      get 'view_results'
+      get  'search'
+      get  'contact'
+      get  'about'
+      get  'terms'
+      get  'view_results'
       post 'revert_recent'
-      get 'side_nav'
+      get  'side_nav'
     end
   end
 
