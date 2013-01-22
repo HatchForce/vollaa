@@ -14,6 +14,12 @@ Vollaa::Application.routes.draw do
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
   match "property_map", :to => 'property_map#index', :as => :property_map
+  match "/about", :to => "application#about"
+  match "/policy", :to => "application#policy"
+  match "/contact", :to => "application#contactus"
+  match "/trends", :to => "application#trends"
+  match "/tools", :to => "application#tools"
+  match "/advertise", :to => "application#advertise"
 
   match 'vollaa_property_:id' => 'properties#vollaa_property_show', :as => 'vollaa_property_show'
   resources :properties do

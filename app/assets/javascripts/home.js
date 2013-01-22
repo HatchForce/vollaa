@@ -31,6 +31,7 @@ $(function () {
         var prop_id = ($(this).attr("data-property-id"));
         var user_id = ($(this).attr("data-user-id"));
         var profile_id = $(this).attr("data-profile-id");
+        var $this = $(this)
         if (prop_id != null || user_id != null) {
             $.ajax(
                 {   type:'POST',
@@ -40,11 +41,11 @@ $(function () {
                         'user_id':user_id
                     }
                 })
-            $(this).text("Saved");
-            $(this).attr("href", "../profiles/"+ profile_id);
-            $(this).removeAttr("onclick");
-            $(this).removeClass("save_prop");
-            $(this).addClass('saved');
+            $this.text("Saved");
+            $this.attr("href", "../profiles/"+ profile_id);
+            $this.removeAttr("onclick");
+            $this.removeClass("save_prop");
+            $this.addClass('saved');
             return false;
         }
         else {
@@ -53,7 +54,6 @@ $(function () {
     });
 
 //    ### Save Property End ###
-
     $('#email_submit').submit(function () {
         $.fancybox.close();
         return true;
@@ -64,9 +64,11 @@ $(function () {
 //      $(".for_hide").show();
 //    });
 
+    $(".hide_load_image").hide();
+
     $(".advanced_search").click(function () {
 //        $(".for_hide").remove();
-//        $(".adv_search").show();
+        $(".loading_adv_search").html("<img src='assets/loading_image.gif'>");
         $.ajax({
             type: 'GET',
             url: '/home/adv_search'
@@ -167,7 +169,8 @@ $(function () {
         $("#filtered-price").val("Rs." + (params["price_min"]) + " - " + "Rs." + (params["price_max"]));
     }
     else if ((params["price_min"]) == null && (params["price_max"]) == null) {
-        $("#filtered-price").val("Rs." + (PropertyPriceFilter.min) + " - " + "Rs." + (PropertyPriceFilter.max));
+        $("#filtered-price").val("Min-price       :       Max-Price")
+//        $("#filtered-price").val("Rs." + (PropertyPriceFilter.min) + " - " + "Rs." + (PropertyPriceFilter.max));
     }
 
     $("#property_price").slider({

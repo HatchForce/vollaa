@@ -1,37 +1,8 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.profile {
-  border: 1px solid #AAAAAA;
-  height: 100%;
-  min-height: 550px;
-  line-height: 50px;
-  margin-left: 150px;
-  margin-right: 500px;
-  width: 600px;
-  border-radius: 5px;
-  background-color: #f0f1f5;
-  background-image: linear-gradient(#F9F9F9, #F9F9F9);
-  background-repeat: repeat-x;
-  border-color: #F2EEED #F7F7F7 #E8E8E8;
-  .a {
-    padding-top: 50px;
-  }
+
   .b {
+    font-size: 17px;
     font-weight: bold;
   }
-  .c {
-    margin-left: 145px;
-  }
-  .d {
-  }
-
-  .table th {
-    border-top: 1px solid transparent !important;
-
-  }
-  .table td {
-    border-top: 1px solid transparent !important;
-
-  }
-}

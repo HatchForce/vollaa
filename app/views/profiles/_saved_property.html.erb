@@ -7,7 +7,9 @@
         <%= link_to truncate(@property.property_title, :length => 80), vollaa_property_show_path(@property.id), :target => '_blank' %>
         (<%= @property.property_for %>)
         <%= "- " + time_ago_in_words(saved_prop.created_at) %>
-        <%= link_to " Remove", "#", "data-property-id" => @property.id, "data-user-id" => @profile.user_id, id: 'remove_save_prop' %>
+        <span>
+        <%= link_to " Remove", "#", "data-property-id" => @property.id, "data-user-id" => @profile.user_id, id: 'remove_save_prop', style:"color: #CC0000;" %>
+        </span>
       </div>
       <div class="result_details">
         <div class="price pull-left">

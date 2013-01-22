@@ -1,15 +1,3 @@
-<h1>Personal Details</h1>
+<br/>
+<h2 style="color:#8996BC; margin-left:100px">&nbsp;Edit Profile</h2>
 <%= render :partial => 'form', :locals => {:profile => @profile} %>
-
-<form method='post' name='paging' action='/do/quicksearch/search' onsubmit='try{return sptab.doPage(event,"quicksearch");}catch(ex){alert(ex);}'>
-  <input type='hidden' name='encrypted_input' value='UiB8IFFTIHwgUyB8IzcjICB8IFNIIzE3IyB8IFNFQVJDSCB8IDc1NTIzNDI5MzQwODY3MTQgfCMyIyAgfCA3NzczNTg3LDgxMDc3MDEgfCAxLDQsMiwzLDkwLDUsMjIsODAgfCAxICMxI3wgIHwgTyxBLEIgfCMyIyAgfCAxLDQsMiwzLDkwLDUsMjIsODAgfCM0IyAgfCBPLEEsQiMxNyMgfCA='><input type='hidden' name='search_id' value='7552527514534759'>
-  <input type='hidden' name='src' value='PAGING'><input type='hidden' name='lstAcn' value='SEARCH'><input type='hidden' name='lstAcnId' value='7552527514534759'><input type='hidden' name='fsl_results' value='Y' id='fsl_results'><input type='hidden' name='total_fsl_count' id='total_fsl_count' value='2'>
-
-  <div style='margin-top: 15px;'></div>
-  <div class='pgdiv'>
-    <input type=submit onclick='this.form.elem=this' name='button_prev' value='&laquo; Previous' class='pgdis' style='width:72px' disabled=true><input type=submit name='page' onclick='this.form.elem=this' value='1' class='pgdes' disabled=true><input type=submit name='page' onclick='this.form.elem=this' value='2' class='pgsel'><input type=submit name='page' onclick='this.form.elem=this' value='3' class='pgsel'><input type=submit name='page' onclick='this.form.elem=this' value='4' class='pgsel'><input type=submit name='page' onclick='this.form.elem=this' value='5' class='pgsel'><input type=submit name='page' onclick='this.form.elem=this' value='6' class='pgsel'><input type=submit name='page' onclick='this.form.elem=this' value='7' class='pgsel'><input type=submit name='page' onclick='this.form.elem=this' value='8' class='pgsel'><input type=submit name='page' onclick='this.form.elem=this' value='9' class='pgsel'><input type=submit name='page' onclick='this.form.elem=this' value='10' class='pgsel'>
-    ....
-    <input type=submit name='page' onclick='this.form.elem=this' value='1932' class='pgsel'><input type=submit name='page' onclick='this.form.elem=this' value='1933' class='pgsel'><input type=hidden onclick='this.form.elem=this' name='button_next' id='button_next' value='2'>&nbsp;<input type=submit name='nextbutton' onclick='this.form.elem=this' class='pgsel' value='Next &raquo;' style='width:50px;'>
-  </div>
-  <div style='margin-bottom: 35px;'></div>
-</form>

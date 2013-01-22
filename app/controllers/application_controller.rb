@@ -2,6 +2,29 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :current_fb_user, :current_twitter_user
 
+  def about
+  end
+
+  def policy
+
+  end
+
+  def contactus
+
+  end
+
+  def trends
+
+  end
+
+  def tools
+
+  end
+
+  def advertise
+
+  end
+
   private
 
   def current_fb_user
@@ -14,5 +37,8 @@ class ApplicationController < ActionController::Base
       @current_user ||= User.find(session[:user_id]) if session[:user_id]
       #return false unless @current_user.provider == "twitter"
   end
+
+
+
 
 end
