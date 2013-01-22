@@ -20,7 +20,7 @@
      <% end %>
 
   <br/>
-  <p><%= (params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max]).nil? ? '' : (link_to 'Remove All', params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max), class: 'nav_clear') %></p>
+  <p><%= (params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max]).nil? ? '' : (link_to 'Remove Filters', params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max), class: 'nav_clear') %></p>
 
 <h5><span class="type">Type</span></h5>
   <span class="tp">

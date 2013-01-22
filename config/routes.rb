@@ -2,6 +2,7 @@ Vollaa::Application.routes.draw do
 
   post '/home/saved_properties' => "home#saved_properties"
   match 'home/remove_save_prop', :to => 'home#remove_save_prop'
+  match 'home/adv_search', :to => 'home#adv_search'
 
   resources :profiles
 

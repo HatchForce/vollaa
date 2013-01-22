@@ -3,8 +3,8 @@
 .search_box {
   padding-left: 250px;
   height: 400px;
-  display: table-cell;
-  vertical-align: middle;
+  //display: table-cell;
+  padding-top: 30px;
   home_image{
     padding-bottom: 20px;
     padding-left: 50px;
@@ -16,6 +16,7 @@
 }
 
 .advanced_search{
+  margin-top: 20px;
   padding-left: 250px;
 }
 

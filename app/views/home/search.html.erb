@@ -11,7 +11,7 @@
 
     <div style="width: 980px;margin: 0 auto;">
       <div class="search_box">
-        <div class="row form-inline">
+        <div class="row form-inline" style="position: absolute;">
           <div class="span3 form-inline">
             <%= label_tag :what %><br/>
             <%= text_field_tag :what, nil, id: 'what' %>
@@ -23,18 +23,15 @@
             <p class="help-inline">city, state</p>
           </div>
           <div class="span form-inline" style="padding-bottom: 20px;padding-top: 5px;"> <br/>
-            <%= submit_tag :search, :class => 'btn btn-primary home_search_btn ' %>
+            <%= submit_tag :search, :class => 'btn btn-primary home_search_btn' %>
           </div>
         </div>
           <br/>
-        <div class="for_hide" style="padding-bottom: 171px;color: #ffffff;"> <br/>
+        <div class="row for_hide" style="padding-left:20px;margin-top: 50px;"> <br/>
           <%= link_to "Advanced", "#", class: 'advanced_search' %>
         </div>
-        <div class="row">
-          <div class="adv_search"  style="padding-left: 30px;">
-            <%= render :partial => 'adv_search' %>
-          </div>
-        </div>
+        <%  %>
+
 <% end %>
 
 </div>

@@ -6,7 +6,7 @@
 
   <div class="span3 form-inline">
     <%= label_tag :property_type %>
-    <%= select_tag :property_type, options_for_select({ "Select One" => '', "Plot" => "plot","Non-Layout Land" => "Non-Layout Land", "Residential" => "residential", "Flat" => "Flat", "Office Space" => "Office Space" }) %>
+    <%= select_tag :property_type, options_for_select({"Residential" => "Residential", "Plot" => "plot","Non-Layout Land" => "Non-Layout Land", "Flat" => "Flat", "Office Space" => "Office Space" }) %>
     <p class="help-inline">residential,flat,commercial, house</p>
   </div>
 
@@ -22,13 +22,15 @@
 
   <div class="span3 form-inline">
     <%= label_tag :price_min %>
-    <%= text_field_tag :price_min %>
+    <% min_value = Property.minimum(:property_price) %>
+    <%= text_field_tag :price_min, min_value %>
     <p class="help-inline"></p>
   </div>
 
   <div class="span3 form-inline">
     <%= label_tag :price_max%>
-    <%= text_field_tag :price_max %>
+    <% max_value = Property.maximum(:property_price) %>
+    <%= text_field_tag :price_max, max_value %>
     <p class="help-inline"></p>
   </div>
 

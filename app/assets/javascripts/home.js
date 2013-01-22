@@ -65,8 +65,12 @@ $(function () {
 //    });
 
     $(".advanced_search").click(function () {
-        $(".for_hide").hide();
-        $(".adv_search").show();
+//        $(".for_hide").remove();
+//        $(".adv_search").show();
+        $.ajax({
+            type: 'GET',
+            url: '/home/adv_search'
+        });
     });
 
     $(".remove_recent").live('click', function () {
