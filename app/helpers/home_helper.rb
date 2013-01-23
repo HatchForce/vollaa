@@ -6,18 +6,6 @@ module HomeHelper
     ((params[:property_type]) == value)? (link_to 'Clear', params.except(:property_type), class: 'nav_clear type_link') : ''
   end
 
-  def bed_clear(value)
-    ((params[:bedrooms]).to_i == value)? (link_to 'Clear', params.except(:bedrooms), class: 'nav_clear') : ''
-  end
-
-  def city_clear(value)
-    ((params[:city]) == value)? (link_to 'Clear', params.except(:city), class: 'nav_clear') : ''
-  end
-
-  def state_clear(value)
-    ((params[:state]) == value)? (link_to 'Clear', params.except(:state), class: 'nav_clear') : ''
-  end
-
   def price_sel(name, val1,val2)
     link_to name,params.merge(:price_min => val1, :price_max => val2), :class => ((params[:price_min].to_i == val1) && (params[:price_max].to_i == val2))? "sel_nav" : ""
   end

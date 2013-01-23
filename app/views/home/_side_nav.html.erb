@@ -12,7 +12,8 @@
      <p>
        <% session[:s_qry_ary].uniq.each_with_index do |q, i = 0| %>
            <% unless (i == (session[:s_qry_ary].length - 1)) %>
-               <%= link_to q.join(" "), params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max).merge(:what => q[0], :where => q[1]) %>
+               <% @params_except = params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max) %>
+               <%= link_to q.join(" "), params_except.merge(:what => q[0], :where => q[1]) %>
                <br/>
            <% end %>
        <% end %></p>
@@ -20,14 +21,15 @@
      <% end %>
 
   <br/>
-  <p><%= (params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max]).nil? ? '' : (link_to 'Remove Filters', params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max), class: 'nav_clear') %></p>
+  <p><%= (params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max]).nil? ? '' : (link_to 'Remove Filters', @params_except, class: 'nav_clear') %></p>
 
 <h5><span class="type">Type</span></h5>
   <span class="tp">
   <% @search.facet(:property_type).rows.each do |facet| %>
-       <% @fac_type = (facet.value == "residential") ? "Residential" : facet.value %>
-        <p><%= link_to @fac_type, params.merge(:property_type => facet.value), :class => ((params[:property_type]) == facet.value) ? "sel_nav type_link" : "type_link" %>
-          ( <%= @count = facet.count %>)<%= type_clear("#{facet.value}") %></p>
+        <% facet_value = facet.value %>
+       <% @fac_type = (facet_value == "residential") ? "Residential" : facet_value %>
+        <p><%= link_to @fac_type, params.merge(:property_type => facet_value), :class => ((params[:property_type]) == facet_value) ? "sel_nav type_link" : "type_link" %>
+          ( <%= @count = facet.count %>)<%= type_clear("#{facet_value}") %></p>
   <% end %></span>
   <br/>
 
@@ -65,10 +67,10 @@
              <% i += 1 %>
              <% if i > 5 %>
                  <span class="more"><p><%= link_to "#{facet_value}b (#{@count = facet_count})", params.merge(:bedrooms => facet_value), :class => ((params[:bedrooms]).to_i == facet_value) ? "sel_nav type_link" : "type_link" %>
-                   <%= bed_clear(facet_value) %></p></span>
+                   <%= ((params[:bedrooms]).to_i == facet_value)? (link_to 'Clear', params.except(:bedrooms), class: 'nav_clear') : '' %></p></span>
              <% else %>
                  <p><%= link_to "#{facet_value}b (#{@count = facet_count})", params.merge(:bedrooms => facet_value), :class => ((params[:bedrooms]).to_i == facet_value) ? "sel_nav type_link" : "type_link" %>
-                   <%= bed_clear(facet_value) %></p>
+                   <%= ((params[:bedrooms]).to_i == facet_value)? (link_to 'Clear', params.except(:bedrooms), class: 'nav_clear') : '' %></p>
              <% end %>
          <% end %>
      <% end %>
@@ -97,9 +99,10 @@
 
    <ul class="nav nav-pills nav-stacked">
      <% @search.facet(:city).rows.each do |facet| %>
+         <% facet_value = facet.value %>
          <% unless facet.value == '' %>
-             <p><%= link_to facet.value, params.merge(:city => facet.value), :class => ((params[:city]) == facet.value) ? "sel_nav type_link" : "type_link" %>
-               ( <%= @count = facet.count %>)<%= city_clear("#{facet.value}") %></p>
+             <p><%= link_to facet_value, params.merge(:city => facet_value), :class => ((params[:city]) == facet_value) ? "sel_nav type_link" : "type_link" %>
+               ( <%= @count = facet.count %>)<%= ((params[:city]) == facet_value)? (link_to 'Clear', params.except(:city), class: 'nav_clear') : '' %></p>
          <% end %>
      <% end %>
    </ul>
@@ -109,8 +112,9 @@
 
    <ul class="nav nav-pills nav-stacked">
      <% @search.facet(:state).rows.each do |facet| %>
-         <p><%= link_to facet.value, params.merge(:state => facet.value), :class => ((params[:state]) == facet.value) ? "sel_nav type_link" : "type_link" %>
-           ( <%= @count = facet.count %>)<%= state_clear("#{facet.value}") %></p>
+         <% facet_value = facet.value %>
+         <p><%= link_to facet_value, params.merge(:state => facet_value), :class => ((params[:state]) == facet_value) ? "sel_nav type_link" : "type_link" %>
+           ( <%= @count = facet.count %>)<%= ((params[:state]) == facet_value)? (link_to 'Clear', params.except(:state), class: 'nav_clear') : '' %></p>
      <% end %>
    </ul>
    <br/><br/>
