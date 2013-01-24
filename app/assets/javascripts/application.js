@@ -13,16 +13,16 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
-//= require jquery.ui.slider
+// require jquery.ui.slider
 //= require underscore
 //= require bootstrap
 //= require jquery.fancybox
 
-//= require solr-autocomplete/ajax-solr/core/Core
-//= require solr-autocomplete/ajax-solr/core/AbstractManager
-//= require solr-autocomplete/ajax-solr/managers/Manager.jquery
-//= require solr-autocomplete/ajax-solr/core/Parameter
-//= require solr-autocomplete/ajax-solr/core/ParameterStore
+// require solr-autocomplete/ajax-solr/core/Core
+// require solr-autocomplete/ajax-solr/core/AbstractManager
+// require solr-autocomplete/ajax-solr/managers/Manager.jquery
+// require solr-autocomplete/ajax-solr/core/Parameter
+// require solr-autocomplete/ajax-solr/core/ParameterStore
 // require solr-autocomplete/jquery-autocomplete/jquery.autocomplete
 //= require_self
 

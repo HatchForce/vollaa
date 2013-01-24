@@ -13,7 +13,7 @@
        <% session[:s_qry_ary].uniq.each_with_index do |q, i = 0| %>
            <% unless (i == (session[:s_qry_ary].length - 1)) %>
                <% @params_except = params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max) %>
-               <%= link_to q.join(" "), params_except.merge(:what => q[0], :where => q[1]) %>
+               <%= link_to q.join(" "), @params_except.merge(:what => q[0], :where => q[1]) %>
                <br/>
            <% end %>
        <% end %></p>
@@ -21,7 +21,7 @@
      <% end %>
 
   <br/>
-  <p><%= (params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max]).nil? ? '' : (link_to 'Remove Filters', @params_except, class: 'nav_clear') %></p>
+  <p><%= (params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max]).nil? ? '' : (link_to 'Remove All', params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max), class: 'nav_clear') %></p>
 
 <h5><span class="type">Type</span></h5>
   <span class="tp">

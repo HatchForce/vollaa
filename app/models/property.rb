@@ -25,6 +25,7 @@ class Property < ActiveRecord::Base
     string :state
     string :built_up_area
     string :source
+    Date :last_update
     Date :created_at
 
   end
