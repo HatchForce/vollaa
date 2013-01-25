@@ -2,32 +2,37 @@
 
 <span class="filter_nav span3">
      <% unless session[:s_qry_ary].blank? %>
-      <div class="search_query">
-        searching <%= session[:s_qry_ary].last[0] %>
-        <br/> in <%= session[:s_qry_ary].last[1] %> <br/>
-      </div>
-   <div class="recent">
-     <p><b>Recent searches</b><%= link_to "Remove", "#", class: 'nav_clear remove_recent' %></p>
+        <div id="query_popup">
+          <div class="search_query">
+            searching <b style="color: #4E6B78;"> <%= session[:s_qry_ary].last[0] %></b>
+            <% @query2 = session[:s_qry_ary].last[1] %>
+            <% unless @query2.empty? %>
+                <br/> in <b style="color: #4E6B78;"> <%= @query2 %></b> <br/>
+            <% end %>
+          </div>
+          <div class="recent">
+            <p><b>Recent searches</b><%= link_to "Remove", "#", class: 'nav_clear remove_recent' %></p>
 
-     <p>
-       <% session[:s_qry_ary].uniq.each_with_index do |q, i = 0| %>
-           <% unless (i == (session[:s_qry_ary].length - 1)) %>
-               <% @params_except = params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max) %>
-               <%= link_to q.join(" "), @params_except.merge(:what => q[0], :where => q[1]) %>
-               <br/>
-           <% end %>
-       <% end %></p>
-   </div>
-     <% end %>
-
+            <p>
+              <% session[:s_qry_ary].uniq.each_with_index do |q, i = 0| %>
+                  <% unless (i == (session[:s_qry_ary].length - 1)) %>
+                      <% @params_except = params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max) %>
+                      <%= link_to q.join(" "), @params_except.merge(:what => q[0], :where => q[1]) %>
+                      <br/>
+                  <% end %>
+              <% end %></p>
+          </div>
+        </div>
+       <% end %>
   <br/>
+
   <p><%= (params[:property_type] || params[:bedrooms] || params[:city] || params[:state] || params[:price_min] || params[:price_max] || params[:area_min] || params[:area_max]).nil? ? '' : (link_to 'Remove All', params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max), class: 'nav_clear') %></p>
 
 <h5><span class="type">Type</span></h5>
   <span class="tp">
   <% @search.facet(:property_type).rows.each do |facet| %>
         <% facet_value = facet.value %>
-       <% @fac_type = (facet_value == "residential") ? "Residential" : facet_value %>
+        <% @fac_type = (facet_value == "residential") ? "Residential" : facet_value %>
         <p><%= link_to @fac_type, params.merge(:property_type => facet_value), :class => ((params[:property_type]) == facet_value) ? "sel_nav type_link" : "type_link" %>
           ( <%= @count = facet.count %>)<%= type_clear("#{facet_value}") %></p>
   <% end %></span>
@@ -67,16 +72,16 @@
              <% i += 1 %>
              <% if i > 5 %>
                  <span class="more"><p><%= link_to "#{facet_value}b (#{@count = facet_count})", params.merge(:bedrooms => facet_value), :class => ((params[:bedrooms]).to_i == facet_value) ? "sel_nav type_link" : "type_link" %>
-                   <%= ((params[:bedrooms]).to_i == facet_value)? (link_to 'Clear', params.except(:bedrooms), class: 'nav_clear') : '' %></p></span>
+                   <%= ((params[:bedrooms]).to_i == facet_value) ? (link_to 'Clear', params.except(:bedrooms), class: 'nav_clear') : '' %></p></span>
              <% else %>
                  <p><%= link_to "#{facet_value}b (#{@count = facet_count})", params.merge(:bedrooms => facet_value), :class => ((params[:bedrooms]).to_i == facet_value) ? "sel_nav type_link" : "type_link" %>
-                   <%= ((params[:bedrooms]).to_i == facet_value)? (link_to 'Clear', params.except(:bedrooms), class: 'nav_clear') : '' %></p>
+                   <%= ((params[:bedrooms]).to_i == facet_value) ? (link_to 'Clear', params.except(:bedrooms), class: 'nav_clear') : '' %></p>
              <% end %>
          <% end %>
      <% end %>
      <% if i > 5 %>
-     <div class="bed_more"><%= "more>>" %></div>
-         <% end %>
+         <div class="bed_more"><%= "more>>" %></div>
+     <% end %>
    </ul>
    <br/>
 
@@ -102,7 +107,8 @@
          <% facet_value = facet.value %>
          <% unless facet.value == '' %>
              <p><%= link_to facet_value, params.merge(:city => facet_value), :class => ((params[:city]) == facet_value) ? "sel_nav type_link" : "type_link" %>
-               ( <%= @count = facet.count %>)<%= ((params[:city]) == facet_value)? (link_to 'Clear', params.except(:city), class: 'nav_clear') : '' %></p>
+               ( <%= @count = facet.count %>
+               )<%= ((params[:city]) == facet_value) ? (link_to 'Clear', params.except(:city), class: 'nav_clear') : '' %></p>
          <% end %>
      <% end %>
    </ul>
@@ -114,7 +120,8 @@
      <% @search.facet(:state).rows.each do |facet| %>
          <% facet_value = facet.value %>
          <p><%= link_to facet_value, params.merge(:state => facet_value), :class => ((params[:state]) == facet_value) ? "sel_nav type_link" : "type_link" %>
-           ( <%= @count = facet.count %>)<%= ((params[:state]) == facet_value)? (link_to 'Clear', params.except(:state), class: 'nav_clear') : '' %></p>
+           ( <%= @count = facet.count %>
+           )<%= ((params[:state]) == facet_value) ? (link_to 'Clear', params.except(:state), class: 'nav_clear') : '' %></p>
      <% end %>
    </ul>
    <br/><br/>
