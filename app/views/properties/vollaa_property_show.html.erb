@@ -1,5 +1,11 @@
 <div>
-  <iframe id="propery_iframe" height="100%" width="100%" frameborder=0 src="<%= @property.more_link %>">
+  <% @prop_link = @property.more_link %>
+  <% unless @prop_link.to_s.match("http://") %>
+      <% @url = "http://" +  @property.more_link %>
+  <% else %>
+      <% @url = @prop_link %>
+  <% end %>
+  <iframe id="propery_iframe" height="100%" width="100%" frameborder=0 src="<%= @url %>">
     "ash"
   </iframe>
 </div>
