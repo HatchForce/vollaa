@@ -37,12 +37,12 @@
     <% (@user_id = (current_user.id || current_fb_user.id || current_twitter_user.id) rescue nil) %>
     <% unless @user_id.nil? %>
         <% @user = current_user || current_fb_user || current_twitter_user %>
-        <% @save_property = link_to 'Save Property', "#", class: 'save_prop', "data-property-id" => result.id, "data-user-id" => @user_id, "data-profile-id" => @user.profile.id, :onclick => "$('#save_property_#{result.id}').slideToggle(); ", title: "Click to save the property"  %>
+        <% @save_property = link_to 'Save Property', "javascript:void(0)", class: 'save_prop', "data-property-id" => result.id, "data-user-id" => @user_id, "data-profile-id" => @user.profile.id, :onclick => "$('#save_property_#{result.id}').slideToggle(); ", title: "Click to save the property"  %>
         <% @saved_property = link_to "Saved", "/profiles/#{@user.profile.id}#tab2", class: "saved" %>
         <% @saved_prop_present = SavedProperty.where("property_id = ?",result.id).present? %>
         <%= @saved_prop_present?  @saved_property : @save_property %>
     <% else %>
-        <%= link_to 'Save Property', "#", class: 'save_prop', :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
+        <%= link_to 'Save Property', "javascript:void(0)", class: 'save_prop', :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
     <% end %>
     -
     <%= link_to 'Email', '#email_form', :class => 'email_property', "data-property-id" => result.id, title: "Send to Multiple Emails"  %>  -

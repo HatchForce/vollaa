@@ -9,6 +9,7 @@
             <% unless @query2.empty? %>
                 <br/> in <b style="color: #4E6B78;"> <%= @query2 %></b> <br/>
             <% end %>
+            for <b style="color: #4E6B78;"> <%= params[:property_for] %></b> <br/>
           </div>
           <div class="recent">
             <p><b>Recent searches</b><%= link_to "Remove", "#", class: 'nav_clear remove_recent' %></p>
