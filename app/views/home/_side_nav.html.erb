@@ -31,12 +31,22 @@
 
 <h5><span class="type">Type</span></h5>
   <span class="tp">
+    <% i = 0 %>
   <% @search.facet(:property_type).rows.each do |facet| %>
         <% facet_value = facet.value %>
         <% @fac_type = (facet_value == "residential") ? "Residential" : facet_value %>
+        <% i += 1 %>
+        <% if i > 5 %>
+        <span class="more_type"><p><%= link_to @fac_type, params.merge(:property_type => facet_value), :class => ((params[:property_type]) == facet_value) ? "sel_nav type_link" : "type_link" %>
+          ( <%= @count = facet.count %>)<%= type_clear("#{facet_value}") %></p></span>
+        <% else %>
         <p><%= link_to @fac_type, params.merge(:property_type => facet_value), :class => ((params[:property_type]) == facet_value) ? "sel_nav type_link" : "type_link" %>
           ( <%= @count = facet.count %>)<%= type_clear("#{facet_value}") %></p>
-  <% end %></span>
+        <% end %>
+  <% end %>
+    <% if i > 5 %>
+         <div class="p_type_more"><%= "more>>" %></div>
+     <% end %></span>
   <br/>
 
 <h5><span id="price">Price</span></h5>

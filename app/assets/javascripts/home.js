@@ -1,6 +1,6 @@
 $(function () {
 
-    var whatTags = [ "2 bhk", "1 bhk", "3 bhk", "4 bhk", "5 bhk", "Flat", "Land", "Office", "Residential" ];
+    var whatTags = [ "Apartment","House","2 bhk", "1 bhk", "3 bhk", "4 bhk", "5 bhk", "Flat", "Land", "Office", "Residential" ];
     $("#what").autocomplete({
         source:whatTags
     });
@@ -94,6 +94,20 @@ $(function () {
         $(this).text("more>>");
         $(this).removeClass("bed_less");
         $(this).addClass("bed_more");
+    });
+
+    $(".more_type").hide();
+    $(".p_type_more").live('click', function () {
+        $(".more_type").slideDown();
+        $(this).text("<<less");
+        $(this).removeClass("p_type_more");
+        $(this).addClass("p_type_less");
+    });
+    $(".p_type_less").live('click', function () {
+        $(".more_type").hide();
+        $(this).text("more>>");
+        $(this).removeClass("p_type_less");
+        $(this).addClass("p_type_more");
     });
 //    #### more less end ####
 
