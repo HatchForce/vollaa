@@ -152,7 +152,7 @@ $(function () {
 //    });
 
 //    // Property price Slider function
-
+       $price_max = 10000000; $price_min = 100000;
     if ((params["price_min"] != null) || (params["price_max"] != null)) {
 
         if ((params["price_min"]) != null && (params["price_max"]) != null) {
@@ -163,21 +163,21 @@ $(function () {
         else if ((params["price_min"] != null) && (params["price_max"] == null)) {
             alert("coming pmn");
             var price_min = params["price_min"];
-            var price_max = 10000000;
+            var price_max = $price_max;
         }
         else if ((params["price_min"]) == null && (params["price_max"]) != null) {
             alert("coming pmx");
-            var price_min = 100000;
+            var price_min = $price_min;
             var price_max = params["price_max"];
 
         }
     }
     else {
-        var price_min = 100000;
-        var price_max = 10000000;
+        var price_min = $price_min;
+        var price_max = $price_max;
     }
 
-    var PropertyPriceFilter = { min:100000, max:10000000 };
+    var PropertyPriceFilter = { min:$price_min, max:$price_max };
 
     if ((params["price_min"]) != null && (params["price_max"]) != null) {
         $("#filtered-price").val("Rs." + (params["price_min"]) + " - " + "Rs." + (params["price_max"]));

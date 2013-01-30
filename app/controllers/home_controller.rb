@@ -48,22 +48,18 @@ class HomeController < ApplicationController
       with(:built_up_area, params[:area_min]..params[:area_max]) if params[:area_max].present? and params[:area_min].present?
       with(:built_up_area).less_than(params[:area_max]) if params[:area_max].present? and !!params[:area_min].present?
 
-      #@sort_column =  Property.column_names.include?(params[:sort]) ? params[:sort] : :bedrooms
-      #@sort_dir = %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
       paginate :page => params[:page], :per_page => 10
-      order_by params[:sort], params[:direction] if params[:sort].present?
+      params[:sort].present??  (order_by params[:sort], params[:direction]) : (order_by 'created_at', 'desc')
     end
 
     #sort_by('xx','zz')
-
     @results = @search.results
 
-    @search.facet(:property_type).rows.each do |facet|
-      @value = facet.value
-      @count = facet.count
-    end
+    #@search.facet(:property_type).rows.each do |facet|
+    #  @value = facet.value
+    #  @count = facet.count
+    #end
   end
-
 
   def view_results
     self.results

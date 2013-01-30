@@ -17,7 +17,7 @@
     <div style="padding-top: 1px;">
       <br/>
       <span class="span3">  Type : <%= result.property_type %></span>
-      <span class="span2">  Area : <%= result.built_up_area + " yards" %> </span>
+      <span class="span2">  Area : <%= (result.built_up_area + " yards") rescue '' %> </span>
       <span class="span2">Bedrooms : <%= result.bedrooms %></span> <br/>
       <span class="span3"> State : <%= result.state %></span>
       <span class="span2"> City : <%= result.city %></span>
