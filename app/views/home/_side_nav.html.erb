@@ -4,10 +4,12 @@
      <% unless session[:s_qry_ary].blank? %>
         <div id="query_popup">
           <div class="search_query">
-            searching <b style="color: #4E6B78;"> <%= session[:s_qry_ary].last[0] %></b>
+            searching <b style="color: #4E6B78;"> <%= session[:s_qry_ary].last[0] if params["what"].present? %></b>
             <% @query2 = session[:s_qry_ary].last[1] %>
             <% unless @query2.empty? %>
-                <br/> in <b style="color: #4E6B78;"> <%= @query2 %></b> <br/>
+                <% if params["where"].present? %>
+                    <br/> in <b style="color: #4E6B78;"> <%= @query2 %></b> <br/>
+                <% end %>
             <% end %>
             for <b style="color: #4E6B78;"> <%= params[:property_for] %></b> <br/>
           </div>
@@ -24,6 +26,12 @@
               <% end %></p>
           </div>
         </div>
+      <% else %>
+  <div id="query_popup">
+    <div class="search_query">
+      searching for <b style="color: #4E6B78;"><%= (params["property_for"] + " " ) rescue "" %></b>properties
+    </div>
+  </div>
        <% end %>
   <br/>
 
@@ -32,7 +40,7 @@
 <h5><span class="type">Type</span></h5>
   <span class="tp">
     <% i = 0 %>
-  <% @search.facet(:property_type).rows.each do |facet| %>
+    <% @search.facet(:property_type).rows.each do |facet| %>
         <% facet_value = facet.value %>
         <% @fac_type = (facet_value == "residential") ? "Residential" : facet_value %>
         <% i += 1 %>
@@ -98,6 +106,19 @@
 
    <h5>Area in yards</h5>
 
+  <!--<%# if (params["area_min"] || params["area_max"]).present? %>-->
+  <!--<div class="area_range">-->
+    <!--Area-->
+    <!--Range <br>-->
+   <%#= (params["area_min"])+" yards"+ "-"+ (params["area_max"]) + " yards" %>
+  <!--</div>-->
+  <!--<br/>-->
+      <!--<%# end %>-->
+  <!--<div id='built_up_area' style="width: 200px"></div>-->
+    <!--<br/>-->
+    <!--<input type="text" id="filtered-area" style="width: 185px; cursor: default; " disabled="true"/>
+  <br/>-->
+
    <p><%= area_sel('< hundred', 0, 100) %>                          <%= area_clear(0, 100) %></p>
 
    <p><%= area_sel('hundred - 1 thousand', 100, 1000) %>            <%= area_clear(100, 1000) %></p>
@@ -108,7 +129,7 @@
 
    <p><%= area_sel('50 thousand - 1Lakh', 50000, 100000) %>         <%= area_clear(50000, 100000) %></p>
 
-   <p><%= area_sel('more than 1Lakh', 100000, 0) %>                 <%= area_clear(100000, 0) %></p>
+   <p><%= area_sel('more than 1Lakh', 100000, '') %>                 <%= area_clear(100000, '') %></p>
    <br/>
 
    <h5>City</h5>

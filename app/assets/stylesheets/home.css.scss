@@ -170,8 +170,13 @@
     }
   }
 
-  .price_range {
+  .price_range  {
     border: 2px dotted #D6CACA;
+    margin-right: 10px;
+  }
+  .area_range {
+    border: 2px dotted #D6CACA;
+    margin-right: 10px;
   }
   .bed_more, .p_type_more, .bed_less, .p_type_less  {
     color: #B97920;

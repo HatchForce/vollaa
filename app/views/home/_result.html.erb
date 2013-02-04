@@ -17,8 +17,15 @@
     <div style="padding-top: 1px;">
       <br/>
       <span class="span3">  Type : <%= result.property_type %></span>
-      <span class="span2">  Area : <%= (result.built_up_area + " yards") rescue '' %> </span>
-      <span class="span2">Bedrooms : <%= result.bedrooms %></span> <br/>
+      <% built_up_area = result.built_up_area %>
+      <% unless built_up_area.to_i == 0 %>
+          <span class="span2">  Area : <%= (built_up_area + " yards") rescue '' %> </span>
+      <% end %>
+      <% bedrooms = result.bedrooms %>
+      <% unless bedrooms == 0 %>
+          <span class="span2">Bedrooms : <%= bedrooms %></span>
+      <% end %>
+      <br/>
       <span class="span3"> State : <%= result.state %></span>
       <span class="span2"> City : <%= result.city %></span>
     </div>
@@ -26,7 +33,7 @@
       <%= result.property_description %>
     </div>
     <% image = result.property_image %>
-    <% if image.present? %>
+    <% if image.present? && !image.nil? %>
         <%= image_tag result.property_image, class: 'prop_image', alt: '' %>
     <% end %>
     <div class="clear"></div>
@@ -37,15 +44,16 @@
     <% (@user_id = (current_user.id || current_fb_user.id || current_twitter_user.id) rescue nil) %>
     <% unless @user_id.nil? %>
         <% @user = current_user || current_fb_user || current_twitter_user %>
-        <% @save_property = link_to 'Save Property', "javascript:void(0)", class: 'save_prop', "data-property-id" => result.id, "data-user-id" => @user_id, "data-profile-id" => @user.profile.id, :onclick => "$('#save_property_#{result.id}').slideToggle(); ", title: "Click to save the property"  %>
+        <% @save_property = link_to 'Save Property', "javascript:void(0)", class: 'save_prop', "data-property-id" => result.id, "data-user-id" => @user_id, "data-profile-id" => @user.profile.id, :onclick => "$('#save_property_#{result.id}').slideToggle(); ", title: "Click to save the property" %>
         <% @saved_property = link_to "Saved", "/profiles/#{@user.profile.id}#tab2", class: "saved" %>
-        <% @saved_prop_present = SavedProperty.where("property_id = ?",result.id).present? %>
-        <%= @saved_prop_present?  @saved_property : @save_property %>
+        <% @saved_prop_present = SavedProperty.where("property_id = ?", result.id).present? %>
+        <%= @saved_prop_present ? @saved_property : @save_property %>
     <% else %>
         <%= link_to 'Save Property', "javascript:void(0)", class: 'save_prop', :onclick => "$('#save_property_#{result.id}').slideToggle(); " %>
     <% end %>
     -
-    <%= link_to 'Email', '#email_form', :class => 'email_property', "data-property-id" => result.id, title: "Send to Multiple Emails"  %>  -
+    <%= link_to 'Email', '#email_form', :class => 'email_property', "data-property-id" => result.id, title: "Send to Multiple Emails" %>
+    -
     <%= link_to 'more info', vollaa_property_show_path(result.id), :target => '_blank', title: 'visit source' %>
   </div>
 

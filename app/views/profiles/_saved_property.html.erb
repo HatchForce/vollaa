@@ -2,33 +2,35 @@
 <% @saved_properties.each do |saved_prop| %>
     <% properties = Property.where("id = ?", saved_prop.property_id) %>
     <% @property = properties[0] %>
-    <div class="sav_prop_<%= @property.id %>">
+    <div class="sav_prop_<%= @property.id rescue '' %>">
       <div class="result_heading">
-        <%= link_to truncate(@property.property_title, :length => 80), vollaa_property_show_path(@property.id), :target => '_blank' %>
-        (<%= @property.property_for %>)
+        <% title = @property.property_title rescue '' %>
+        <% prop_id = @property.id rescue 1 %>
+        <%= link_to truncate(title, :length => 80), vollaa_property_show_path(prop_id), :target => '_blank' %>
+        (<%= @property.property_for rescue '' %>)
         <%= "- " + time_ago_in_words(saved_prop.created_at) %>
         <span>
-        <%= link_to " Remove", "#", "data-property-id" => @property.id, "data-user-id" => @profile.user_id, id: 'remove_save_prop', style:"color: #CC0000;" %>
+        <%= link_to " Remove", "#", "data-property-id" => prop_id, "data-user-id" => @profile.user_id, id: 'remove_save_prop', style:"color: #CC0000;" %>
         </span>
       </div>
       <div class="result_details">
         <div class="price pull-left">
-          <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= number_to_indian_currency @property.property_price %></span>
+          <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= number_to_indian_currency @property.property_price rescue '' %></span>
 
         </div>
         <div style="padding-top: 1px;">
-          <br/> <span class="span3">  Type : <%= @property.property_type %></span>
-          <span class="span2">  Area : <%= @property.built_up_area %> yards</span>
-          <span class="span2">Bedrooms : <%= @property.bedrooms %></span> <br/>
-          <span class="span3"> State : <%= @property.state %></span>
-          <span class="span2"> City : <%= @property.city %></span>
+          <br/> <span class="span3">  Type : <%= @property.property_type rescue '' %></span>
+          <span class="span2">  Area : <%= @property.built_up_area rescue '' %> yards</span>
+          <span class="span2">Bedrooms : <%= @property.bedrooms rescue '' %></span> <br/>
+          <span class="span3"> State : <%= @property.state rescue '' %></span>
+          <span class="span2"> City : <%= @property.city rescue '' %></span>
         </div>
         <br/>
 
         <div class="description span8">
-          <%= @property.property_description %>
+          <%= @property.property_description rescue '' %>
         </div>
-        <% image = @property.property_image %>
+        <% image = @property.property_image rescue '' %>
         <% if image.present? %>
             <%= image_tag @property.property_image, class: 'save_prop_image', alt: '' %>
         <% end %>

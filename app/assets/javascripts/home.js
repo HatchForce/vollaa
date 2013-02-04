@@ -32,6 +32,7 @@ $(function () {
         var user_id = ($(this).attr("data-user-id"));
         var profile_id = $(this).attr("data-profile-id");
         var $this = $(this)
+        $this.text("saving...").fadeIn(1000);
         if (prop_id != null || user_id != null) {
             $.ajax(
                 {   type:'POST',
@@ -41,11 +42,11 @@ $(function () {
                         'user_id':user_id
                     }
                 })
-            $this.text("Saved");
             $this.attr("href", "../profiles/"+ profile_id);
             $this.removeAttr("onclick");
             $this.removeClass("save_prop");
             $this.addClass('saved');
+            $this.text("Saved");
             return false;
         }
         else {
@@ -151,7 +152,7 @@ $(function () {
 //        })
 //    });
 
-//    // Property price Slider function
+//    //------ Property price Slider function  Start------//
        $price_max = 10000000; $price_min = 100000;
     if ((params["price_min"] != null) || (params["price_max"] != null)) {
 
@@ -203,8 +204,62 @@ $(function () {
             window.location += '&price_min=' + PropertyPriceFilter.min + '&price_max=' + PropertyPriceFilter.max;
         }
     });
+//    //------ Property price Slider function  Ends------//
 
-  $('.home_search_btn').live('click', function(){
+
+//    //------ Property AREA Slider function  Start------//
+//    $area_max = 1000; $area_min = 0;
+//    if ((params["area_min"] != null) || (params["area_max"] != null)) {
+//
+//        if ((params["area_min"]) != null && (params["area_max"]) != null) {
+//            var area_min = params["area_min"];
+//            var area_max = params["area_max"];
+//        }
+//        else if ((params["area_min"] != null) && (params["area_max"] == null)) {
+//            var area_min = params["area_min"];
+//            var area_max = $area_max;
+//        }
+//        else if ((params["area_min"]) == null && (params["area_max"]) != null) {
+//            var area_min = $area_min;
+//            var area_max = params["area_max"];
+//
+//        }
+//    }
+//    else {
+//        var area_min = $area_min;
+//        var area_max = $area_max;
+//    }
+//
+//    var PropertyAreaFilter = { min:$area_min, max:$area_max };
+//
+//    if ((params["area_min"]) != null && (params["area_max"]) != null) {
+//        $("#filtered-area").val((params["area_min"])+ " yards" + " - "  + (params["area_max"])+ " yards");
+//    }
+//    else if ((params["area_min"]) == null && (params["area_max"]) == null) {
+//        $("#filtered-area").val("Min-area       :       Max-area")
+//    }
+//
+//    $("#built_up_area").slider({
+//
+//        range:true,
+//        min:PropertyAreaFilter.min,
+//        max:PropertyAreaFilter.max,
+//        values:[ area_min, area_max ],
+//
+//        slide:function (event, ui) {
+//
+//            $("#filtered-area").val(( ui.values[ 0 ])+ " yards" + " - " + (ui.values[ 1 ]) + " yards")
+//            PropertyAreaFilter.min = ui.values[ 0 ]
+//            PropertyAreaFilter.max = ui.values[ 1 ]
+//
+//            window.location += '&area_min=' + PropertyAreaFilter.min + '&area_max=' + PropertyAreaFilter.max;
+//        }
+//    });
+//    //------ Property AREA Slider function  Ends------//
+
+
+
+    $('.home_search_btn').live('click', function(){
 
         var search_url = "http://localhost:3000/home/results?commit=search&utf8=%E2%9C%93"
         var what = function () {
