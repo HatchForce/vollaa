@@ -1,0 +1,10 @@
+<% if email_sent == true %>
+$.fancybox("<span style='color:#597500; font-size:18px;'>Email sent to <b><%= email %></b></span>");
+setTimeout("parent.$.fancybox.close()", 1000);
+<% elsif email_sent == false %>
+$.fancybox("<span style='color:#597500; font-size:18px;'>Email Validation failed for <b><%= email %></b></span>");
+setTimeout("parent.$.fancybox.close()", 1200);
+<% else %>
+$.fancybox("Technical Failure, Email after sometime");
+setTimeout("parent.$.fancybox.close()", 1200);
+<% end %>

@@ -32,7 +32,6 @@ $(function () {
         var user_id = ($(this).attr("data-user-id"));
         var profile_id = $(this).attr("data-profile-id");
         var $this = $(this)
-        $this.text("saving...").fadeIn(1000);
         if (prop_id != null || user_id != null) {
             $.ajax(
                 {   type:'POST',
@@ -42,6 +41,7 @@ $(function () {
                         'user_id':user_id
                     }
                 })
+//            $this.text("saving...").fadeIn(1000);
             $this.attr("href", "../profiles/"+ profile_id);
             $this.removeAttr("onclick");
             $this.removeClass("save_prop");

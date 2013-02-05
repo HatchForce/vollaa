@@ -3,6 +3,9 @@
 /log/*.*
 /tmp
 /public/assets
+solr/*
+tmp/*
+/tmp
 
 .project
 .idea
