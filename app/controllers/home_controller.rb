@@ -77,7 +77,7 @@ class HomeController < ApplicationController
       if email =~ /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/
         Notifier.mail_property_details(email, property_id).deliver
         respond_to do |format|
-          format.js { render :action => "email_validation", :locals => {:email_sent => true, :email => email} }
+          format.js { render :action => "email_validation", :locals => {:email_sent => true, :email => email, :prop_id => property_id} }
         end
       else
         respond_to do |format|

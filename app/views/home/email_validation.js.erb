@@ -1,8 +1,9 @@
 <% if email_sent == true %>
-$.fancybox("<span style='color:#597500; font-size:18px;'>Email sent to <b><%= email %></b></span>");
-setTimeout("parent.$.fancybox.close()", 1000);
+<% property = Property.where("id = ?",prop_id) %>
+$.fancybox("<span style='color:#597500; font-size:16px;'>Email sent to <b><%= email %></b></br></br><b style='color:#005580'><%= property[0].property_title %></b></span>");
+setTimeout("parent.$.fancybox.close()", 2000);
 <% elsif email_sent == false %>
-$.fancybox("<span style='color:#597500; font-size:18px;'>Email Validation failed for <b><%= email %></b></span>");
+$.fancybox("<span style='color:#597500; font-size:16px;'>Email Validation failed for<br/> <b><%= email %></b></span>");
 setTimeout("parent.$.fancybox.close()", 1200);
 <% else %>
 $.fancybox("Technical Failure, Email after sometime");
