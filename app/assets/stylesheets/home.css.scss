@@ -1,3 +1,10 @@
+//bootstrap overwrite
+
+.page-header {
+  padding-bottom: 0px;
+  margin: 0px 0 0px;
+}
+
 /* Search */
 .search_box {
   padding-left: 250px;
@@ -50,10 +57,20 @@
   padding: 5px;
 }
 
+.result:hover{
+  box-shadow: 2px 2px 3px #99A6C6;
+  background-color: #EAFAFF;
+  a{color: #005587;}
+  .saved{
+    color: #855B07;
+  }
+}
+
 .result {
+  //box-shadow: 2px 2px 3px #99A6C6;
   margin-bottom: 5px;
   padding: 5px;
-  border-bottom: 1px dotted #bbbbbb;
+  border-bottom: 1px solid #E7E7E7;
 
   .result_heading {
     font-size: 18px;
@@ -64,6 +81,8 @@
       text-decoration: underline;
     }
   }
+
+
 
   .result_details {
     margin-bottom: 5px;
@@ -84,11 +103,15 @@
     height: 100px;
     display: none;
   }
+  .saved:hover{
+    color: #452F02;
+  }
   .saved {
     color: #855B07;
   }
   .prop_image {
     height: 65px;
+    margin-bottom: -20px;
     margin-top: -10px;
     margin-left: 235px;
     width: 110px;
@@ -102,6 +125,8 @@
     padding-right: 50px;
     padding-left: 30px;
   }
+  margin-left: 64px;
+  margin-top: 20px;
 }
 
 .sort_links {
@@ -133,25 +158,9 @@
 }
 
 .filter_nav {
-  #query_popup {
-    margin-right: 5px;
-    border-bottom: 1px solid #DDD9D9;
-  }
-  .recent {
-    background-color: #F1F1F1;
-    margin-bottom: 5px;
-  }
-  .search_query {
-    border: 1px solid #D0CFCF;
-    border-radius: 4px 4px 4px 4px;
-    font-size: 12px;
-    margin-bottom: 10px;
-    margin-right: 15px;
-    padding: 7px 1px 5px 13px;
-    position: inherit;
-  }
 
   border-right: #F2EEEE solid 1px;
+  line-height: 10px;
   p {
     font-size: 12px;
     display: compact;
@@ -172,7 +181,8 @@
 
   .price_range  {
     border: 2px dotted #D6CACA;
-    margin-right: 10px;
+    line-height: 16px;
+    margin-right: 9px;
   }
   .area_range {
     border: 2px dotted #D6CACA;
@@ -183,6 +193,32 @@
     cursor: pointer;
     font-size: 12px;
   }
+}
+
+.query_popup {
+  border-left: 1px solid #EBEBEB;
+  //box-shadow: 0 0 2px #A6A9AA;
+  margin-bottom: 8px;
+  margin-right: 3px;
+  padding-top: 6px;
+}
+.recent {
+  //background-color: #EDF9FF;
+  font-size: 13px;
+  margin-bottom: 5px;
+  width: 180px;
+  word-wrap: break-word;
+  a{
+    color:#0088CC;
+  }
+}
+.search_query {
+  //border: 1px solid #D0CFCF;
+  font-size: 12px;
+  margin-bottom: 10px;
+  position: inherit;
+  width: 160px;
+  word-wrap: break-word;
 }
 
 /* End Results */

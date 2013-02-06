@@ -28,25 +28,27 @@ $(function () {
 //    ### Save Property Start ###
     $(".save_prop").live('click', function () {
         $('#save_property_result.id').slideToggle();
-        var prop_id = ($(this).attr("data-property-id"));
+        var $prop_id = ($(this).attr("data-property-id"));
         var user_id = ($(this).attr("data-user-id"));
         var profile_id = $(this).attr("data-profile-id");
         var $this = $(this)
-        if (prop_id != null || user_id != null) {
+        if ($prop_id != null || user_id != null) {
             $.ajax(
                 {   type:'POST',
                     url:'/home/saved_properties',
                     data:{
-                        'property_id':prop_id,
+                        'property_id':$prop_id,
                         'user_id':user_id
                     }
                 })
-//            $this.text("saving...").fadeIn(1000);
+            $this.text("saving...");
+            setTimeout(function(){$this.text('Saved');}, 500);
+            setTimeout(function() {($('#save_property_'+ $prop_id)).slideUp();}, 2000);
+//          $this.text("saving...").fadeIn(1000);
             $this.attr("href", "../profiles/"+ profile_id);
             $this.removeAttr("onclick");
             $this.removeClass("save_prop");
             $this.addClass('saved');
-            $this.text("Saved");
             return false;
         }
         else {
@@ -153,7 +155,7 @@ $(function () {
 //    });
 
 //    //------ Property price Slider function  Start------//
-       $price_max = 10000000; $price_min = 100000;
+       $price_max = 100; $price_min = 0;
     if ((params["price_min"] != null) || (params["price_max"] != null)) {
 
         if ((params["price_min"]) != null && (params["price_max"]) != null) {
@@ -181,29 +183,84 @@ $(function () {
     var PropertyPriceFilter = { min:$price_min, max:$price_max };
 
     if ((params["price_min"]) != null && (params["price_max"]) != null) {
-        $("#filtered-price").val("Rs." + (params["price_min"]) + " - " + "Rs." + (params["price_max"]));
+        $("#filtered-price").val("Rs." + currency(params["price_min"]) + " - " + "Rs." + currency(params["price_max"]));
     }
     else if ((params["price_min"]) == null && (params["price_max"]) == null) {
-        $("#filtered-price").val("Min-price       :       Max-Price")
+        $("#filtered-price").val("Min-price     :     Max-Price")
 //        $("#filtered-price").val("Rs." + (PropertyPriceFilter.min) + " - " + "Rs." + (PropertyPriceFilter.max));
     }
-
-    $("#property_price").slider({
-
+    var trueValues = [0, 10000, 25000, 50000, 100000, 150000, 300000, 500000, 1000000, 2000000, 1500000, 2000000, 2500000, 3000000, 3500000, 4000000, 5000000, 10000000, 200000000, 500000000, 1000000000];
+    var values =     [0,   5,   10,    15,    20,    25,    30,    35,    40,     45,     50,     55,     60,     65,     70,  75,   80,  85,   90,  95,   100];
+    var slider = $("#property_price").slider({
+//        orientation: 'horizontal',
         range:true,
+//        animate : true,
         min:PropertyPriceFilter.min,
         max:PropertyPriceFilter.max,
         values:[ price_min, price_max ],
 
         slide:function (event, ui) {
+            var includeLeft = event.keyCode != $.ui.keyCode.RIGHT;
+            var includeRight = event.keyCode != $.ui.keyCode.LEFT;
+            var value = findNearest(includeLeft, includeRight, ui.value);
+            if (ui.value == ui.values[0]) {
+                slider.slider('values', 0, value);
+            }
+            else {
+                slider.slider('values', 1, value);
+            }
 
-            $("#filtered-price").val(("Rs." + ui.values[ 0 ]) + " - " + "Rs." + (ui.values[ 1 ]))
-            PropertyPriceFilter.min = ui.values[ 0 ]
-            PropertyPriceFilter.max = ui.values[ 1 ]
+            $("#filtered-price").val(("Rs." +currency(getRealValue( ui.values[ 0 ]))) + " - " + "Rs." + currency(getRealValue(ui.values[ 1 ])))
 
-            window.location += '&price_min=' + PropertyPriceFilter.min + '&price_max=' + PropertyPriceFilter.max;
+            PropertyPriceFilter.min = getRealValue(ui.values[ 0 ])
+            PropertyPriceFilter.max = getRealValue(ui.values[ 1 ])
+
+            setTimeout(function(){window.location += '&price_min=' + PropertyPriceFilter.min + '&price_max=' + PropertyPriceFilter.max;},3000);
         }
     });
+    function findNearest(includeLeft, includeRight, value) {
+        var nearest = null;
+        var diff = null;
+        for (var i = 0; i < values.length; i++) {
+            if ((includeLeft && values[i] <= value) || (includeRight && values[i] >= value)) {
+                var newDiff = Math.abs(value - values[i]);
+                if (diff == null || newDiff < diff) {
+                    nearest = values[i];
+                    diff = newDiff;
+                }
+            }
+        }
+        return nearest;
+    }
+    function getRealValue(sliderValue) {
+        for (var i = 0; i < values.length; i++) {
+            if (values[i] >= sliderValue) {
+                return trueValues[i];
+            }
+        }
+        return 0;
+    }
+
+    function currency(numbr) {
+        number = parseInt(numbr)
+        if (number < 10000000 && number > 99999) {
+            lk = (number / 100000)
+            return (lk +" Lakhs")
+        }
+        else if (number > 9999999) {
+            lk = (number / 10000000)
+            return (lk + " Crores")
+        }
+        else if (number > 999 && number < 100000)
+        {
+            lk = (number / 1000)
+            return (lk + " Thousands")
+        }
+        else
+        {
+            return number
+        }
+    }
 //    //------ Property price Slider function  Ends------//
 
 

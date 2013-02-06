@@ -1,11 +1,11 @@
 <%= form_tag 'home/results', :method => :get, :class => 'search_form' do %>
 
-    <%= image_tag("Vollaa_logo.png", :size => "275x130", :alt => "Vollaa", :style => "margin-bottom: 60px;margin-top:10px;") %>
+    <%#= image_tag("Vollaa_logo.png", :size => "275x130", :alt => "Vollaa", :style => "margin-bottom: 60px;margin-top:10px;") %>
 
      <br/>
     <div class="btn-group offset6" data-toggle="buttons-radio">
-      <%= button_tag :Sale, :class=>"btn span2  sale_btn", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('sale'); $('.rent_btn').attr('disabled',false)",:disabled => true %>
-      <%= button_tag :Rent,:class=>"btn span2  rent_btn", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('rent'); $('.sale_btn').attr('disabled',false)" %>
+      <% button_tag :Sale, :class=>"btn span2  sale_btn", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('sale'); $('.rent_btn').attr('disabled',false)",:disabled => true %>
+      <% button_tag :Rent,:class=>"btn span2  rent_btn", :type => 'button', "data-toggle"=> "button", :onClick=>"$('#property_for').val('rent'); $('.sale_btn').attr('disabled',false)" %>
     </div>
     <%= hidden_field_tag :property_for, 'sale', :id => 'property_for'  %>
 

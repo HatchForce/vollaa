@@ -9,7 +9,7 @@
   <div class="result_details">
     <div class="price pull-left">
       <%# if result.property_price != 0 %>
-      <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= number_to_indian_currency result.property_price %></span>
+      <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= number_to_price result.property_price %></span>
       <%# else %>
       <!--Contact for price-->
       <%# end %>
@@ -57,9 +57,9 @@
     <%= link_to 'more info', vollaa_property_show_path(result.id), :target => '_blank', title: 'visit source' %>
   </div>
 
-  <div id="save_property_<%= result.id %>" style="background : #ececef; width :500px; height:100%; display:none;">
+  <div id="save_property_<%= result.id %>" style="background : #deeef3; width :500px; height:100%; display:none;text-align: center;">
     <% if (user_signed_in? || current_twitter_user || current_fb_user) %>
-        <span style="padding-left: 100px;">Property Saved</span>
+        <span style="padding-left: 100px;color: #5C3B02;">Property Saved</span>
     <% else %>
         <%= link_to "Sign in  /", user_session_path %>
         <%= link_to "Sign Up", new_user_registration_path %>

@@ -49,14 +49,14 @@ olark.identify('5083-439-10-8087');/*]]>*/</script><noscript><a href="https://ww
   <!--<b>Search Results</b>-->
 </div>
 <div class="row">
-  <div class="span25">
+  <!--<div class="span25">-->
     <%= render :partial => 'side_nav' %>
-  </div>
+  <!--</div>-->
 
-  <div class="span10">
-    <!--<div class=" footer ads">-->
-      <!--Your Ads Here-->
-    <!--</div>-->
+  <div class="span10" style="margin-top: -55px;">
+    <!--<div class=" footer ads">
+      Your Ads Here
+    </div>-->
     <br/>
    <div class="view_results" >
     <%= render :partial => 'view_results' %>
@@ -65,6 +65,37 @@ olark.identify('5083-439-10-8087');/*]]>*/</script><noscript><a href="https://ww
       <!--Your Ads Here-->
     <!--</div>-->
   </div>
+  <% unless session[:s_qry_ary].blank? %>
+      <div class='query_popup span'>
+        <div class="search_query span">
+          searching <b style="color: #4E6B78;"> <%= session[:s_qry_ary].last[0] if params["what"].present? %></b>
+          <% @query2 = session[:s_qry_ary].last[1] %>
+          <% unless @query2.empty? %>
+              <% if params["where"].present? %>
+                  <br/> in <b style="color: #4E6B78;"> <%= @query2 %></b> <br/>
+              <% end %>
+          <% end %>
+          for <b style="color: #4E6B78;"> <%= params[:property_for] %></b> <br/>
+        </div><br>
+        <div class="recent span">
+          <p><b>Recent searches</b><%= link_to "Remove", "#", class: 'nav_clear remove_recent', style: "color: #8E8585; padding-left: 20px;" %></p>
+          <p>
+            <% session[:s_qry_ary].uniq.each_with_index do |q, i = 0| %>
+                <% unless (i == (session[:s_qry_ary].length - 1)) %>
+                    <% @params_except = params.except(:property_type, :bedrooms, :city, :state, :price_min, :price_max, :area_min, :area_max) %>
+                    <%= link_to q.join(" "), @params_except.merge(:what => q[0], :where => q[1]) %>
+                    <br/>
+                <% end %>
+            <% end %></p>
+        </div>
+      </div>
+  <% else %>
+      <div class='query_popup span'>
+        <div class="search_query span">
+          searching for <b style="color: #4E6B78;"><%= (params["property_for"] + " " ) rescue "" %></b>properties
+        </div>
+      </div>
+  <% end %>
   <!--<div class="span3">Volla Ads<br/><br/><br/>-->
     <%#= link_to "Real estate - OLX", "#" %><br/>
     <!--<span style="color: #4B964A;">www.olx.in/</span>-->

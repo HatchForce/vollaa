@@ -39,4 +39,20 @@ module ApplicationHelper
     "Rs.#{number.to_s.gsub(/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/, "\\1,")}"
   end
 
+  def number_to_price(number)
+    number = number.to_i
+    if number < 10000000 and number > 99999
+      lk = (number.to_f / 100000).to_f
+     return "Rs. #{lk} Lakhs"
+    elsif number > 9999999
+      lk = (number.to_f / 10000000).to_f
+      return "Rs. #{lk} Crores"
+    elsif number > 999 and number < 100000
+      lk = (number.to_f / 1000).to_f
+      return "Rs. #{lk} Thousands"
+    else
+      number_to_indian_currency(number)
+    end
+  end
+
 end

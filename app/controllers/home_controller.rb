@@ -12,7 +12,7 @@ class HomeController < ApplicationController
   end
 
   def adv_search
-    @properties = Property.all
+    #@properties = Property.all
   end
 
   def results
