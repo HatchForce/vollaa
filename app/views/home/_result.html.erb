@@ -7,9 +7,15 @@
   </div>
 
   <div class="result_details">
+    <% image = result.property_image %>
+    <% if image.present? && !image.nil? %>
+        <%= image_tag result.property_image, class: 'prop_image', alt: '' %>
+    <% else %>
+        <%= image_tag "property_image.jpg", class: 'prop_image', alt: 'Property Image'  %>
+    <% end %>
     <div class="price pull-left">
       <%# if result.property_price != 0 %>
-      <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;"><!--Rs. --> <%= number_to_price result.property_price %></span>
+      <span style="color: rgba(9, 122, 0, 0.96);font-size: 16px;margin-left: 20px;"><!--Rs. --> <%= number_to_price result.property_price %></span>
       <%# else %>
       <!--Contact for price-->
       <%# end %>
@@ -32,10 +38,7 @@
     <div class="description span8">
       <%= result.property_description %>
     </div>
-    <% image = result.property_image %>
-    <% if image.present? && !image.nil? %>
-        <%= image_tag result.property_image, class: 'prop_image', alt: '' %>
-    <% end %>
+
     <div class="clear"></div>
   </div>
   <div class="property_links">

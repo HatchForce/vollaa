@@ -1,6 +1,6 @@
 $(function () {
 
-    var whatTags = [ "Apartment","House","2 bhk", "1 bhk", "3 bhk", "4 bhk", "5 bhk", "Flat", "Land", "Office", "Residential" ];
+    var whatTags = [ "Apartment", "House", "2 bhk", "1 bhk", "3 bhk", "4 bhk", "5 bhk", "Flat", "Land", "Office", "Residential" ];
     $("#what").autocomplete({
         source:whatTags
     });
@@ -11,7 +11,7 @@ $(function () {
     });
 
 
-    $('.email_property').live('click',function () {
+    $('.email_property').live('click', function () {
         var id = ($(this).attr("data-property-id"));
         $('.send_details_form > #property_id').val(id);
         $(this).fancybox({
@@ -42,10 +42,14 @@ $(function () {
                     }
                 })
             $this.text("saving...");
-            setTimeout(function(){$this.text('Saved');}, 500);
-            setTimeout(function() {($('#save_property_'+ $prop_id)).slideUp();}, 2000);
+            setTimeout(function () {
+                $this.text('Saved');
+            }, 500);
+            setTimeout(function () {
+                ($('#save_property_' + $prop_id)).slideUp();
+            }, 2000);
 //          $this.text("saving...").fadeIn(1000);
-            $this.attr("href", "../profiles/"+ profile_id);
+            $this.attr("href", "../profiles/" + profile_id);
             $this.removeAttr("onclick");
             $this.removeClass("save_prop");
             $this.addClass('saved');
@@ -73,8 +77,8 @@ $(function () {
 //        $(".for_hide").remove();
         $(".loading_adv_search").html("<img src='assets/loading_image.gif'>");
         $.ajax({
-            type: 'GET',
-            url: '/home/adv_search'
+            type:'GET',
+            url:'/home/adv_search'
         });
     });
 
@@ -155,13 +159,14 @@ $(function () {
 //    });
 
 //    //------ Property price Slider function  Start------//
-       $price_max = 100; $price_min = 0;
+    $price_max = 100;
+    $price_min = 0;
     if ((params["price_min"] != null) || (params["price_max"] != null)) {
 
         if ((params["price_min"]) != null && (params["price_max"]) != null) {
-//            alert((params["price_min"]) + (params["price_max"]));
             var price_min = params["price_min"];
             var price_max = params["price_max"];
+//            alert(price_min.toString() + " - " + price_max.toString());
         }
         else if ((params["price_min"] != null) && (params["price_max"] == null)) {
             alert("coming pmn");
@@ -187,18 +192,16 @@ $(function () {
     }
     else if ((params["price_min"]) == null && (params["price_max"]) == null) {
         $("#filtered-price").val("Min-price     :     Max-Price")
-//        $("#filtered-price").val("Rs." + (PropertyPriceFilter.min) + " - " + "Rs." + (PropertyPriceFilter.max));
     }
     var trueValues = [0, 10000, 25000, 50000, 100000, 150000, 300000, 500000, 1000000, 2000000, 1500000, 2000000, 2500000, 3000000, 3500000, 4000000, 5000000, 10000000, 200000000, 500000000, 1000000000];
-    var values =     [0,   5,   10,    15,    20,    25,    30,    35,    40,     45,     50,     55,     60,     65,     70,  75,   80,  85,   90,  95,   100];
+    var values = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
     var slider = $("#property_price").slider({
-//        orientation: 'horizontal',
+        orientation:'horizontal',
         range:true,
-//        animate : true,
+        animate:true,
         min:PropertyPriceFilter.min,
         max:PropertyPriceFilter.max,
-        values:[ price_min, price_max ],
-
+        values:[ (price_min == 0) ? 0 : getSliderValue(price_min) , (price_max == 100) ? price_max : getSliderValue(price_max) ],
         slide:function (event, ui) {
             var includeLeft = event.keyCode != $.ui.keyCode.RIGHT;
             var includeRight = event.keyCode != $.ui.keyCode.LEFT;
@@ -210,14 +213,19 @@ $(function () {
                 slider.slider('values', 1, value);
             }
 
-            $("#filtered-price").val(("Rs." +currency(getRealValue( ui.values[ 0 ]))) + " - " + "Rs." + currency(getRealValue(ui.values[ 1 ])))
+            $("#filtered-price").val(("Rs." + currency(getRealValue(ui.values[ 0 ]))) + " - " + "Rs." + currency(getRealValue(ui.values[ 1 ])))
 
             PropertyPriceFilter.min = getRealValue(ui.values[ 0 ])
             PropertyPriceFilter.max = getRealValue(ui.values[ 1 ])
-
-            setTimeout(function(){window.location += '&price_min=' + PropertyPriceFilter.min + '&price_max=' + PropertyPriceFilter.max;},3000);
+        },
+        change:function (event, ui) {
+            setTimeout(function () {
+//                alert(PropertyPriceFilter.min + " - " + PropertyPriceFilter.max);
+                window.location += '&price_min=' + PropertyPriceFilter.min + '&price_max=' + PropertyPriceFilter.max;
+            }, 100);
         }
     });
+
     function findNearest(includeLeft, includeRight, value) {
         var nearest = null;
         var diff = null;
@@ -232,6 +240,7 @@ $(function () {
         }
         return nearest;
     }
+
     function getRealValue(sliderValue) {
         for (var i = 0; i < values.length; i++) {
             if (values[i] >= sliderValue) {
@@ -241,26 +250,34 @@ $(function () {
         return 0;
     }
 
+    function getSliderValue(sliderValue) {
+        for (var i = 0; i < trueValues.length; i++) {
+            if (trueValues[i] >= sliderValue) {
+                return values[i];
+            }
+        }
+        return 0;
+    }
+
     function currency(numbr) {
         number = parseInt(numbr)
         if (number < 10000000 && number > 99999) {
             lk = (number / 100000)
-            return (lk +" Lakhs")
+            return (lk + " Lakhs")
         }
         else if (number > 9999999) {
             lk = (number / 10000000)
             return (lk + " Crores")
         }
-        else if (number > 999 && number < 100000)
-        {
+        else if (number > 999 && number < 100000) {
             lk = (number / 1000)
             return (lk + " Thousands")
         }
-        else
-        {
+        else {
             return number
         }
     }
+
 //    //------ Property price Slider function  Ends------//
 
 
@@ -315,64 +332,81 @@ $(function () {
 //    //------ Property AREA Slider function  Ends------//
 
 
-
-    $('.home_search_btn').live('click', function(){
+    $('.home_search_btn').live('click', function () {
 
         var search_url = "http://localhost:3000/home/results?commit=search&utf8=%E2%9C%93"
         var what = function () {
             if (params["what"] != null) {
                 return ("&what=" + params["what"]);
-            } else { return '' }
+            } else {
+                return ''
+            }
         }
 
         var where = function () {
             if (params["where"] != null) {
                 return ("&where=" + params["where"])
-            } else { return '' }
+            } else {
+                return ''
+            }
         }
 
         var property_for = function () {
             if (params["property_for"] != null) {
                 return ("&property_for=" + params["property_for"])
-            } else { return false }
+            } else {
+                return false
+            }
         }
 
         var price_min = function () {
             if (params["price_min"] != null) {
                 return ("&price_min=" + params["price_min"])
-            } else { return false }
+            } else {
+                return false
+            }
         }
 
         var price_max = function () {
             if (params["price_max"] != null) {
                 return ("&price_max=" + params["price_max"])
-            } else { return false}
+            } else {
+                return false
+            }
         }
 
         var city = function () {
             if (params["city"] != null) {
                 return ("&city=" + params["city"])
-            } else { return false }
+            } else {
+                return false
+            }
         }
 
         var property_type = function () {
             if (params["property_type"] != null) {
                 return ("&property_type=" + params["property_type"])
-            } else { return false }
+            } else {
+                return false
+            }
         }
 
         var area_min = function () {
             if (params["area_min"] != null) {
                 return ("&area_min=" + params["area_min"])
-            } else { return false }
+            } else {
+                return false
+            }
         }
 
         var area_max = function () {
             if (params["area_max"] != null) {
                 return ("&area_max=" + params["area_max"])
-            } else { return false }
+            } else {
+                return false
+            }
         }
 
         window.location = search_url + what + where + property_for + property_type + price_min + price_max + area_min + area_max
-  });
+    });
 });
