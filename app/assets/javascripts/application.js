@@ -17,6 +17,7 @@
 //= require underscore
 //= require bootstrap
 //= require jquery.fancybox
+//= require rails.validations
 
 // require solr-autocomplete/ajax-solr/core/Core
 // require solr-autocomplete/ajax-solr/core/AbstractManager

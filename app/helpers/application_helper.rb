@@ -43,13 +43,16 @@ module ApplicationHelper
     number = number.to_i
     if number < 10000000 and number > 99999
       lk = (number.to_f / 100000).to_f
-     return "Rs. #{lk} Lakhs"
+      lks = sprintf('%.2f', lk)
+     return "Rs. #{lks} Lakhs"
     elsif number > 9999999
       lk = (number.to_f / 10000000).to_f
-      return "Rs. #{lk} Crores"
+      lks = sprintf('%.2f', lk)
+      return "Rs. #{lks} Crores"
     elsif number > 999 and number < 100000
       lk = (number.to_f / 1000).to_f
-      return "Rs. #{lk} Thousands"
+      lks = sprintf('%.2f', lk)
+      return "Rs. #{lks} Thousands"
     else
       number_to_indian_currency(number)
     end

@@ -1,37 +1,75 @@
-<br/><br/>
-<div class="form-horizontal sign_in span7">
+<br xmlns="http://www.w3.org/1999/html"/><br/>
+<div class="sign_in span7">
   <h2 class="offset2 sign">Sign in</h2>
   <br/>
-  <span class="form_body">
-  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-      <div class="control-group">
-        <%= f.label :email, class: "control-label control" %>
-        <div class="controls">
-          <%= f.email_field :email %>
-        </div>
-      </div>
-
-      <div class="control-group">
-        <%= f.label :password, class: "control-label" %>
-        <div class="controls">
-          <%= f.password_field :password %>
-        </div>
-      </div>
-
-      <div class="control-group">
-        <div class="controls">
-          <% if devise_mapping.rememberable? -%>
-
-              <label class="checkbox">
-                <%= f.check_box :remember_me %> <%= f.label :remember_me %>
-              </label>
-          <% end -%>
-          <%= f.submit "Sign in" %>
-  <% end %>   <br/>
-    <br/>
-    <%= render "devise/shared/links" %>
+  <div class="form_body">
+    <div class="span25 pull-left">
+      <!--<br/>-->
+      <ul class="unstyled" style="line-height: 24px;">
+        <li>
+          <%= link_to image_tag("twitter_t.png", :size => "20x16")+"Twitter", "/auth/twitter", class: 'btn span2', id: "sign_in", style: "color: #3494EE;" %>
+        </li>
+        <br/><br/>
+        <li>
+          <%= link_to image_tag("f-facebook.png", :size => "20x16") +" Facebook", "/auth/facebook", class: 'btn span2', id: "sign_in", style: "color: #4B5897;" %>
+        </li>
+      </ul>
     </div>
+
+    <div class="span">
+      <div class="login_divider">&nbsp;</div>
     </div>
-  </span>
+
+    <div class="span3 pull-left">
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :validate => true) do |f| %>
+          <% if resource.errors.any? %>
+              <div id="error_explanation">
+                <ul>
+                  <% resource.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <div class="control-group">
+            <%#= f.label :email, class: "control-label control" %>
+            <div class="controls">
+              <%= f.email_field :email, placeholder: "Email" %>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <%#= f.label :password, class: "control-label" %>
+            <div class="controls">
+              <%= f.password_field :password, placeholder: "password" %>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="controls">
+              <% if devise_mapping.rememberable? -%>
+
+                  <label class="checkbox">
+                    <%= f.check_box :remember_me %> <%= f.label :remember_me, style: "color: #C67355" %>
+                  </label>
+              <% end -%>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="controls">
+              <%= f.submit "Sign in", class: 'btn btn-danger' %>
+            </div>
+          </div>
+      <% end %>
+      <!--<br/>-->
+      <!--<br/>-->
+      <%#= render "devise/shared/links" %>
+      <%= link_to "Sign Up", "/users/sign_up", style: "color: #C67355" %>
+      <br>
+      <%= link_to "Forgot Password", "/users/password/new", style: "color: #C67355" %>
+      <br>
+    </div>
+  </div>
 </div>

@@ -8,7 +8,7 @@ set :scm, :git
 set :deploy_to, "/home/deployer/vollaa/"
 set :user, "root"
 
-set :keep_releases, 5
+set :keep_releases, 3
 
 role :web, domain # Your HTTP server, Apache/etc
 role :app, domain # This may be the same as your `Web` server

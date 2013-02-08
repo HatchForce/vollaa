@@ -30,8 +30,8 @@
   <!--Shows Property price from the params-->
   <% if (params["price_min"] || params["price_max"]).present? %>
   <div class="price_range">
-    Price
-    Range<br/> <%= number_to_price(params["price_min"])+ "-"+ number_to_price(params["price_max"]) %>
+    <span>Price Range</span>
+    <br/><%= number_to_price(params["price_min"])+ " to " %> <br> <%= number_to_price(params["price_max"]) %>
   </div>
   <br/>
       <% end %>

@@ -219,12 +219,28 @@ $(function () {
             PropertyPriceFilter.max = getRealValue(ui.values[ 1 ])
         },
         change:function (event, ui) {
+
             setTimeout(function () {
-//                alert(PropertyPriceFilter.min + " - " + PropertyPriceFilter.max);
-                window.location += '&price_min=' + PropertyPriceFilter.min + '&price_max=' + PropertyPriceFilter.max;
+                loadUrl({p_min:PropertyPriceFilter.min, p_max:PropertyPriceFilter.max})
+//              loadUrl(PropertyPriceFilter.min, PropertyPriceFilter.max)
             }, 100);
         }
     });
+
+    function loadUrl(values) {
+        var win_loc = window.location.toString()
+        var search_url = (win_loc.split('?')[0] + "?utf8=✓&commit=search");
+        var u_prop_for = (win_loc.match(/property_for/) ? '&property_for=' + params["property_for"] : "")
+        var u_what = (win_loc.match(/what/) ? '&what=' + params["what"] : "")
+        var u_where = (win_loc.match(/where/) ? '&where=' + params["where"] : "")
+        var u_beds = (win_loc.match(/bedrooms/) ? '&bedrooms=' + params["bedrooms"] : "")
+        var u_prop_type = (win_loc.match(/property_type/) ? '&property_type=' + params["property_type"] : "")
+        var u_price_min = values.p_min == undefined ? "" : '&price_min=' + values.p_min
+        var u_price_max = values.p_max == undefined ? "" : '&price_max=' + values.p_max
+        var u_area_min = (win_loc.match(/area_min/) ? '&area_min=' + params["area_min"] : "")
+        var u_area_max = (win_loc.match(/area_max/) ? '&area_max=' + params["area_max"] : "")
+        window.location = search_url + u_prop_for + u_what + u_where + u_prop_type + u_price_min + u_price_max + u_beds + u_area_min + u_area_max;
+    }
 
     function findNearest(includeLeft, includeRight, value) {
         var nearest = null;
@@ -263,15 +279,15 @@ $(function () {
         number = parseInt(numbr)
         if (number < 10000000 && number > 99999) {
             lk = (number / 100000)
-            return (lk + " Lakhs")
+            return (lk + " Lks")
         }
         else if (number > 9999999) {
             lk = (number / 10000000)
-            return (lk + " Crores")
+            return (lk + " Crs")
         }
         else if (number > 999 && number < 100000) {
             lk = (number / 1000)
-            return (lk + " Thousands")
+            return (lk + " Ths")
         }
         else {
             return number
@@ -331,82 +347,4 @@ $(function () {
 //    });
 //    //------ Property AREA Slider function  Ends------//
 
-
-    $('.home_search_btn').live('click', function () {
-
-        var search_url = "http://localhost:3000/home/results?commit=search&utf8=%E2%9C%93"
-        var what = function () {
-            if (params["what"] != null) {
-                return ("&what=" + params["what"]);
-            } else {
-                return ''
-            }
-        }
-
-        var where = function () {
-            if (params["where"] != null) {
-                return ("&where=" + params["where"])
-            } else {
-                return ''
-            }
-        }
-
-        var property_for = function () {
-            if (params["property_for"] != null) {
-                return ("&property_for=" + params["property_for"])
-            } else {
-                return false
-            }
-        }
-
-        var price_min = function () {
-            if (params["price_min"] != null) {
-                return ("&price_min=" + params["price_min"])
-            } else {
-                return false
-            }
-        }
-
-        var price_max = function () {
-            if (params["price_max"] != null) {
-                return ("&price_max=" + params["price_max"])
-            } else {
-                return false
-            }
-        }
-
-        var city = function () {
-            if (params["city"] != null) {
-                return ("&city=" + params["city"])
-            } else {
-                return false
-            }
-        }
-
-        var property_type = function () {
-            if (params["property_type"] != null) {
-                return ("&property_type=" + params["property_type"])
-            } else {
-                return false
-            }
-        }
-
-        var area_min = function () {
-            if (params["area_min"] != null) {
-                return ("&area_min=" + params["area_min"])
-            } else {
-                return false
-            }
-        }
-
-        var area_max = function () {
-            if (params["area_max"] != null) {
-                return ("&area_max=" + params["area_max"])
-            } else {
-                return false
-            }
-        }
-
-        window.location = search_url + what + where + property_for + property_type + price_min + price_max + area_min + area_max
-    });
 });

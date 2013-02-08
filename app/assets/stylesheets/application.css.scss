@@ -1,0 +1,278 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require jquery-ui
+ *= require jquery.ui.slider
+ *= require bootstrap
+ *= require jquery.fancybox
+ *= require_self
+ *= require solr-autocomplete/jquery.autocomplete
+ */
+
+body {
+  /*background: transparent url("/assets/bg_pattern.png") repeat scroll 0 0;*/
+}
+
+.header {
+  min-height: 20px;
+}
+
+.content {
+  min-height: 400px;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  /*border: 1px solid #A9A9A9;*/
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.footer {
+  margin-top:20px;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-align: center;
+}
+
+.footer_links a {
+  margin: 0 10px;
+}
+
+.footer_links a:hover {
+  text-decoration: none;
+  color: red;
+
+}
+
+.border {
+  border: 1px solid #A9A9A9;
+}
+
+.radius-border {
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.shadow-border {
+  border: 1px solid #A9A9A9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 0 1px 5px #000000, inset 0 10px 20px #FFFFFF;
+  -o-box-shadow: 0 1px 5px #000000, inset 0 10px 20px #FFFFFF;
+  -webkit-box-shadow: 0 1px 5px #000000, inset 0 10px 20px #FFFFFF;
+  -moz-box-shadow: 0 1px 5px #000000, inset 0 10px 20px #FFFFFF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Pagination */
+.will_paginate {
+  background: white;
+  cursor: default;
+  text-align: center;
+  /* self-clearing method: */
+}
+
+.will_paginate a, .will_paginate span, .will_paginate em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+.will_paginate .disabled {
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+
+.will_paginate .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #2e6ab1;
+  color: white;
+  border: 1px solid #2e6ab1;
+}
+
+.will_paginate a {
+  text-decoration: none;
+  color: #105cb6;
+  border: 1px solid #9aafe5;
+}
+
+.will_paginate a:hover, .will_paginate a:focus {
+  color: #000033;
+  border-color: #000033;
+}
+
+.will_paginate .page_info {
+  /*background: #2e6ab1;*/
+  /*color: white;*/
+  /*padding: 0.4em 0.6em;*/
+  /*width: 22em;*/
+  /*margin-bottom: 0.3em;*/
+  /*text-align: center;*/
+    color: #89CDE4;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+
+.will_paginate .page_info b {
+    color: #38B2DA;
+    padding: 0.1em 0.25em;
+}
+
+.will_paginate:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .will_paginate {
+  height: 1%;
+}
+
+*:first-child + html .will_paginate {
+  overflow: hidden;
+}
+
+/* End Pagination */
+
+
+/* iframe */
+.iframe_header {
+  background-color: #EFEFEF;
+  height: 70px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #AAAAAA;
+}
+
+.iframe_logo {
+  margin-top: 20px;
+  float: left;
+  color: #A2BCD2;
+}
+
+.iframe_logo:hover {
+  text-decoration: none;
+  color: #91a9bf;
+}
+
+.iframe_logo h2 {
+  font-size: 48px;
+    margin: 0 0 10px 20px;
+}
+
+.iframe_close {
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 0px 8px;
+  background-color: #B1AEAE;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.iframe_content {
+  background: #FFFFFF;
+}
+
+//Signin and signUp css
+//.sign_up, .sign_in{
+  .sign_udp,{
+    border: 1px solid #CFD3D5;
+  border-radius: 7px 7px 7px 7px;
+  display: table;
+  left: 25%;
+  margin: 0 auto;
+  position: fixed;
+}
+
+.sign_in, .sign_up{
+  border: 1px solid #FFE4DC;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 1px 1px 5px #FBE0D8, 1px 10px 20px #FFE4DC inset;
+  display: table;
+  left: 25%;
+  height: 312px;
+  margin: 0 auto;
+  position: fixed;
+}
+
+.login_divider {
+  background-color: #CCCCCC;
+  height: 120px;
+  margin: 0 auto;
+  width: 1px;
+}
+
+.sign {
+  background-color: #F05C2B;
+  background-image: linear-gradient(#F2D0C3, #C13300);
+  background-repeat: repeat-x;
+  border-color: #F9C3B8 #F7B1A3 #DD8362;
+  border-image: none;
+  border-radius: 5px 5px 0 0;
+  border-style: solid;
+  border-width: 1px;
+  color: #F8C8C1;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 8px 210px;
+  position: relative;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.new_user{
+    padding-right: 10px;
+}
+
+.form_body{
+    /*background-color: #FFFFFF;*/
+    /*border-color: #E9F1F4 #D8DEE2 #D8DEE2;*/
+    /*border-radius: 0 0 3px 3px;*/
+    /*border-style: solid;*/
+    /*border-width: 0 1px 1px;*/
+    /*margin: 0 0 1em;*/
+    /*overflow: hidden;*/
+    /*padding: 2em;*/
+}
+
+.google_cal{
+    float: right;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.save_prop_image{
+    height: 65px;
+    margin-top: -50px;
+    width: 110px;
+    border: 3px solid #D0DAE1;
+}
+
+.sign_links{
+  a{
+    color: #F05C2B;
+  }
+}
