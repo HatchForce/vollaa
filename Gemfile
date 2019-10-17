@@ -9,7 +9,7 @@ gem 'progress_bar'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 #gem "sunspot_autocomplete", ">= 0.0.3", :git => "git@github.com:xponrails/sunspot_autocomplete.git"
-gem 'will_paginate', '~> 3.0.0'
+gem 'will_paginate', '~> 3.0.5'
 #gem 'pg'
 gem 'client_side_validations'
 gem "mechanize", "~> 2.5.1"
