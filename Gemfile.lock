@@ -84,7 +84,7 @@ GEM
     jquery-ui-rails (4.0.0)
       jquery-rails
       railties (>= 3.1.0)
-    json (1.7.6)
+    json (1.8.6)
     jwt (0.1.5)
       multi_json (>= 1.0)
     libv8 (3.11.8.13)
