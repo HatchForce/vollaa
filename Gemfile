@@ -12,7 +12,7 @@ gem 'sunspot_solr'
 gem 'will_paginate', '~> 3.0.0'
 #gem 'pg'
 gem 'client_side_validations'
-gem "mechanize", "~> 2.5.1"
+gem "mechanize", "~> 2.7.7"
 gem "devise", "~> 2.1.2"
 gem "carrierwave", "~> 0.7.1"
 gem "rmagick"
